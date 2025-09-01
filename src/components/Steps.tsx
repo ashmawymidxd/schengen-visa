@@ -72,10 +72,10 @@ const Steps = () => {
               <div className="flex flex-col lg:flex-row items-center gap-8 mb-12 lg:mb-16">
                 {/* Step Number and Icon */}
                 <div className="flex-shrink-0 relative">
-                  <div className={`w-24 h-24 lg:w-32 lg:h-32 rounded-3xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-[var(--shadow-strong)] relative z-10`}>
+                  <div className={`z-10 w-24 h-24 lg:w-32 lg:h-32 rounded-3xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-[var(--shadow-strong)] relative z-10`}>
                     <step.icon className="w-10 h-10 lg:w-12 lg:h-12 text-white" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 lg:w-10 lg:h-10 bg-accent rounded-full flex items-center justify-center shadow-lg">
+                  <div className="z-20 absolute -top-2 -right-2 w-8 h-8 lg:w-10 lg:h-10 bg-accent rounded-full flex items-center justify-center shadow-lg">
                     <span className={`text-sm lg:text-base font-bold text-accent-foreground ${isRTL ? 'font-arabic' : ''}`}>
                       {step.number}
                     </span>

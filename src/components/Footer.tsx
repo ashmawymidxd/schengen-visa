@@ -8,6 +8,7 @@ import {
   Linkedin,
   ExternalLink
 } from "lucide-react";
+import logo from "../assets/logo.png"
 
 const Footer = () => {
   const quickLinks = [
@@ -41,8 +42,10 @@ const Footer = () => {
           <div className="space-y-6">
             <div>
               <div className="flex items-center mb-4">
-                <div className="bg-accent p-2 rounded-lg">
-                  <span className="text-accent-foreground font-bold text-lg font-arabic">فيزا</span>
+                <div className="p-2 rounded-lg">
+                  <span className="text-accent-foreground font-bold text-lg font-arabic">
+                     <img src={logo} alt="" className="h-10 rounded-sm"/>
+                  </span>
                 </div>
                 <div className="mr-3">
                   <h3 className="text-xl font-bold font-arabic">مكتب فيزا الشنغن</h3>
@@ -175,7 +178,7 @@ const Footer = () => {
                 placeholder="أدخل بريدك الإلكتروني"
                 className="flex-1 px-4 py-3 rounded-lg bg-white/90 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent"
               />
-              <button className="btn-accent px-6 py-3 whitespace-nowrap font-arabic">
+              <button className="btn-accent px-6 py-3 whitespace-nowrap font-arabic flex items-center justify-center gap-3">
                 اشتراك
                 <ExternalLink className="w-4 h-4 mr-2" />
               </button>

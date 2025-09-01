@@ -45,7 +45,7 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className={`text-white border-white/30 hover:bg-white/10 text-xl px-8 py-6 ${isRTL ? 'font-arabic' : ''}`}
+              className={`text-dark border-white/30 hover:bg-white/10 text-xl px-8 py-6 ${isRTL ? 'font-arabic' : ''}`}
             >
               {t('hero.free_consultation')}
             </Button>
