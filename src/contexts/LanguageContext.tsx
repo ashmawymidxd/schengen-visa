@@ -326,7 +326,10 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "contact.form.send": "إرسال الرسالة",
       "contact.form.privacy":
         "🔒 نحن نحترم خصوصيتك. جميع المعلومات المرسلة محمية ولن يتم مشاركتها مع أطراف ثالثة. سنستخدم معلوماتك فقط للرد على استفسارك وتقديم خدماتنا.",
-
+      "contact.hours.weekdays": "عدد ساعات العمل",
+      "contact.hours.weekend": "نعمل 24 ساعة - علي مدار الاسبوع",
+      "contact.address.line1": "الرياض - حي الملز",
+      "contact.address.line2": "الرياض",
       // Footer
 
       "footer.home": "الرئيسية",
@@ -679,7 +682,10 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "contact.form.send": "Send Message",
       "contact.form.privacy":
         "🔒 We respect your privacy. All information sent is protected and will not be shared with third parties. We will use your information only to respond to your inquiry and provide our services.",
-
+      "contact.hours.weekdays": " hours weekdays",
+      "contact.hours.weekend": "24 Hours at week",
+      "contact.address.line1": "Riyadh - Al-Malaz",
+      "contact.address.line2": "Riyadh",
       // Footer
       "footer.home": "Home",
       "footer.services": "Services",

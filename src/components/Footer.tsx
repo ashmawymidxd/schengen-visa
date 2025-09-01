@@ -44,8 +44,8 @@ const Footer = () => {
           <div className="space-y-6">
             <div>
               <div className="flex items-center mb-4">
-                <div className="p-2 rounded-lg">
-                  <span className="text-accent-foreground font-bold text-lg font-arabic">
+                <div className="p-2 rounded-lg bg-white">
+                  <span className="">
                     <img src={logo} alt="" className="h-10 rounded-sm" />
                   </span>
                 </div>
@@ -182,7 +182,7 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
-                placeholder={t("enter_email") || "أدخل بريدك الإلكتروني"}
+                placeholder={t("footer.enter_email") || "أدخل بريدك الإلكتروني"}
                 className="flex-1 px-4 py-3 rounded-lg bg-white/90 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent"
               />
               <button className="btn-accent px-6 py-3 whitespace-nowrap font-arabic flex items-center justify-center gap-3">

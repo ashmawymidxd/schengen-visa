@@ -31,15 +31,15 @@ const Contact = () => {
     {
       icon: MapPin,
       title: t("contact.address.title"),
-      details: [t("contact.address.line1", "الرياض - حي الملز"), t("contact.address.line2", "شارع الأمير عبدالرحمن بن عبدالعزيز")],
+      details: [t("contact.address.line1"), t("contact.address.line2")],
       color: "text-red-500"
     },
     {
       icon: Clock,
       title: t("contact.hours.title"),
       details: [
-        t("contact.hours.weekdays", "الأحد - الخميس: 9 صباحاً - 5 مساءً"),
-        t("contact.hours.weekend", "الجمعة - السبت: مغلق")
+        t("contact.hours.weekdays"),
+        t("contact.hours.weekend")
       ],
       color: "text-purple-500"
     }
@@ -152,7 +152,7 @@ const Contact = () => {
                     {t("contact.form.name")}
                   </label>
                   <Input 
-                    placeholder={t("contact.form.name.placeholder", "أدخل اسمك الكامل")}
+                    placeholder={t("contact.form.name")}
                     className="h-12 font-arabic"
                   />
                 </div>
@@ -184,7 +184,7 @@ const Contact = () => {
                   {t("contact.form.country")}
                 </label>
                 <Input 
-                  placeholder={t("contact.form.country.placeholder", "مثال: ألمانيا، فرنسا، إيطاليا...")}
+                  placeholder={t("contact.form.country")}
                   className="h-12 font-arabic"
                 />
               </div>
@@ -194,7 +194,7 @@ const Contact = () => {
                   {t("contact.form.message")}
                 </label>
                 <Textarea 
-                  placeholder={t("contact.form.message.placeholder", "اكتب تفاصيل استفسارك أو طلبك هنا...")}
+                  placeholder={t("contact.form.message")}
                   className="min-h-[120px] font-arabic"
                   rows={5}
                 />
