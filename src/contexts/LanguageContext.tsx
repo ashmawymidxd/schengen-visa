@@ -328,10 +328,28 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
         "🔒 نحن نحترم خصوصيتك. جميع المعلومات المرسلة محمية ولن يتم مشاركتها مع أطراف ثالثة. سنستخدم معلوماتك فقط للرد على استفسارك وتقديم خدماتنا.",
 
       // Footer
+
+      "footer.home": "الرئيسية",
+      "footer.services": "خدماتنا",
+      "footer.steps": "كيف نعمل",
+      "footer.about": "عن الشركة",
+
+      "footer.visa_schengen": "فيزا الشنغن",
+      "footer.free_consult": "استشارة مجانية",
+      "footer.appointment_booking": "حجز المواعيد",
+      "footer.health_insurance": "التأمين الصحي",
+
+      "footer.terms": "الشروط والأحكام",
+      "footer.privacy": "سياسة الخصوصية",
+      "footer.cancellation": "سياسة الإلغاء",
+      "footer.agreement": "اتفاقية الخدمة",
+
+      "footer.enter_email": "أدخل بريدك الإلكتروني",
+
       "footer.company.desc":
         "شريكك الموثوق للحصول على تأشيرات الشنغن بأسرع وقت وأعلى معدل نجاح في المملكة العربية السعودية.",
       "footer.quick_links": "روابط سريعة",
-      "footer.services": "خدماتنا",
+      "footer.service": "خدماتنا",
       "footer.legal": "معلومات قانونية",
       "footer.follow": "تابعنا على",
       "footer.newsletter.title": "اشترك في نشرتنا الإخبارية",
@@ -341,6 +359,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "footer.copyright": "© 2024 مكتب فيزا الشنغن. جميع الحقوق محفوظة.",
       "footer.licensed": "مرخص من وزارة التجارة السعودية",
       "footer.member": "عضو غرفة الرياض التجارية",
+      "footer.address": "الرياض - حي الملز",
     },
     en: {
       // Header
@@ -662,10 +681,27 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
         "🔒 We respect your privacy. All information sent is protected and will not be shared with third parties. We will use your information only to respond to your inquiry and provide our services.",
 
       // Footer
+      "footer.home": "Home",
+      "footer.services": "Services",
+      "footer.steps": "How We Work",
+      "footer.about": "About Us",
+
+      "footer.visa_schengen": "Schengen Visa",
+      "footer.free_consult": "Free Consultation",
+      "footer.appointment_booking": "Appointment Booking",
+      "footer.health_insurance": "Health Insurance",
+
+      "footer.terms": "Terms & Conditions",
+      "footer.privacy": "Privacy Policy",
+      "footer.cancellation": "Cancellation Policy",
+      "footer.agreement": "Service Agreement",
+
+      "footer.enter_email": "Enter your email",
+
       "footer.company.desc":
-        "Your trusted partner for obtaining Schengen visas in the shortest time with the highest success rate in Saudi Arabia.",
+        "Your trusted partner for obtaining Schengen visas quickly with the highest success rate in Saudi Arabia.",
       "footer.quick_links": "Quick Links",
-      "footer.services": "Our Services",
+      "footer.service": "Our Services",
       "footer.legal": "Legal Information",
       "footer.follow": "Follow Us",
       "footer.newsletter.title": "Subscribe to Our Newsletter",
@@ -673,8 +709,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
         "Get the latest updates on visa requirements and special offers",
       "footer.newsletter.button": "Subscribe",
       "footer.copyright": "© 2024 Schengen Visa Office. All rights reserved.",
-      "footer.licensed": "Licensed by Saudi Ministry of Commerce",
-      "footer.member": "Member of Riyadh Chamber of Commerce",
+      "footer.licensed": "Licensed by the Saudi Ministry of Commerce",
+      "footer.member": "Member of the Riyadh Chamber of Commerce",
+      "footer.address": "Riyadh - Al-Malaz",
     },
   };
 

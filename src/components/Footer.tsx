@@ -1,35 +1,38 @@
-import { 
-  Phone, 
-  Mail, 
+import {
+  Phone,
+  Mail,
   MapPin,
   Facebook,
   Twitter,
   Instagram,
   Linkedin,
-  ExternalLink
+  ExternalLink,
 } from "lucide-react";
-import logo from "../assets/logo.png"
+import logo from "../assets/logo.png";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t, isRTL } = useLanguage();
+
   const quickLinks = [
-    { name: "الرئيسية", href: "#home" },
-    { name: "خدماتنا", href: "#services" },
-    { name: "كيف نعمل", href: "#steps" },
-    { name: "عن الشركة", href: "#about" }
+    { name: t("footer.home"), href: "#home" },
+    { name: t("footer.services"), href: "#services" },
+    { name: t("footer.steps"), href: "#steps" },
+    { name: t("footer.about"), href: "#about" },
   ];
 
   const services = [
-    { name: "فيزا الشنغن", href: "#services" },
-    { name: "استشارة مجانية", href: "#contact" },
-    { name: "حجز المواعيد", href: "#services" },
-    { name: "التأمين الصحي", href: "#services" }
+    { name: t("footer.visa_schengen"), href: "#services" },
+    { name: t("footer.free_consult"), href: "#contact" },
+    { name: t("footer.appointment_booking"), href: "#services" },
+    { name: t("footer.health_insurance"), href: "#services" },
   ];
 
   const legalLinks = [
-    { name: "الشروط والأحكام", href: "#terms" },
-    { name: "سياسة الخصوصية", href: "#privacy" },
-    { name: "سياسة الإلغاء", href: "#cancellation" },
-    { name: "اتفاقية الخدمة", href: "#agreement" }
+    { name: t("footer.terms"), href: "#terms" },
+    { name: t("footer.privacy"), href: "#privacy" },
+    { name: t("footer.cancellation"), href: "#cancellation" },
+    { name: t("footer.agreement"), href: "#agreement" },
   ];
 
   return (
@@ -37,25 +40,26 @@ const Footer = () => {
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          
           {/* Company Info */}
           <div className="space-y-6">
             <div>
               <div className="flex items-center mb-4">
                 <div className="p-2 rounded-lg">
                   <span className="text-accent-foreground font-bold text-lg font-arabic">
-                     <img src={logo} alt="" className="h-10 rounded-sm"/>
+                    <img src={logo} alt="" className="h-10 rounded-sm" />
                   </span>
                 </div>
                 <div className="mr-3">
-                  <h3 className="text-xl font-bold font-arabic">مكتب فيزا الشنغن</h3>
+                  <h3 className="text-xl font-bold font-arabic">
+                    {t("header.company_name")}
+                  </h3>
                 </div>
               </div>
               <p className="text-primary-foreground/80 font-arabic leading-relaxed">
-                شريكك الموثوق للحصول على تأشيرات الشنغن بأسرع وقت وأعلى معدل نجاح في المملكة العربية السعودية.
+                {t("footer.company.desc")}
               </p>
             </div>
-            
+
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-accent" />
@@ -67,7 +71,10 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-accent" />
-                <span className="text-sm font-arabic">الرياض - حي الملز</span>
+                <span className="text-sm font-arabic">
+                  {" "}
+                  {t("footer.address")}
+                </span>
               </div>
             </div>
           </div>
@@ -75,12 +82,12 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-bold mb-6 font-arabic text-primary-foreground">
-              روابط سريعة
+              {t("footer.quick_links")}
             </h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a 
+                  <a
                     href={link.href}
                     className="text-primary-foreground/80 hover:text-accent transition-colors font-arabic"
                   >
@@ -94,12 +101,12 @@ const Footer = () => {
           {/* Services */}
           <div>
             <h4 className="text-lg font-bold mb-6 font-arabic text-primary-foreground">
-              خدماتنا
+              {t("footer.service")}
             </h4>
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
-                  <a 
+                  <a
                     href={service.href}
                     className="text-primary-foreground/80 hover:text-accent transition-colors font-arabic"
                   >
@@ -113,12 +120,12 @@ const Footer = () => {
           {/* Legal & Social */}
           <div>
             <h4 className="text-lg font-bold mb-6 font-arabic text-primary-foreground">
-              معلومات قانونية
+              {t("footer.legal")}
             </h4>
             <ul className="space-y-3 mb-8">
               {legalLinks.map((link, index) => (
                 <li key={index}>
-                  <a 
+                  <a
                     href={link.href}
                     className="text-primary-foreground/80 hover:text-accent transition-colors font-arabic text-sm"
                   >
@@ -131,29 +138,29 @@ const Footer = () => {
             {/* Social Media */}
             <div>
               <h5 className="text-sm font-semibold mb-4 font-arabic text-primary-foreground">
-                تابعنا على
+                {t("footer.follow")}
               </h5>
               <div className="flex gap-3">
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="w-10 h-10 bg-primary-foreground/10 hover:bg-accent rounded-lg flex items-center justify-center transition-colors group"
                 >
                   <Facebook className="w-5 h-5 text-primary-foreground/80 group-hover:text-accent-foreground" />
                 </a>
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="w-10 h-10 bg-primary-foreground/10 hover:bg-accent rounded-lg flex items-center justify-center transition-colors group"
                 >
                   <Twitter className="w-5 h-5 text-primary-foreground/80 group-hover:text-accent-foreground" />
                 </a>
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="w-10 h-10 bg-primary-foreground/10 hover:bg-accent rounded-lg flex items-center justify-center transition-colors group"
                 >
                   <Instagram className="w-5 h-5 text-primary-foreground/80 group-hover:text-accent-foreground" />
                 </a>
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="w-10 h-10 bg-primary-foreground/10 hover:bg-accent rounded-lg flex items-center justify-center transition-colors group"
                 >
                   <Linkedin className="w-5 h-5 text-primary-foreground/80 group-hover:text-accent-foreground" />
@@ -167,19 +174,19 @@ const Footer = () => {
         <div className="mt-16 pt-12 border-t border-primary-foreground/20">
           <div className="bg-primary-foreground/10 rounded-2xl p-8 text-center backdrop-blur-sm">
             <h4 className="text-2xl font-bold mb-4 font-arabic text-primary-foreground">
-              اشترك في نشرتنا الإخبارية
+              {t("footer.newsletter.title")}
             </h4>
             <p className="text-primary-foreground/80 mb-6 font-arabic">
-              احصل على آخر التحديثات حول متطلبات التأشيرات والعروض الخاصة
+              {t("footer.newsletter.desc")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input 
+              <input
                 type="email"
-                placeholder="أدخل بريدك الإلكتروني"
+                placeholder={t("enter_email") || "أدخل بريدك الإلكتروني"}
                 className="flex-1 px-4 py-3 rounded-lg bg-white/90 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent"
               />
               <button className="btn-accent px-6 py-3 whitespace-nowrap font-arabic flex items-center justify-center gap-3">
-                اشتراك
+                {t("footer.newsletter.button")}
                 <ExternalLink className="w-4 h-4 mr-2" />
               </button>
             </div>
@@ -192,12 +199,12 @@ const Footer = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm text-primary-foreground/60 font-arabic">
-              © 2024 مكتب فيزا الشنغن. جميع الحقوق محفوظة.
+              {t("footer.copyright")}
             </div>
             <div className="flex items-center gap-6 text-sm text-primary-foreground/60">
-              <span className="font-arabic">مرخص من وزارة التجارة السعودية</span>
+              <span className="font-arabic">{t("footer.licensed")}</span>
               <span>|</span>
-              <span className="font-arabic">عضو غرفة الرياض التجارية</span>
+              <span className="font-arabic">{t("footer.member")}</span>
             </div>
           </div>
         </div>
