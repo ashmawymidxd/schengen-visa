@@ -108,7 +108,7 @@ const About = () => {
                   key={index}
                   className="flex items-start gap-4 p-4 rounded-2xl bg-gradient-to-r from-muted/30 to-transparent border border-border/30"
                 >
-                  <div className="p-3 rounded-xl bg-primary/10">
+                  <div className="p-3 rounded-xl bg-primary/10 bg-gradient-to-br from-white to-gray-200">
                     <feature.icon className="w-6 h-6 text-primary" />
                   </div>
                   <div>

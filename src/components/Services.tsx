@@ -82,7 +82,7 @@ const Services = () => {
             >
               <CardHeader className="text-center pb-4">
                 <div className="flex justify-center mb-4">
-                  <div className={`p-4 rounded-2xl bg-gradient-to-br from-white to-gray-50 shadow-[var(--shadow-medium)] group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`p-4 rounded-2xl bg-gradient-to-br from-white to-gray-200 shadow-[var(--shadow-medium)] group-hover:scale-110 transition-transform duration-300`}>
                     <service.icon className={`w-8 h-8 ${service.color}`} />
                   </div>
                 </div>

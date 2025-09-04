@@ -172,7 +172,7 @@ const Countries = () => {
             >
               <CardContent className="p-6">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="text-4xl">{country.flag}</div>
+                  <div className="text-4xl bg-gradient-to-br from-white to-gray-200 rounded-md p-3">{country.flag}</div>
                   <div className="flex-1">
                     <h3
                       className={`text-xl font-bold text-foreground ${

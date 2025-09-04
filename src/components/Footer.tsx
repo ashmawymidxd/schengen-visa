@@ -49,7 +49,7 @@ const Footer = () => {
                     <img src={logo} alt="" className="h-10 rounded-sm" />
                   </span>
                 </div>
-                <div className="mr-3">
+                <div className="mx-3">
                   <h3 className="text-xl font-bold font-arabic">
                     {t("header.company_name")}
                   </h3>

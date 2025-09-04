@@ -126,7 +126,7 @@ const Documents = () => {
           {documents.map((doc, index) => (
             <Card
               key={index}
-              className="group hover:shadow-[var(--shadow-strong)] transition-all duration-300 hover:-translate-y-2 border-border/50 bg-white/80 backdrop-blur-sm relative overflow-hidden"
+              className="group hover:shadow-[var(--shadow-strong)] transition-all duration-300 hover:-translate-y-2 border-border/50 backdrop-blur-sm relative overflow-hidden"
             >
               {doc.required && (
                 <div className="absolute top-4 left-4">
@@ -142,7 +142,7 @@ const Documents = () => {
 
               <CardHeader className="text-center pb-4">
                 <div className="flex justify-center mb-4">
-                  <div className="p-4 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/20 group-hover:scale-110 transition-transform duration-300">
+                  <div className="p-4 rounded-2xl bg-gradient-to-br from-white to-gray-200 group-hover:scale-110 transition-transform duration-300">
                     <doc.icon className="w-8 h-8 text-primary" />
                   </div>
                 </div>
