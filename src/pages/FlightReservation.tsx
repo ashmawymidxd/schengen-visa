@@ -1,4 +1,4 @@
-here i slider items being vertcal block note in line or horizontals import ServiceHeader from "@/components/ServiceHeader";
+import ServiceHeader from "@/components/ServiceHeader";
 import Footer from "@/components/Footer";
 import FlightReservationFAQ from "@/components/FlightReservationFAQ";
 import { CircleCheckIcon } from "lucide-react";
