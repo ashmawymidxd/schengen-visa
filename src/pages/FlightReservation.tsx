@@ -15,6 +15,9 @@ import air7 from "../assets/countries/om.png";
 import air8 from "../assets/countries/qa.png";
 import air9 from "../assets/countries/sa.png";
 import air10 from "../assets/countries/spa.png";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
 import { Navigation, Autoplay } from "swiper/modules";
 const FlightReservation = () => {
   const { t, isRTL } = useLanguage();
@@ -88,7 +91,7 @@ const FlightReservation = () => {
               1024: { slidesPerView: 5 },
               1280: { slidesPerView: 7 },
             }}
-            navigation={true}
+            navigation={false}
             autoplay={{
               delay: 2000,
               disableOnInteraction: false,

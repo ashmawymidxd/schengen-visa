@@ -25,23 +25,6 @@ body {
   transition: all 0.3s ease;
   background-color: green;
 }
-.swiper-button-prev,
-.swiper-button-next {
-  display: none;
-  /* @apply w-10 h-10 flex items-center justify-center rounded-full shadow-lg text-white; */
-  /* background: linear-gradient(to right, #16a34a, #22c55e); */
-  /* transition: all 0.3s ease; */
-}
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-  transform: scale(1.1);
-  opacity: 0.9;
-}
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  font-size: 16px; /* smaller arrow */
-  font-weight: bold;
-}
 @layer base {
   :root {
     /* Saudi Green Theme */

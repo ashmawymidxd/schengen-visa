@@ -458,7 +458,7 @@ const Countries = () => {
                 1024: { slidesPerView: 5 },
                 1280: { slidesPerView: 7 },
               }}
-              navigation={true}
+              navigation={false}
               autoplay={{
                 delay: 2000,
                 disableOnInteraction: false,
