@@ -1,17 +1,10 @@
-import ServiceHeader from "@/components/ServiceHeader";
+here i slider items being vertcal block note in line or horizontals import ServiceHeader from "@/components/ServiceHeader";
 import Footer from "@/components/Footer";
 import FlightReservationFAQ from "@/components/FlightReservationFAQ";
-import { CircleCheckIcon, PlaneIcon } from "lucide-react";
+import { CircleCheckIcon } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/autoplay";
-
-// Import assets
+import { PlaneIcon } from "lucide-react";
 import air1 from "../assets/countries/ae.png";
 import air2 from "../assets/countries/eg.png";
 import air3 from "../assets/countries/em.png";
@@ -22,7 +15,10 @@ import air7 from "../assets/countries/om.png";
 import air8 from "../assets/countries/qa.png";
 import air9 from "../assets/countries/sa.png";
 import air10 from "../assets/countries/spa.png";
-
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
+import { Navigation, Autoplay } from "swiper/modules";
 const FlightReservation = () => {
   const { t, isRTL } = useLanguage();
   const additionalDocuments = [
@@ -33,9 +29,6 @@ const FlightReservation = () => {
     t("flight.reservation.why-us-answer4"),
     t("flight.reservation.why-us-answer5"),
   ];
-
-  const airlines = [air1, air2, air3, air4, air5, air6, air7, air8, air9, air10];
-
   return (
     <div className="min-h-screen">
       <ServiceHeader />
@@ -79,7 +72,6 @@ const FlightReservation = () => {
           </div>
         </div>
       </section>
-      
       <div className="my-10">
         <div className="bg-gradient-to-br from-white to-gray-200 w-[70px] h-[70px] m-auto flex items-center justify-center rounded-xl">
           <PlaneIcon className="w-12 h-12 text-primary mx-auto" />
@@ -88,7 +80,7 @@ const FlightReservation = () => {
           {t("countries.service_providers")}
         </h3>
 
-        <div className="container mx-auto mt-10 px-4">
+        <div className="container mt-10">
           <Swiper
             dir={isRTL ? "rtl" : "ltr"}
             modules={[Navigation, Autoplay]}
@@ -96,40 +88,34 @@ const FlightReservation = () => {
             slidesPerView={2}
             breakpoints={{
               640: { slidesPerView: 3 },
-              768: { slidesPerView: 4 },
               1024: { slidesPerView: 5 },
               1280: { slidesPerView: 7 },
             }}
-            navigation={{
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            }}
+            navigation={true}
             autoplay={{
               delay: 2000,
               disableOnInteraction: false,
-              reverseDirection: isRTL,
+              reverseDirection: !isRTL, // ✅ autoplay goes left for LTR, right for RTL
             }}
             speed={500}
             loop={true}
+            // force swiper to recalc on direction change
             key={isRTL ? "rtl" : "ltr"}
-            className="w-full"
           >
-            {airlines.map((img, index) => (
-              <SwiperSlide key={index}>
-                <div className="p-4 rounded-md bg-gradient-to-br from-white to-gray-200 flex items-center justify-center h-full">
-                  <img
-                    src={img}
-                    draggable="false"
-                    alt={`airline-${index}`}
-                    className="rounded-md max-w-[80px] max-h-[60px] object-contain"
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-            
-            {/* Navigation buttons */}
-            <div className="swiper-button-next !text-primary"></div>
-            <div className="swiper-button-prev !text-primary"></div>
+            {[air1, air2, air3, air4, air5, air6, air7, air8, air9, air10].map(
+              (img, index) => (
+                <SwiperSlide key={index}>
+                  <div className="p-5 rounded-md bg-gradient-to-br from-white to-gray-200">
+                    <img
+                      src={img}
+                      draggable="false"
+                      alt={`slide-${index}`}
+                      className="rounded-md"
+                    />
+                  </div>
+                </SwiperSlide>
+              )
+            )}
           </Swiper>
         </div>
       </div>
