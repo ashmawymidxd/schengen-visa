@@ -19,13 +19,12 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-[25px] sm:px-6 py-20">
-        <div className="max-w-3xl">
+        <div className="max-w-4xl">
           <div className="mb-8">
             <span className={`inline-block bg-accent/20 text-accent-dark px-4 py-2 rounded-full ${isRTL ? 'font-arabic' : ''} font-medium mb-6`}>
               {t('hero.badge')}
             </span>
-            <h1 className={`text-5xl lg:text-7xl font-bold text-white mb-6 ${isRTL ? 'font-arabic' : ''} leading-tight`}>
-              {t('hero.title')}
+            <h1 className={`text-2xl lg:text-4xl font-bold text-white mb-6 ${isRTL ? 'font-arabic' : ''} leading-tight`}>
               <span className="block text-accent">{t('hero.subtitle')}</span>
             </h1>
             <p className={`text-xl lg:text-2xl text-white/90 mb-8 ${isRTL ? 'font-arabic' : ''} leading-relaxed`}>

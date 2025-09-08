@@ -28,33 +28,19 @@ const Contact = () => {
       details: ["info@schengenvisasa.com", "support@schengenvisasa.com"],
       color: "text-blue-500"
     },
-    {
-      icon: MapPin,
-      title: t("contact.address.title"),
-      details: [t("contact.address.line1"), t("contact.address.line2")],
-      color: "text-red-500"
-    },
-    {
-      icon: Clock,
-      title: t("contact.hours.title"),
-      details: [
-        t("contact.hours.weekdays"),
-        t("contact.hours.weekend")
-      ],
-      color: "text-purple-500"
-    }
+    
   ];
 
   return (
     <section id="contact" className="section-padding bg-gradient-subtle">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full font-arabic font-medium mb-4">
+          <span className="inline-text-white bg-primary/10 text-primary px-4 py-2 rounded-full font-arabic font-medium mb-4">
             {t("contact.badge")}
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 font-arabic">
             {t("contact.title")}
-            <span className="block text-primary">{t("contact.subtitle")}</span>
+            <span className="text-white block text-primary">{t("contact.subtitle")}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-arabic leading-relaxed">
             {t("contact.description")}
@@ -135,67 +121,67 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-border/50 shadow-[var(--shadow-medium)]">
+          <div className="bg-gradient-to-br from-primary-dark to-primary backdrop-blur-sm rounded-3xl p-8 border border-border/50 shadow-[var(--shadow-medium)]">
             <div className="mb-8">
-              <h3 className="text-2xl font-bold text-foreground mb-4 font-arabic">
+              <h3 className="text-white text-2xl font-bold text-foreground mb-4 font-arabic">
                 {t("contact.form.title")}
               </h3>
-              <p className="text-muted-foreground font-arabic">
+              <p className="text-white text-muted-foreground font-arabic">
                 {t("contact.form.desc")}
               </p>
             </div>
 
             <form className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2 font-arabic">
+                  <label className="text-white block text-sm font-medium text-foreground mb-2 font-arabic">
                     {t("contact.form.name")}
                   </label>
                   <Input 
                     placeholder={t("contact.form.name")}
-                    className="h-12 font-arabic"
+                    className="h-12 font-arabic bg-gray-200"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2 font-arabic">
+                  <label className="text-white block text-sm font-medium text-foreground mb-2 font-arabic">
                     {t("contact.form.phone")}
                   </label>
                   <Input 
                     placeholder="05xxxxxxxx"
-                    className="h-12"
+                    className="h-12 bg-gray-200"
                     type="tel"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2 font-arabic">
+                <label className="text-white block text-sm font-medium text-foreground mb-2 font-arabic">
                   {t("contact.form.email")}
                 </label>
                 <Input 
                   placeholder="example@email.com"
-                  className="h-12"
+                  className="h-12 bg-gray-200"
                   type="email"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2 font-arabic">
+                <label className="text-white block text-sm font-medium text-foreground mb-2 font-arabic">
                   {t("contact.form.country")}
                 </label>
                 <Input 
                   placeholder={t("contact.form.country")}
-                  className="h-12 font-arabic"
+                  className="h-12 font-arabic bg-gray-200"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2 font-arabic">
+                <label className="text-white block text-sm font-medium text-foreground mb-2 font-arabic">
                   {t("contact.form.message")}
                 </label>
                 <Textarea 
                   placeholder={t("contact.form.message")}
-                  className="min-h-[120px] font-arabic"
+                  className="min-h-[120px] font-arabic bg-gray-200"
                   rows={5}
                 />
               </div>
@@ -207,8 +193,8 @@ const Contact = () => {
             </form>
 
             {/* Privacy notice */}
-            <div className="mt-6 p-4 bg-muted/30 rounded-xl border border-border/30">
-              <p className="text-xs text-muted-foreground font-arabic leading-relaxed">
+            <div className="mt-6 p-4 bg-muted/30 rounded-xl border border-border/30 hidden md:flex">
+              <p className="text-xs text-gray-200 font-arabic leading-relaxed">
                 {t("contact.form.privacy")}
               </p>
             </div>

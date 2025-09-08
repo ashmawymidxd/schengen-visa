@@ -1,6 +1,20 @@
-import { MapPin, Clock, Users } from "lucide-react";
+import { MapPin, Clock, Users, Airplay, PlaneIcon } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
+import air1 from "../assets/countries/ae.png";
+import air2 from "../assets/countries/eg.png";
+import air3 from "../assets/countries/em.png";
+import air4 from "../assets/countries/ku.png";
+import air5 from "../assets/countries/na.png";
+import air6 from "../assets/countries/ni.png";
+import air7 from "../assets/countries/om.png";
+import air8 from "../assets/countries/qa.png";
+import air9 from "../assets/countries/sa.png";
+import air10 from "../assets/countries/spa.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const Countries = () => {
   const { t, isRTL } = useLanguage();
@@ -105,6 +119,182 @@ const Countries = () => {
       popularity: "متوسطة",
       popularityEn: "Medium",
     },
+    {
+      name: "المملكة المتحدة",
+      nameEn: "UK",
+      flag: "🇬🇧",
+      description: "وجهة دراسية وعمل شهيرة",
+      descriptionEn: "Popular destination for study and work",
+      processingTime: "15 يوم",
+      processingTimeEn: "15 days",
+      popularity: "عالية جداً",
+      popularityEn: "Very High",
+    },
+    {
+      name: "الولايات المتحدة",
+      nameEn: "USA",
+      flag: "🇺🇸",
+      description: "أرض الفرص المتنوعة",
+      descriptionEn: "Land of diverse opportunities",
+      processingTime: "20 يوم",
+      processingTimeEn: "20 days",
+      popularity: "عالية",
+      popularityEn: "High",
+    },
+    {
+      name: "أستراليا",
+      nameEn: "Australia",
+      flag: "🇦🇺",
+      description: "وجهة للهجرة والدراسة",
+      descriptionEn: "Destination for migration and study",
+      processingTime: "18 يوم",
+      processingTimeEn: "18 days",
+      popularity: "متوسطة",
+      popularityEn: "Medium",
+    },
+    {
+      name: "كندا",
+      nameEn: "Canada",
+      flag: "🇨🇦",
+      description: "واحدة من أفضل الدول للهجرة",
+      descriptionEn: "One of the best countries for immigration",
+      processingTime: "25 يوم",
+      processingTimeEn: "25 days",
+      popularity: "عالية جداً",
+      popularityEn: "Very High",
+    },
+    {
+      name: "نيوزيلندا",
+      nameEn: "New Zealand",
+      flag: "🇳🇿",
+      description: "طبيعة خلابة وفرص عمل",
+      descriptionEn: "Stunning nature and work opportunities",
+      processingTime: "20 يوم",
+      processingTimeEn: "20 days",
+      popularity: "متوسطة",
+      popularityEn: "Medium",
+    },
+    {
+      name: "سويسرا",
+      nameEn: "Switzerland",
+      flag: "🇨🇭",
+      description: "بلد البنوك والساعات",
+      descriptionEn: "Country of banks and watches",
+      processingTime: "12 يوم",
+      processingTimeEn: "12 days",
+      popularity: "عالية",
+      popularityEn: "High",
+    },
+    {
+      name: "البرازيل",
+      nameEn: "Brazil",
+      flag: "🇧🇷",
+      description: "أكبر بلد في أمريكا الجنوبية",
+      descriptionEn: "Largest country in South America",
+      processingTime: "15 يوم",
+      processingTimeEn: "15 days",
+      popularity: "متوسطة",
+      popularityEn: "Medium",
+    },
+    {
+      name: "إثيوبيا",
+      nameEn: "Ethiopia",
+      flag: "🇪🇹",
+      description: "تاريخ عريق في إفريقيا",
+      descriptionEn: "Rich history in Africa",
+      processingTime: "10 يوم",
+      processingTimeEn: "10 days",
+      popularity: "منخفضة",
+      popularityEn: "Low",
+    },
+    {
+      name: "تركيا",
+      nameEn: "Turkey",
+      flag: "🇹🇷",
+      description: "جسر بين الشرق والغرب",
+      descriptionEn: "Bridge between East and West",
+      processingTime: "7 يوم",
+      processingTimeEn: "7 days",
+      popularity: "عالية",
+      popularityEn: "High",
+    },
+    {
+      name: "تايلاند",
+      nameEn: "Thailand",
+      flag: "🇹🇭",
+      description: "وجهة سياحية عالمية",
+      descriptionEn: "Global tourist destination",
+      processingTime: "8 يوم",
+      processingTimeEn: "8 days",
+      popularity: "متوسطة",
+      popularityEn: "Medium",
+    },
+    {
+      name: "روسيا",
+      nameEn: "Russia",
+      flag: "🇷🇺",
+      description: "أكبر دولة في العالم",
+      descriptionEn: "Largest country in the world",
+      processingTime: "14 يوم",
+      processingTimeEn: "14 days",
+      popularity: "متوسطة",
+      popularityEn: "Medium",
+    },
+    {
+      name: "ماليزيا",
+      nameEn: "Malaysia",
+      flag: "🇲🇾",
+      description: "بلد متعدد الثقافات",
+      descriptionEn: "Multicultural country",
+      processingTime: "9 يوم",
+      processingTimeEn: "9 days",
+      popularity: "عالية",
+      popularityEn: "High",
+    },
+    {
+      name: "البحرين",
+      nameEn: "Bahrain",
+      flag: "🇧🇭",
+      description: "جزيرة في الخليج العربي",
+      descriptionEn: "Island in the Arabian Gulf",
+      processingTime: "5 يوم",
+      processingTimeEn: "5 days",
+      popularity: "متوسطة",
+      popularityEn: "Medium",
+    },
+    {
+      name: "اليابان",
+      nameEn: "Japan",
+      flag: "🇯🇵",
+      description: "بلد التكنولوجيا المتقدمة",
+      descriptionEn: "Land of advanced technology",
+      processingTime: "12 يوم",
+      processingTimeEn: "12 days",
+      popularity: "عالية جداً",
+      popularityEn: "Very High",
+    },
+    {
+      name: "السلفادور",
+      nameEn: "El Salvador",
+      flag: "🇸🇻",
+      description: "أصغر بلد في أمريكا الوسطى",
+      descriptionEn: "Smallest country in Central America",
+      processingTime: "10 يوم",
+      processingTimeEn: "10 days",
+      popularity: "منخفضة",
+      popularityEn: "Low",
+    },
+    // {
+    //   name: "جنوب أفريقيا",
+    //   nameEn: "South Africa",
+    //   flag: "🇿🇦",
+    //   description: "بلد التنوع الثقافي",
+    //   descriptionEn: "Country of cultural diversity",
+    //   processingTime: "15 يوم",
+    //   processingTimeEn: "15 days",
+    //   popularity: "عالية",
+    //   popularityEn: "High",
+    // },
   ];
 
   const getPopularityColor = (popularity: string) => {
@@ -164,15 +354,17 @@ const Countries = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {countries.map((country, index) => (
             <Card
               key={index}
-              className="group hover:shadow-[var(--shadow-strong)] transition-all duration-300 hover:-translate-y-2 border-border/50 bg-white overflow-hidden"
+              className="group hover:shadow-[var(--shadow-strong)] transition-all duration-300 hover:-translate-y-2 border-border/50 bg-gray-0 overflow-hidden"
             >
               <CardContent className="p-6">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="text-4xl bg-gradient-to-br from-white to-gray-200 rounded-md p-3">{country.flag}</div>
+                  <div className="text-4xl bg-gradient-to-br from-white to-gray-200 rounded-md p-3">
+                    {country.flag}
+                  </div>
                   <div className="flex-1">
                     <h3
                       className={`text-xl font-bold text-foreground ${
@@ -248,6 +440,60 @@ const Countries = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+        <div className="my-20">
+          <PlaneIcon className="w-12 h-12 text-primary mx-auto mb-4" />
+          <h3 className="text-2xl font-bold text-foreground mb-4 text-center">
+            {t("countries.service_providers")}
+          </h3>
+
+          <div className="mt-10">
+            <Swiper
+              dir={isRTL ? "rtl" : "ltr"}
+              modules={[Navigation, Autoplay]}
+              spaceBetween={20}
+              slidesPerView={2}
+              breakpoints={{
+                640: { slidesPerView: 3 },
+                1024: { slidesPerView: 5 },
+                1280: { slidesPerView: 7 },
+              }}
+              navigation={true}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+                reverseDirection: !isRTL, // ✅ autoplay goes left for LTR, right for RTL
+              }}
+              speed={500}
+              loop={true}
+              // force swiper to recalc on direction change
+              key={isRTL ? "rtl" : "ltr"}
+            >
+              {[
+                air1,
+                air2,
+                air3,
+                air4,
+                air5,
+                air6,
+                air7,
+                air8,
+                air9,
+                air10,
+              ].map((img, index) => (
+                <SwiperSlide key={index}>
+                  <div className="p-5 rounded-md bg-gradient-to-br from-white to-gray-200">
+                    <img
+                      src={img}
+                      draggable="false"
+                      alt={`slide-${index}`}
+                      className="rounded-md"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
 
         {/* Additional Info */}

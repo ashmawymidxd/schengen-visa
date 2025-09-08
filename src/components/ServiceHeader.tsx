@@ -5,26 +5,17 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const ServiceHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesHovered, setIsServicesHovered] = useState(false);
   const { language, setLanguage, t, isRTL } = useLanguage();
 
   const menuItems = [
-    { name: t("header.home"), href: "#home" },
-    { 
-      name: t("header.services"), 
-      href: "#services",
-      submenu: [
-        { name: t("header.service1"), href: "/request-schengen" },
-        { name: t("header.service2"), href: "/tourist-visa" },
-        { name: t("header.service3"), href: "/flight-reservation" },
-        { name: t("header.service4"), href: "/hotel-reservation" }
-      ]
-    },
-    { name: t("header.about"), href: "#about" },
-    { name: t("header.faq"), href: "#faq" },
-    { name: t("header.contact"), href: "#contact" },
+    { name: t("header.home"), href: "/" },
+    { name: t("header.service1"), href: "/request-schengen" },
+    { name: t("header.service2"), href: "/tourist-visa" },
+    { name: t("header.service3"), href: "/flight-reservation" },
+    { name: t("header.service4"), href: "/hotel-reservation" },
   ];
 
   const toggleLanguage = () => {
@@ -90,45 +81,15 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {menuItems.map((item) => (
-              <div 
+              <Link
                 key={item.name}
-                className="relative group"
-                onMouseEnter={() => item.submenu && setIsServicesHovered(true)}
-                onMouseLeave={() => item.submenu && setIsServicesHovered(false)}
+                to={item.href}
+                className={`text-foreground hover:text-primary ${
+                  isRTL ? "font-arabic" : ""
+                } font-medium transition-colors`}
               >
-                <a
-                  href={item.href}
-                  className={`flex items-center text-foreground hover:text-primary ${
-                    isRTL ? "font-arabic" : ""
-                  } font-medium transition-colors`}
-                >
-                  {item.name}
-                  {item.submenu && (
-                    <ChevronDown className={`w-4 h-4 ${isRTL ? "mr-2" : "ml-2"} transition-transform ${isServicesHovered ? 'rotate-180' : ''}`} />
-                  )}
-                </a>
-                
-                {/* Services Submenu */}
-                {item.submenu && isServicesHovered && (
-                  <div 
-                    className={`absolute mt-0 w-48 bg-white rounded-lg py-3 z-50 ${
-                      isRTL ? 'right-0' : 'left-0'
-                    } bg-white`}
-                    onMouseEnter={() => setIsServicesHovered(true)}
-                    onMouseLeave={() => setIsServicesHovered(false)}
-                  >
-                    {item.submenu.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        to={subItem.href}
-                        className="block px-4 py-3 text-sm text-foreground hover:bg-gray-100 hover:text-primary"
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+                {item.name}
+              </Link>
             ))}
           </nav>
 
@@ -173,38 +134,17 @@ const Header = () => {
           <nav className="lg:hidden pb-4 border-t border-border px-[10px]">
             <div className="flex flex-col gap-4 mt-4">
               {menuItems.map((item) => (
-                <div key={item.name}>
-                  <a
-                    href={item.href}
-                    className={`text-foreground hover:text-primary ${
-                      isRTL ? "font-arabic" : ""
-                    } font-medium py-2 flex items-center justify-between`}
-                    onClick={() => !item.submenu && setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                    {item.submenu && (
-                      <ChevronDown className="w-4 h-4" />
-                    )}
-                  </a>
-                  
-                  {/* Mobile submenu */}
-                  {item.submenu && (
-                    <div className="pl-4 mt-2 border-l border-border">
-                      {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.href}
-                          className="block py-2 text-sm text-muted-foreground hover:text-primary"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className={`text-foreground hover:text-primary ${
+                    isRTL ? "font-arabic" : ""
+                  } font-medium py-2`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </a>
               ))}
-              
               {/* Language toggle for mobile */}
               <Button
                 variant="outline"
@@ -239,4 +179,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default ServiceHeader;

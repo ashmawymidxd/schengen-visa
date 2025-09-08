@@ -1,36 +1,52 @@
 import {
   Shield,
-  Award,
+  // Award,
   Users,
   Clock,
   CheckCircle2,
   Star,
   Quote,
 } from "lucide-react";
+import solution from "../assets/about/solutions.png";
+import time from "../assets/about/time&effort.png";
+import knowen from "../assets/about/knowandexpert.png";
+import price from "../assets/about/price.png";
+import supprt from "../assets/about/support.png";
+import safe from "../assets/about/safe.png";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 const About = () => {
   const { t, isRTL } = useLanguage();
   const features = [
     {
-      icon: Award,
+      img: solution,
       title: t("about.features1.title"),
       description: t("about.features1.description"),
     },
     {
-      icon: Users,
+      img: time,
       title: t("about.features2.title"),
       description: t("about.features2.description"),
     },
     {
-      icon: Shield,
+      img: knowen,
       title: t("about.features3.title"),
       description: t("about.features3.description"),
     },
     {
-      icon: Clock,
+      img: price,
       title: t("about.features4.title"),
       description: t("about.features4.description"),
+    },
+    {
+      img: supprt,
+      title: t("about.features5.title"),
+      description: t("about.features5.description"),
+    },
+    {
+      img: safe,
+      title: t("about.features6.title"),
+      description: t("about.features6.description"),
     },
   ];
 
@@ -55,29 +71,6 @@ const About = () => {
     },
   ];
 
-  const achievements = [
-    {
-      number: "+8",
-      label: t("about.achievements.label1"),
-      color: "text-blue-500",
-    },
-    {
-      number: "+5000",
-      label: t("about.achievements.label2"),
-      color: "text-green-500",
-    },
-    {
-      number: "95%",
-      label: t("about.achievements.label3"),
-      color: "text-purple-500",
-    },
-    {
-      number: "26",
-      label: t("about.achievements.label4"),
-      color: "text-orange-500",
-    },
-  ];
-
   return (
     <section id="about" className="section-padding bg-white">
       <div className="container mx-auto">
@@ -95,90 +88,36 @@ const About = () => {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-16 items-center">
           {/* Left: Features */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h3 className="text-3xl font-bold text-foreground font-arabic mb-8">
-                {t("about.featuresTitle")}
-              </h3>
-
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex items-start gap-4 p-4 rounded-2xl bg-gradient-to-r from-muted/30 to-transparent border border-border/30"
-                >
-                  <div className="p-3 rounded-xl bg-primary/10 bg-gradient-to-br from-white to-gray-200">
-                    <feature.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-foreground mb-2 font-arabic">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 items-center">
+                {features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col items-center h-[27vh] gap-2 p-4 shadow-sm rounded-2xl  bg-muted/50  border border-border/30"
+                  >
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-white to-gray-200">
+                      <img src={feature.img} width={50} alt="" />
+                    </div>
+                    <h4 className="text-lg font-semibold text-foreground mb-1 font-arabic">
                       {feature.title}
                     </h4>
                     <p className="text-muted-foreground font-arabic">
                       {feature.description}
                     </p>
                   </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="bg-gradient-primary rounded-2xl p-6 text-white">
-              <h4 className="text-xl font-bold mb-4 font-arabic">
-                {t("about.commitmentTitle")}
-              </h4>
-              <div className="space-y-3">
-                {[
-                  t("about.commitmentItems.slug1"),
-                  t("about.commitmentItems.slug2"),
-                  t("about.commitmentItems.slug3"),
-                  t("about.commitmentItems.slug4"),
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
-                    <span className="font-arabic">{item}</span>
-                  </div>
                 ))}
               </div>
             </div>
           </div>
 
-          {/* Right: Stats */}
-          <div className="space-y-8">
-            <div className="grid grid-cols-2 gap-6">
-              {achievements.map((achievement, index) => (
-                <div
-                  key={index}
-                  className="text-center p-6 rounded-2xl bg-gradient-subtle border border-border/30"
-                >
-                  <div
-                    className={`text-4xl font-bold mb-2 ${achievement.color} font-arabic`}
-                  >
-                    {achievement.number}
-                  </div>
-                  <div className="text-muted-foreground font-arabic">
-                    {achievement.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-6 border border-accent/20">
-              <h4 className="text-xl font-bold text-foreground mb-4 font-arabic">
-                {t("about.visionTitle")}
-              </h4>
-              <p className="text-muted-foreground mb-4 font-arabic leading-relaxed">
-                {t("about.visionText1")}
-              </p>
-              <p className="text-muted-foreground font-arabic leading-relaxed">
-                {t("about.visionText2")}
-              </p>
-            </div>
-          </div>
+         
         </div>
 
         {/* Testimonials */}
-        <div className="mb-16">
+        <div className="my-16">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-foreground mb-4 font-arabic">
               {t("about.testimonialsTitle")}

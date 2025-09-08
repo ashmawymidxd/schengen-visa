@@ -1,94 +1,21 @@
 import {
   FileText,
-  Camera,
-  CreditCard,
-  Briefcase,
-  Plane,
-  Shield,
-  CheckCircle2,
   Download,
 } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Documents = () => {
   const { t, isRTL } = useLanguage();
 
-  const documents = [
-    {
-      icon: FileText,
-      title: t("documents.passport.title"),
-      description: t("documents.passport.desc"),
-      details: [
-        t("document.passport.details.d1"),
-        t("document.passport.details.d2"),
-        t("document.passport.details.d3"),
-      ],
-      required: true,
-    },
-    {
-      icon: Camera,
-      title: t("documents.photos.title"),
-      description: t("documents.photos.desc"),
-      details: [
-        t("document.photos.details.d1"),
-        t("document.photos.details.d2"),
-        t("document.photos.details.d3"),
-      ],
-      required: true,
-    },
-    {
-      icon: CreditCard,
-      title: t("documents.bank.title"),
-      description: t("documents.bank.desc"),
-      details: [
-        t("document.photos.bank.d1"),
-        t("document.photos.bank.d2"),
-        t("document.photos.bank.d3"),
-      ],
-      required: true,
-    },
-    {
-      icon: Briefcase,
-      title: t("documents.work.title"),
-      description: t("documents.work.desc"),
-      details: [
-        t("document.photos.work.d1"),
-        t("document.photos.work.d2"),
-        t("document.photos.work.d3"),
-      ],
-      required: true,
-    },
-    {
-      icon: Plane,
-      title: t("documents.travel.title"),
-      description: t("documents.travel.desc"),
-      details: [
-        t("document.photos.travel.d1"),
-        t("document.photos.travel.d2"),
-        t("document.photos.travel.d3"),
-      ],
-      required: true,
-    },
-    {
-      icon: Shield,
-      title: t("documents.insurance.title"),
-      description: t("documents.insurance.desc"),
-      details: [
-        t("document.photos.insurance.d1"),
-        t("document.photos.insurance.d2"),
-        t("document.photos.insurance.d3"),
-      ],
-      required: true,
-    },
-  ];
-
   const additionalDocuments = [
-    t("document.additional.birthCertificate"),
-    t("document.additional.parentConsent"),
-    t("document.additional.marriageCertificate"),
-    t("document.additional.salaryStatement"),
+    t("document.additional.pasport"),
+    t("document.additional.towImg"),
+    t("document.additional.piemetrice"),
+    t("document.additional.insurance"),
+    t("document.additional.reserveFlight"),
+    t("document.additional.profe"),
+    t("document.additional.home"),
+    t("document.additional.invetation"),
   ];
 
   return (
@@ -108,9 +35,7 @@ const Documents = () => {
             }`}
           >
             {t("documents.title")}
-            <span className="block text-primary">
-              {t("documents.subtitle")}
-            </span>
+            {t("documents.subtitle")}
           </h2>
           <p
             className={`text-xl text-muted-foreground max-w-3xl mx-auto ${
@@ -119,68 +44,6 @@ const Documents = () => {
           >
             {t("documents.description")}
           </p>
-        </div>
-
-        {/* Main Documents Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {documents.map((doc, index) => (
-            <Card
-              key={index}
-              className="group hover:shadow-[var(--shadow-strong)] transition-all duration-300 hover:-translate-y-2 border-border/50 backdrop-blur-sm relative overflow-hidden"
-            >
-              {doc.required && (
-                <div className="absolute top-4 left-4">
-                  <Badge
-                    className={`bg-success text-success-foreground ${
-                      isRTL ? "font-arabic" : ""
-                    }`}
-                  >
-                    {t("documents.required")}
-                  </Badge>
-                </div>
-              )}
-
-              <CardHeader className="text-center pb-4">
-                <div className="flex justify-center mb-4">
-                  <div className="p-4 rounded-2xl bg-gradient-to-br from-white to-gray-200 group-hover:scale-110 transition-transform duration-300">
-                    <doc.icon className="w-8 h-8 text-primary" />
-                  </div>
-                </div>
-                <CardTitle
-                  className={`text-xl font-bold text-foreground ${
-                    isRTL ? "font-arabic" : ""
-                  }`}
-                >
-                  {doc.title}
-                </CardTitle>
-              </CardHeader>
-
-              <CardContent className="space-y-4">
-                <p
-                  className={`text-muted-foreground text-center ${
-                    isRTL ? "font-arabic" : ""
-                  }`}
-                >
-                  {doc.description}
-                </p>
-
-                <div className="space-y-2">
-                  {doc.details.map((detail, idx) => (
-                    <div key={idx} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
-                      <span
-                        className={`text-sm text-muted-foreground ${
-                          isRTL ? "font-arabic" : ""
-                        }`}
-                      >
-                        {detail}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
         </div>
 
         {/* Additional Documents Section */}
@@ -200,7 +63,7 @@ const Documents = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {additionalDocuments.map((doc, index) => (
               <div
                 key={index}

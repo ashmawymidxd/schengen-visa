@@ -34,22 +34,26 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     ar: {
       // Header
       "header.home": "الرئيسية",
-      "header.services": "الخدمات",
-      "header.about": "عنا",
-      "header.requirements": "الشروط",
+      "header.services": "خدماتنا",
+      "header.about": "من نحن",
       "header.faq": "الأسئلة الشائعة",
       "header.contact": "اتصل بنا",
       "header.call_now": "اتصل الآن",
       "header.request_service": "اطلب الخدمة",
-      "header.company_name": "مكتب فيزا الشنغن",
+      "header.company_name": "برايم فيزا",
       "header.company_tagline": "خبراء استخراج التأشيرات",
+      "header.service1": "اطلب الشنغن",
+      "header.service2": "التاشيرات السياحية",
+      "header.service3": "حجز الطياران",
+      "header.service4": "حجز الفنادق",
 
       // Hero
       "hero.badge": "✈️ خبراء فيزا الشنغن في السعودية",
-      "hero.title": "استخراج فيزا الشنغن",
-      "hero.subtitle": "بكل سهولة وسرعة",
-      "hero.description":
-        "نحن نسهل لك إجراءات الحصول على تأشيرة الشنغن لدول أوروبا مع ضمان أعلى معدلات النجاح وأسرع الإجراءات",
+      "hero.subtitle":
+        "سواء كانت رحلتك سیاحة، عمل أو مغامرة، نوفر لك كل ما تحتاجھ لتسافر براحة وثقة",
+      "hero.description": `في برایم فیزا لخدمات التأشیرات، نؤمن أن السفر ھو بدایة لاكتشاف العالم وصناعة ذكریات لا تُنسى. لذلك وفرنا حلول متكاملة وسھلة
+        لكل ما یخص التأشیرات السیاحیة، طلبات الشنغن، وحجوزات الطیران السفر، لنمنحك تجربة خالیة من التعقید وبأعلى درجات الاحترافیة.
+        ھدفنا في برایم فیزا لخدمات التأشیرات أن نكون شریكك الأول في رحلتك، من الفكرة وحتى الوصول`,
       "hero.request_now": "اطلب الخدمة الآن",
       "hero.free_consultation": "استشارة مجانية",
       "hero.stats.clients": "+5000",
@@ -65,27 +69,10 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "services.subtitle": "لاستخراج فيزا الشنغن",
       "services.description":
         "من الاستشارة الأولى حتى الحصول على التأشيرة، نحن معك في كل خطوة لضمان نجاح طلبك",
-      "services.consultation.title": "استشارات مجانية",
-      "services.consultation.desc":
-        "نقدم استشارات مجانية شاملة حول متطلبات فيزا الشنغن وأفضل الطرق للحصول على الموافقة",
-      "services.appointment.title": "حجز موعد السفارة",
-      "services.appointment.desc":
-        "نقوم بحجز المواعيد الإلكترونية في السفارات والقنصليات بأسرع وقت ممكن",
-      "services.forms.title": "تعبئة النماذج",
-      "services.forms.desc":
-        "تعبئة جميع نماذج الطلب بدقة واحترافية لضمان عدم رفض الطلب لأسباب إدارية",
-      "services.insurance.title": "التأمين الصحي",
-      "services.insurance.desc":
-        "توفير التأمين الصحي المطلوب الذي يغطي كامل فترة الرحلة وجميع دول الشنغن",
-      "services.flight.title": "حجز الطيران",
-      "services.flight.desc":
-        "حجز تذاكر الطيران والمساعدة في اختيار أفضل المسارات والأسعار المناسبة (اختياري)",
-      "services.hotel.title": "حجز الفنادق",
-      "services.hotel.desc":
-        "حجز الفنادق المناسبة وترتيب الإقامة في الدول الأوروبية حسب برنامج الرحلة (اختياري)",
-      "services.tracking.title": "متابعة الطلب",
-      "services.tracking.desc":
-        "متابعة مستمرة لحالة الطلب من لحظة التقديم حتى الحصول على التأشيرة والتسليم",
+      "services.consultation.title": "طلب الشنغن",
+      "services.appointment.title": "التأشیرات السیاحیة",
+      "services.forms.title": "حجوزات الطیران",
+      "services.insurance.title": "حجوزات الفنادق",
       "services.cta.title": "هل تريد البدء الآن؟",
       "services.cta.desc":
         "احصل على استشارة مجانية وابدأ رحلتك نحو الحصول على فيزا الشنغن اليوم",
@@ -97,75 +84,143 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "steps.subtitle": "فيزا الشنغن",
       "steps.description":
         "عملية بسيطة ومنظمة من خمس خطوات لضمان حصولك على التأشيرة بأسرع وقت وأعلى معدل نجاح",
-      "steps.step1.title": "التواصل والاستشارة",
-      "steps.step1.desc":
-        "تواصل معنا للحصول على استشارة مجانية وتقييم شامل لحالتك وتحديد نوع التأشيرة المناسبة",
-      "steps.step2.title": "تجهيز المستندات",
-      "steps.step2.desc":
-        "نساعدك في تجهيز جميع المستندات المطلوبة وفقاً لمتطلبات السفارة ونراجعها بعناية",
-      "steps.step3.title": "تعبئة النماذج والتقديم",
-      "steps.step3.desc":
-        "نقوم بتعبئة جميع النماذج بدقة وحجز موعد السفارة وتقديم الطلب نيابة عنك",
-      "steps.step4.title": "متابعة حالة الطلب",
-      "steps.step4.desc":
-        "نتابع طلبك يومياً ونبقيك على اطلاع بكل التطورات حتى صدور القرار النهائي",
-      "steps.step5.title": "استلام التأشيرة والسفر",
-      "steps.step5.desc":
-        "بعد الموافقة، نساعدك في استلام التأشيرة ونقدم نصائح مهمة للسفر والوصول",
+      "steps.step1.title": "استشارة سریعة",
+      "steps.step1.desc": "نفھم احتیاجاتك ونحدد وجھتك",
+      "steps.step2.title": "تجھیز الأوراق",
+      "steps.step2.desc": "نرتب مستنداتك بدقة واحترافیة",
+      "steps.step3.title": "متابعة الطلب",
+      "steps.step3.desc": "نتابع مع السفارات خطوة بخطوة",
+      "steps.step4.title": "تأكید الحجوزات",
+      "steps.step4.desc": "نوفر تذاكر الطیران والفنادق بأفضل الأسعار",
+      "steps.step5.title": "تسلیم جاھز",
+      "steps.step5.desc": "تستلم كل أوراقك مكتملة وجاھزة للسفر بثقة.",
       "steps.bottom_cta.title": "جاهز لبدء رحلتك؟",
       "steps.bottom_cta.desc":
         "ابدأ معنا اليوم واحصل على فيزا الشنغن بأسرع وقت وأعلى معدل نجاح",
       "steps.bottom_cta.button": "ابدأ الآن - استشارة مجانية",
 
-      // Documents
-      "documents.badge": "المستندات المطلوبة",
-      "documents.title": "الأوراق والوثائق",
-      "documents.subtitle": "اللازمة للتقديم",
+      // Request Service
+      "documents.badge": "اطلب الشنغن",
+      "documents.title": "ما هي ",
+      "documents.subtitle": "الشنغن",
       "documents.description":
-        "قائمة شاملة بجميع المستندات المطلوبة للحصول على فيزا الشنغن. نساعدك في تحضيرها وتنظيمها",
-      "documents.required": "مطلوب",
-      "documents.passport.title": "جواز السفر",
-      "documents.passport.desc": "جواز سفر ساري المفعول لمدة 6 أشهر على الأقل",
-      "documents.photos.title": "الصور الشخصية",
-      "documents.photos.desc": "صورتان شخصيتان حديثتان بخلفية بيضاء",
-      "documents.bank.title": "كشف الحساب البنكي",
-      "documents.bank.desc": "كشف حساب بنكي للثلاثة أشهر الأخيرة",
-      "documents.work.title": "إثبات العمل",
-      "documents.work.desc": "خطاب من جهة العمل أو السجل التجاري",
-      "documents.travel.title": "حجوزات السفر",
-      "documents.travel.desc": "تذاكر الطيران وحجوزات الفنادق",
-      "documents.insurance.title": "التأمين الصحي",
-      "documents.insurance.desc": "تأمين صحي يغطي دول الشنغن",
-      "documents.additional.title": "مستندات إضافية (حسب الحالة)",
+        " تأشيرة الشنغن هي تأشيرة موحدة تتيح لك السفر إلى 29 دولة أوروبية باستخدام تأشيرة واحدة فقط، مما يجعلها الخيار الأمثل للرحلات السياحية أو العمل.",
+      "documents.additional.title": "الأوراق المطلوبة",
       "documents.additional.desc":
         "قد تحتاج هذه المستندات حسب حالتك الشخصية والعائلية",
+      "document.additional.pasport": "جواز سفر ساري المفعول",
+      "document.additional.towImg": "صورتان شخصيتان بحجم صور جواز السفر",
+      "document.additional.piemetrice": "البصمات (البيومترية)",
+      "document.additional.insurance": "البصمات (البيومترية)",
+      "document.additional.reserveFlight": "حجز طيران ذهاب وعودة",
+      "document.additional.profe":
+        "إثبات القدرة المالية (كشف حساب بنكي أو شهادة راتب)",
+      "document.additional.home": "إثبات السكن (حجز فندق أو مستند إقامة)",
+      "document.additional.invetation": "خطاب دعوة (إن وجد)",
       "documents.help.title": "هل تحتاج مساعدة في التحضير؟",
       "documents.help.desc":
         "نحن هنا لمساعدتك في تحضير وتنظيم جميع المستندات المطلوبة بشكل صحيح",
       "documents.help.button1": "قائمة المستندات PDF",
       "documents.help.button2": "اطلب المساعدة",
-      "document.passport.details.d1": "صفحتان فارغتان على الأقل",
-      "document.passport.details.d2": "نسخة من الصفحات المهمة",
-      "document.passport.details.d3": "جوازات سفر قديمة إن وجدت",
-      "document.photos.details.d1": "مقاس 35×45 مم",
-      "document.photos.details.d2": "خلفية بيضاء موحدة",
-      "document.photos.details.d3": "وضعية مواجهة بدون نظارة شمسية",
-      "document.photos.bank.d1": "باللغة العربية والإنجليزية",
-      "document.photos.bank.d2": "يظهر حركة مالية منتظمة",
-      "document.photos.bank.d3": "ختم البنك الرسمي",
-      "document.photos.work.d1": "خطاب رسمي من صاحب العمل",
-      "document.photos.work.d2": "يحدد الراتب ومدة الإجازة",
-      "document.photos.work.d3": "مترجم ومصدق إذا لزم الأمر",
-      "document.photos.travel.d1": "تذاكر ذهاب وإياب مؤكدة",
-      "document.photos.travel.d2": "حجز فندقي كامل المدة",
-      "document.photos.travel.d3": "برنامج سياحي مفصل",
-      "document.photos.insurance.d1": "تغطية 30,000 يورو على الأقل",
-      "document.photos.insurance.d2": "يشمل جميع دول الشنغن",
-      "document.photos.insurance.d3": "صالح طوال فترة الإقامة",
-      "document.additional.birthCertificate": "شهادة الميلاد للأطفال",
-      "document.additional.parentConsent": "موافقة الوالدين للقُصر",
-      "document.additional.marriageCertificate": "شهادة الزواج للمتزوجين",
-      "document.additional.salaryStatement": "كشف راتب للموظفين",
+      "request.faqs1.question": "كم مدة صلاحية تأشيرة الشنغن؟",
+      "request.faqs1.answer":
+        "عادة من 90 يومًا إلى 180 يومًا حسب نوع التأشيرة.",
+      "request.faqs2.question": "هل يمكن التقديم بدون حجز طيران وفندق؟",
+      "request.faqs2.answer": " لا، الحجوزات مطلوبة ضمن المستندات الأساسية",
+
+      "request.faqs3.question": "ما هي الشروط للحصول على تأشيرة شنغن؟",
+      "request.faqs3.answer": `أن يكون جواز السفر ساري المفعول لمدة لا تقل عن 3 أشهر بعد تاريخ العودة.
+      تقديم خطة سفر واضحة (تذاكر طيران ذهاب وعودة + حجز فندقي).
+      إثبات القدرة المالية (كشف حساب بنكي يغطي تكاليف الرحلة).
+      تأمين طبي للسفر يغطي فترة الإقامة داخل دول الشنغن.
+      سجل جنائي نظيف (قد تطلب بعض السفارات شهادة عدم محكومية).
+      أسباب قوية للعودة إلى بلدك (وظيفة، التزامات أسرية، ممتلكات...).
+      `,
+
+      // tourist visa service
+      "tourist.description":
+        "نقدّم في برايم فيزا خدمة استخراج التأشيرات السياحية لمجموعة واسعة من الوجهات العالمية، مع متابعة دقيقة لكل تفاصيل الطلب لضمان تجربة سفر مريحة وخالية من المتاعب. هدفنا أن نسهّل عليك كل الإجراءات، بحيث تركز فقط على الاستمتاع برحلتك.",
+
+      "tourist.why-us": "ما يميزنا",
+      "tourist.why-us-answer1": "سرعة في تجهيز الملفات والتقديم.",
+      "tourist.why-us-answer2": "متابعة مستمرة مع السفارات والجهات الرسمية.",
+      "tourist.why-us-answer3":
+        "استشارات مخصصة لاختيار الوجهة المناسبة حسب احتياجاتك.",
+      "tourist.why-us-answer4":
+        " رفع فرص قبول التأشيرة عبر مراجعة دقيقة للأوراق.",
+      "tourist.why-us-answer5":
+        "أسعار مناسبة وخدمة دعم متوفرة للإجابة على جميع استفساراتك.",
+      "tourist-visa.faqs1.question": "كم تستغرق مدة استخراج التأشيرة السياحية؟",
+      "tourist-visa.faqs1.answer":
+        " تختلف من دولة لأخرى، وتتراوح عادة بين 3 أيام و3 أسابيع.",
+
+      "tourist-visa.faqs2.question": "هل نسبة القبول مضمونة؟",
+      "tourist-visa.faqs2.answer":
+        " نحن نساعدك في تجهيز الأوراق بشكل احترافي لزيادة فرص القبول، لكن القرار النهائي يعود إلى السفارة.",
+
+      "tourist-visa.faqs3.question": "هل أحتاج إلى حضور مقابلة شخصية؟",
+      "tourist-visa.faqs3.answer":
+        " في بعض الدول مثل الولايات المتحدة وكندا، المقابلة الشخصية إلزامية، بينما في دول أخرى قد لا تكون مطلوبة.",
+
+      "tourist-visa.faqs4.question":
+        "هل يمكن التقديم لعائلة أو مجموعة في نفس الوقت؟",
+      "tourist-visa.faqs4.answer":
+        " نعم، يمكننا تجهيز طلبات جماعية للعائلات أو المجموعات السياحية.",
+
+      // Flight Reservation
+      "flight.reservation.description":
+        "في برايم فيزا نوفر لك خدمة حجز تذاكر الطيران إلى جميع الوجهات العالمية بأفضل الأسعار وبأعلى مستوى من المرونة. سواء كنت تبحث عن رحلة اقتصادية أو درجة رجال الأعمال أو الأولى، نساعدك في إيجاد الخيار الأمثل لرحلتك.",
+
+      "flight.reservation.why-us": "ما يميزنا",
+      "flight.reservation.why-us-answer1":
+        "أسعار تنافسية على جميع شركات الطيران.",
+      "flight.reservation.why-us-answer2":
+        "خيارات متعددة تناسب جميع الميزانيات.",
+      "flight.reservation.why-us-answer3":
+        "إمكانية تعديل أو إلغاء الحجز بسهولة.",
+      "flight.reservation.why-us-answer4": "دعم فني متواصل لمساعدتك في أي وقت.",
+      "flight.reservation.why-us-answer5":
+        "حجوزات مؤكدة مع تذكيرات بمواعيد السفر.",
+      "flight.reservation-visa.faqs1.question":
+        "هل أستطيع تغيير موعد الرحلة بعد الحجز؟",
+      "flight.reservation-visa.faqs1.answer":
+        " تختلف من دولة لأخرى، وتتراوح عادة بين 3 أيام و3 أسابيع.",
+
+      "flight.reservation-visa.faqs2.question":
+        "هل تقدمون عروض خاصة للرحلات الجماعية؟",
+      "flight.reservation-visa.faqs2.answer":
+        " نعم، نوفر أسعارًا خاصة للعائلات والمجموعات.",
+
+      "flight.reservation-visa.faqs3.question":
+        "هل أستطيع اختيار مقعدي مسبقًا؟",
+      "flight.reservation-visa.faqs3.answer":
+        " بالتأكيد، يمكنك اختيار مقعدك عند الحجز أو لاحقًا حسب توافر المقاعد.",
+
+      // Hotel Reservation
+      "hotel.reservation.description":
+        "مع برايم فيزا أصبح حجز فندقك أسهل من أي وقت مضى. نوفر خيارات متنوعة تناسب جميع الميزانيات، من الفنادق الاقتصادية إلى المنتجعات الفاخرة، مع تأكيد فوري وأسعار تنافسية.",
+
+      "hotel.reservation.why-us": "شبكة واسعة من الفنادق حول العالم.",
+      "hotel.reservation.why-us-answer1": "أسعار حصرية تنافسية.",
+      "hotel.reservation.why-us-answer2":
+        "خيارات تناسب كل الميزانيات (اقتصادي – متوسط – فاخر).",
+      "hotel.reservation.why-us-answer3":
+        "إمكانية تعديل أو إلغاء الحجز حسب سياسة الفندق",
+      "hotel.reservation.why-us-answer4":
+        " دعم متواصل لمتابعة أي طلب أو استفسار.",
+      "hotel.reservation.faqs1.question":
+        "هل يمكنني إلغاء الحجز واسترداد المبلغ؟",
+      "hotel.reservation.faqs1.answer":
+        " نعم، حسب سياسة الفندق. بعض الحجوزات تكون قابلة للاسترداد والبعض الآخر لا.",
+
+      "hotel.reservation.faqs2.question": "هل تشمل الأسعار الإفطار والضرائب؟",
+      "hotel.reservation.faqs2.answer":
+        " يعتمد على الفندق. نحن نوضح لك جميع التفاصيل قبل تأكيد الحجز.",
+
+      "hotel.reservation.faqs3.question":
+        "هل يمكنني الحجز لفترة طويلة (شهر أو أكثر)؟",
+      "hotel.reservation.faqs3.answer":
+        " نعم، نوفر خيارات للإقامات الطويلة بأسعار مميزة.",
 
       // Countries
       "countries.badge": "الدول المتاحة",
@@ -196,30 +251,36 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "country.sweden": "السويد",
       "country.iceland": "أيسلندا",
       "country.liechtenstein": "ليختنشتاين",
+      "countries.service_providers": "مزود الخدمة",
       // About
       "about.badge": "عن الشركة",
-      "about.title": "لماذا تختار",
-      "about.subtitle": "مكتب فيزا الشنغن؟",
+      "about.title": "لماذا اختار",
+      "about.subtitle": "برایم فیزا لحجز رحلتي القادمة؟",
       "about.description":
-        "نحن شركة متخصصة في استخراج تأشيرات الشنغن مع سجل حافل من النجاحات وثقة آلاف العملاء",
-      "about.commitmentTitle": "التزامنا تجاهك",
-      "about.commitmentItems.slug1": "استشارة مجانية وشفافية كاملة في الأسعار",
-      "about.commitmentItems.slug2": "متابعة يومية لحالة طلبك",
-      "about.commitmentItems.slug3": "ضمان إعادة التقديم في حالة الرفض",
-      "about.commitmentItems.slug4": "دعم فني على مدار الساعة",
-      "about.featuresTitle": "ما يميزنا عن الآخرين",
-      "about.features1.title": "خبرة واسعة",
+        "لأننا مش مجرد مكتب تأشیرات أو حجوزات، إحنا شریك رحلتك من أول خطوة لحد ما توصل وجھتك. معانا ھتلاقي",
+      "about.features1.title": "حلول متكاملة",
       "about.features1.description":
-        "أكثر من 8 سنوات في مجال استخراج التأشيرات",
+        "تأشیرات، حجوزات طیران، وفنادق – كل شيء في مكان واحد",
 
-      "about.features2.title": "فريق محترف",
-      "about.features2.description": "فريق متخصص من الخبراء والمستشارين",
+      "about.features2.title": "توفیر الوقت والجھد",
+      "about.features2.description":
+        "نختصر لك الإجراءات الطویلة ونقدّمھا بشكل منظم وسریع.",
 
-      "about.features3.title": "أمان وسرية",
-      "about.features3.description": "حماية تامة لجميع بياناتك الشخصية",
+      "about.features3.title": "خبرة ومعرفة",
+      "about.features3.description":
+        "فریق متخصص یعرف متطلبات كل سفارة وشركة طیران وفندق.",
 
-      "about.features4.title": "سرعة الإنجاز",
-      "about.features4.description": "أسرع معالجة مع ضمان الجودة",
+      "about.features4.title": "أسعار تنافسیة",
+      "about.features4.description":
+        "نضمن لك أفضل الصفقات دون تنازل عن الجودة.",
+
+      "about.features5.title": "دعم شخصي",
+      "about.features5.description":
+        "نتابع طلبك خطوة بخطوة ونكون متواجدین للإجابة على أي استفسار",
+
+      "about.features6.title": "ثقة وأمان",
+      "about.features6.description":
+        "كل تعاملاتك معنا آمنة وموثوقة، لتسافر براحة بال كاملة.",
 
       "about.testimonialsTitle": "ماذا يقول عملاؤنا",
       "about.testimonialsSubtitle":
@@ -265,37 +326,40 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "faq.cta.button1": "تواصل معنا الآن",
       "faq.cta.button2": "واتساب مباشر",
 
-      "faqs1.question": "ما هي مدة معالجة طلب فيزا الشنغن؟",
+      "faqs1.question": "ھل برایم فیزا معتمدة لدى السفارات؟",
       "faqs1.answer":
-        "عادة تتراوح مدة معالجة الطلب بين 7-15 يوم عمل من تاريخ تقديم الطلب في السفارة. في بعض الحالات الخاصة قد تصل إلى 30 يوم، وفي حالات الطوارئ يمكن معالجتها خلال 3 أيام عمل مقابل رسوم إضافية.",
+        "نعم، نحن نلتزم بجمیع الشروط والمتطلبات الرسمیة ونعمل بخبرة في تجھیز الملفات بشكل یتوافق مع معاییر السفارات.",
 
-      "faqs2.question": "ما هي نسبة قبول طلبات فيزا الشنغن؟",
+      "faqs2.question": "ھل یمكنني متابعة طلبي بعد التقدیم؟",
       "faqs2.answer":
-        "نحقق نسبة نجاح تصل إلى 95% لجميع طلبات عملائنا. هذا بفضل خبرتنا الواسعة ومراجعتنا الدقيقة لجميع المستندات قبل التقديم، بالإضافة إلى متابعتنا المستمرة مع السفارات.",
+        "بالتأكید، نوفر خدمة متابعة حالة الطلب خطوة بخطوة حتى استلام النتیجة",
 
-      "faqs3.question": "ماذا يحدث لو تم رفض طلبي؟",
+      "faqs3.question": "ھل توفرون باقات سفر متكاملة (تأشیرة + طیران + فندق)؟",
       "faqs3.answer":
-        "في حالة الرفض النادرة، نقوم بمراجعة أسباب الرفض مع العميل ونعيد تقديم الطلب مجاناً بعد معالجة الأسباب. كما نقدم ضمان استرداد جزئي للرسوم في حالات معينة حسب شروط الخدمة.",
+        "نعم، نوفر باقات شاملة تساعدك على تخطیط رحلتك من البدایة للنھایة بسھولة",
 
-      "faqs4.question": "هل يمكنني السفر إلى أكثر من دولة بتأشيرة واحدة؟",
+      "faqs4.question": "ھل ھناك رسوم استشارة منفصلة؟",
       "faqs4.answer":
-        "نعم، تأشيرة الشنغن تسمح لك بالسفر بحرية إلى جميع الـ 26 دولة في منطقة الشنغن بتأشيرة واحدة فقط. يمكنك البقاء لمدة تصل إلى 90 يوماً خلال فترة 180 يوم والتنقل بين الدول بدون قيود.",
+        "لا، الاستشارات الأولیة مجانیة، ولا ندفع أي رسوم إلا عند بدء الإجراءات الفعلیة.",
 
-      "faqs5.question": "ما هي مدة صلاحية تأشيرة الشنغن؟",
+      "faqs5.question": "ھل خدماتكم متاحة للأفراد فقط أم للشركات أیضًا؟",
       "faqs5.answer":
-        "تختلف مدة صلاحية التأشيرة حسب نوعها وظروف المتقدم. عادة تكون صالحة لمدة 90 يوماً خلال فترة 180 يوم. في بعض الحالات يمكن الحصول على تأشيرات متعددة الدخول صالحة لسنة أو أكثر.",
+        "نخدم الأفراد، العائلات، والشركات التي ترغب في تنظیم سفر موظفیھا.",
 
-      "faqs6.question": "كم تكلف خدماتكم لاستخراج فيزا الشنغن؟",
+      "faqs6.question": "كیف أضمن أن بیاناتي الشخصیة آمنة؟",
       "faqs6.answer":
-        "تتراوح تكلفة خدماتنا بين 800-1500 ريال سعودي حسب نوع الخدمة والدولة المختارة، بالإضافة إلى رسوم السفارة البالغة 80 يورو. نقدم استشارة مجانية لتحديد التكلفة الدقيقة حسب حالتك.",
+        "نلتزم بمعاییر عالیة من الأمان والسریة، وجمیع بیاناتك تحفظ بشكل آمن ومحمیة تمامًا",
 
-      "faqs7.question": "هل تقدمون خدمة متابعة الطلب؟",
+      "faqs7.question": "ھل أحتاج للحضور شخصیًا إلى المكتب؟",
       "faqs7.answer":
-        "نعم، نقدم خدمة متابعة شاملة من لحظة تقديم الطلب حتى استلام التأشيرة. ستحصل على تحديثات منتظمة عبر الرسائل النصية والواتساب، كما يمكنك متابعة حالة طلبك عبر موقعنا الإلكتروني.",
+        "لیس دائمًا، یمكننا إنجاز معظم الإجراءات إلكترونیًا أو عبر الھاتف، إلا إذا طلبت السفارة حضورك للمقابلة.",
 
-      "faqs8.question": "ما هي المستندات الأساسية المطلوبة؟",
+      "faqs8.question": "ھل یمكنكم مساعدتي في اختیار الوجھة المناسبة؟",
       "faqs8.answer":
-        "المستندات الأساسية تشمل: جواز سفر ساري، صور شخصية، كشف حساب بنكي، خطاب عمل، تأمين صحي، حجوزات طيران وفنادق، ونماذج الطلب المكتملة. قد تختلف المتطلبات قليلاً حسب الدولة المختارة.",
+        "نعم، نوفر استشارات شخصیة لمساعدتك في اختیار الوجھة المثالیة بناءً على میزانیتك واھتماماتك",
+      "faqs9.question": "ما الذي یمیز برایم فیزا عن غیرھا؟",
+      "faqs9.answer":
+        "نحن نوفّر مزیجًا من الخبرة، السرعة، والأسعار التنافسیة، مع دعم شخصي یجعلك تشعر بالثقة طوال رحلتك.",
 
       // Contact
       "contact.badge": "اتصل بنا",
@@ -368,60 +432,46 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       // Header
       "header.home": "Home",
       "header.services": "Services",
-      "header.about": "About",
-      "header.requirements": "Requirements",
+      "header.about": "About Us",
       "header.faq": "FAQ",
-      "header.contact": "Contact",
+      "header.contact": "Contact Us",
       "header.call_now": "Call Now",
       "header.request_service": "Request Service",
-      "header.company_name": "Schengen Visa",
-      "header.company_tagline": "Visa Processing Experts",
+      "header.company_name": "Prime Visa",
+      "header.company_tagline": "Visa Experts",
+      "header.service1": "ٌRequest Schengen",
+      "header.service2": "Tourism Visa",
+      "header.service3": "Flight Reservation",
+      "header.service4": "Hotel Reservations",
 
       // Hero
       "hero.badge": "✈️ Schengen Visa Experts in Saudi Arabia",
-      "hero.title": "Get Your Schengen Visa",
-      "hero.subtitle": "Easy and Fast",
-      "hero.description":
-        "We simplify the process of obtaining a Schengen visa for European countries with guaranteed highest success rates and fastest procedures",
+      "hero.subtitle":
+        "Whether your trip is for tourism, business, or adventure, we provide everything you need to travel with ease and confidence",
+      "hero.description": `At Prime Visa Services, we believe that travel is the beginning of discovering the world and creating unforgettable memories. That’s why we provide integrated and easy solutions for all things related to tourist visas, Schengen applications, and travel bookings, to give you a hassle-free experience with the highest professionalism.
+    Our goal at Prime Visa is to be your first partner in your journey, from the idea to the destination.`,
       "hero.request_now": "Request Service Now",
       "hero.free_consultation": "Free Consultation",
       "hero.stats.clients": "+5000",
-      "hero.stats.clients_label": "Happy Clients",
+      "hero.stats.clients_label": "Satisfied Clients",
       "hero.stats.success": "95%",
       "hero.stats.success_label": "Success Rate",
       "hero.stats.processing": "7 Days",
-      "hero.stats.processing_label": "Average Processing",
+      "hero.stats.processing_label": "Avg. Processing Time",
 
       // Services
-      "services.badge": "Our Complete Services",
-      "services.title": "We provide comprehensive services",
-      "services.subtitle": "for Schengen visa processing",
+      "services.badge": "Our Services",
+      "services.title": "Comprehensive Visa Solutions",
+      "services.subtitle": "For Schengen Applications",
       "services.description":
-        "From initial consultation to obtaining your visa, we are with you every step to ensure your application success",
-      "services.consultation.title": "Free Consultations",
-      "services.consultation.desc":
-        "We provide comprehensive free consultations about Schengen visa requirements and best ways to get approval",
-      "services.appointment.title": "Embassy Appointment Booking",
-      "services.appointment.desc":
-        "We book electronic appointments at embassies and consulates as quickly as possible",
-      "services.forms.title": "Form Completion",
-      "services.forms.desc":
-        "Complete all application forms accurately and professionally to ensure no rejection for administrative reasons",
-      "services.insurance.title": "Health Insurance",
-      "services.insurance.desc":
-        "Provide required health insurance that covers the entire trip period and all Schengen countries",
-      "services.flight.title": "Flight Booking",
-      "services.flight.desc":
-        "Book flight tickets and help choose the best routes and suitable prices (optional)",
-      "services.hotel.title": "Hotel Booking",
-      "services.hotel.desc":
-        "Book suitable hotels and arrange accommodation in European countries according to your trip itinerary (optional)",
-      "services.tracking.title": "Application Tracking",
-      "services.tracking.desc":
-        "Continuous monitoring of application status from submission until visa receipt and delivery",
-      "services.cta.title": "Ready to Start Now?",
+        "From the first consultation to getting your visa, we are with you every step of the way to ensure success",
+      "services.consultation.title": "Schengen Application",
+      "services.appointment.title": "Tourist Visas",
+      "services.forms.title": "Flight Bookings",
+      "services.insurance.title": "Hotel Reservations",
+      "services.cta.title": "Ready to Start?",
       "services.cta.desc":
-        "Get a free consultation and start your journey to obtain a Schengen visa today",
+        "Get a free consultation and begin your journey toward securing your Schengen visa today",
       "services.cta.button": "Get Free Consultation",
 
       // Steps
@@ -429,98 +479,158 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "steps.title": "Steps to Get Your",
       "steps.subtitle": "Schengen Visa",
       "steps.description":
-        "A simple and organized five-step process to ensure you get your visa in the shortest time with the highest success rate",
-      "steps.step1.title": "Contact and Consultation",
+        "A simple, organized 5-step process to guarantee you get your visa quickly and with the highest success rate",
+      "steps.step1.title": "Quick Consultation",
       "steps.step1.desc":
-        "Contact us for a free consultation and comprehensive assessment of your case to determine the appropriate visa type",
+        "We understand your needs and identify your destination",
       "steps.step2.title": "Document Preparation",
       "steps.step2.desc":
-        "We help you prepare all required documents according to embassy requirements and review them carefully",
-      "steps.step3.title": "Form Completion and Submission",
-      "steps.step3.desc":
-        "We complete all forms accurately, book embassy appointment, and submit the application on your behalf",
-      "steps.step4.title": "Application Status Tracking",
+        "We organize your documents with accuracy and professionalism",
+      "steps.step3.title": "Application Follow-up",
+      "steps.step3.desc": "We track your case with the embassies step by step",
+      "steps.step4.title": "Booking Confirmation",
       "steps.step4.desc":
-        "We track your application daily and keep you updated with all developments until the final decision",
-      "steps.step5.title": "Visa Collection and Travel",
+        "We provide flight and hotel bookings at the best rates",
+      "steps.step5.title": "Ready Delivery",
       "steps.step5.desc":
-        "After approval, we help you collect the visa and provide important travel and arrival tips",
-      "steps.bottom_cta.title": "Ready to Start Your Journey?",
+        "You receive all your documents complete and ready for travel",
+      "steps.bottom_cta.title": "Ready to Begin?",
       "steps.bottom_cta.desc":
-        "Start with us today and get your Schengen visa in the shortest time with the highest success rate",
+        "Start today and get your Schengen visa with speed and confidence",
       "steps.bottom_cta.button": "Start Now - Free Consultation",
 
-      // Documents
-      "documents.badge": "Required Documents",
-      "documents.title": "Papers and Documents",
-      "documents.subtitle": "Needed for Application",
+      // Request Service
+      "documents.badge": "Request Schengen Visa",
+      "documents.title": "What is",
+      "documents.subtitle": "Schengen",
       "documents.description":
-        "Comprehensive list of all documents required to obtain a Schengen visa. We help you prepare and organize them",
-      "documents.required": "Required",
-      "documents.passport.title": "Passport",
-      "documents.passport.desc": "Valid passport for at least 6 months",
-      "documents.photos.title": "Personal Photos",
-      "documents.photos.desc":
-        "Two recent personal photos with white background",
-      "documents.bank.title": "Bank Statement",
-      "documents.bank.desc": "Bank statement for the last three months",
-      "documents.work.title": "Work Proof",
-      "documents.work.desc": "Letter from employer or commercial registration",
-      "documents.travel.title": "Travel Bookings",
-      "documents.travel.desc": "Flight tickets and hotel reservations",
-      "documents.insurance.title": "Health Insurance",
-      "documents.insurance.desc":
-        "Health insurance covering Schengen countries",
-      "documents.additional.title": "Additional Documents (Case-specific)",
+        "The Schengen Visa is a unified visa that allows you to travel to 29 European countries with just one visa, making it the ideal choice for tourism or business trips.",
+      "documents.additional.title": "Required Documents",
       "documents.additional.desc":
-        "You may need these documents depending on your personal and family situation",
-      "documents.help.title": "Need Help with Preparation?",
+        "These documents may be required depending on your personal and family situation",
+      "document.additional.pasport": "Valid Passport",
+      "document.additional.towImg": "Two passport-sized photos",
+      "document.additional.piemetrice": "Biometric fingerprints",
+      "document.additional.insurance": "Travel medical insurance",
+      "document.additional.reserveFlight": "Round-trip flight reservation",
+      "document.additional.profe":
+        "Proof of financial means (bank statement or salary certificate)",
+      "document.additional.home":
+        "Proof of accommodation (hotel booking or residence document)",
+      "document.additional.invetation": "Invitation letter (if available)",
+      "documents.help.title": "Need help with preparation?",
       "documents.help.desc":
         "We are here to help you prepare and organize all required documents correctly",
       "documents.help.button1": "Documents List PDF",
-      "documents.help.button2": "Request Help",
-      "document.passport.details.d1": "At least two blank pages",
-      "document.passport.details.d2": "Copy of important pages",
-      "document.passport.details.d3": "Old passports if available",
+      "documents.help.button2": "Request Assistance",
+      "request.faqs1.question": "How long is the Schengen visa valid?",
+      "request.faqs1.answer":
+        "Usually from 90 to 180 days depending on the type of visa.",
+      "request.faqs2.question":
+        "Can I apply without flight and hotel reservations?",
+      "request.faqs2.answer":
+        "No, reservations are required as part of the basic documents.",
+      "request.faqs3.question":
+        "What are the conditions for obtaining a Schengen visa?",
+      "request.faqs3.answer": `- A valid passport for at least 3 months after return date.
+- Clear travel plan (round-trip flight tickets + hotel booking).
+- Proof of financial means (bank statement covering trip expenses).
+- Travel medical insurance covering the stay within Schengen countries.
+- Clean criminal record (some embassies may require a police clearance certificate).
+- Strong reasons to return to your home country (job, family obligations, property...).`,
 
-      "document.photos.details.d1": "Size 35×45 mm",
-      "document.photos.details.d2": "Uniform white background",
-      "document.photos.details.d3": "Frontal pose without sunglasses",
+      // Tourist Visa Service
+      "tourist.description":
+        "At Prime Visa, we provide tourist visa services for a wide range of global destinations, with careful follow-up on every detail of your application to ensure a smooth and hassle-free travel experience. Our goal is to simplify all procedures so you can focus only on enjoying your trip.",
+      "tourist.why-us": "Why Choose Us",
+      "tourist.why-us-answer1": "Fast processing of files and applications.",
+      "tourist.why-us-answer2":
+        "Continuous follow-up with embassies and official authorities.",
+      "tourist.why-us-answer3":
+        "Personalized consultations to choose the destination that suits your needs.",
+      "tourist.why-us-answer4":
+        "Increased chances of approval through thorough document review.",
+      "tourist.why-us-answer5":
+        "Affordable prices and dedicated support available to answer all your questions.",
+      "tourist-visa.faqs1.question":
+        "How long does it take to issue a tourist visa?",
+      "tourist-visa.faqs1.answer":
+        "It varies from country to country, usually between 3 days and 3 weeks.",
+      "tourist-visa.faqs2.question": "Is visa approval guaranteed?",
+      "tourist-visa.faqs2.answer":
+        "We help you prepare your documents professionally to increase your chances, but the final decision lies with the embassy.",
+      "tourist-visa.faqs3.question":
+        "Do I need to attend a personal interview?",
+      "tourist-visa.faqs3.answer":
+        "In some countries like the US and Canada, the interview is mandatory, while in others it may not be required.",
+      "tourist-visa.faqs4.question":
+        "Can I apply for a family or group at the same time?",
+      "tourist-visa.faqs4.answer":
+        "Yes, we can prepare group applications for families or tourist groups.",
 
-      "document.photos.bank.d1": "In Arabic and English",
-      "document.photos.bank.d2": "Shows regular financial activity",
-      "document.photos.bank.d3": "Official bank stamp",
+      // Flight Reservation
+      "flight.reservation.description":
+        "At Prime Visa, we provide flight reservation services to all global destinations at the best prices and with maximum flexibility. Whether you are looking for an economy, business, or first-class ticket, we help you find the best option for your trip.",
+      "flight.reservation.why-us": "Why Choose Us",
+      "flight.reservation.why-us-answer1":
+        "Competitive prices across all airlines.",
+      "flight.reservation.why-us-answer2":
+        "Multiple options to suit all budgets.",
+      "flight.reservation.why-us-answer3":
+        "Easy modification or cancellation of bookings.",
+      "flight.reservation.why-us-answer4":
+        "24/7 technical support to assist you anytime.",
+      "flight.reservation.why-us-answer5":
+        "Confirmed bookings with travel reminders.",
+      "flight.reservation-visa.faqs1.question":
+        "Can I change my flight date after booking?",
+      "flight.reservation-visa.faqs1.answer":
+        "Yes, depending on the airline's policies and ticket type.",
+      "flight.reservation-visa.faqs2.question":
+        "Do you offer special deals for group travel?",
+      "flight.reservation-visa.faqs2.answer":
+        "Yes, we provide special rates for families and groups.",
+      "flight.reservation-visa.faqs3.question":
+        "Can I choose my seat in advance?",
+      "flight.reservation-visa.faqs3.answer":
+        "Of course, you can select your seat at booking or later depending on availability.",
 
-      "document.photos.work.d1": "Official letter from employer",
-      "document.photos.work.d2": "Specifies salary and leave duration",
-      "document.photos.work.d3": "Translated and certified if required",
-
-      "document.photos.travel.d1": "Confirmed round-trip tickets",
-      "document.photos.travel.d2": "Hotel booking for full duration",
-      "document.photos.travel.d3": "Detailed travel itinerary",
-
-      "document.photos.insurance.d1": "Coverage of at least €30,000",
-      "document.photos.insurance.d2": "Covers all Schengen countries",
-      "document.photos.insurance.d3": "Valid throughout the stay",
-
-      "document.additional.birthCertificate": "Children's birth certificate",
-      "document.additional.parentConsent": "Parental consent for minors",
-      "document.additional.marriageCertificate":
-        "Marriage certificate for married applicants",
-      "document.additional.salaryStatement": "Salary statement for employees",
+      // Hotel Reservation
+      "hotel.reservation.description":
+        "With Prime Visa, booking your hotel is easier than ever. We offer a wide range of options to suit all budgets, from economy hotels to luxury resorts, with instant confirmation and competitive prices.",
+      "hotel.reservation.why-us": "Wide network of hotels worldwide.",
+      "hotel.reservation.why-us-answer1": "Exclusive competitive prices.",
+      "hotel.reservation.why-us-answer2":
+        "Options to suit all budgets (economy – mid-range – luxury).",
+      "hotel.reservation.why-us-answer3":
+        "Possibility to modify or cancel the booking according to hotel policy.",
+      "hotel.reservation.why-us-answer4":
+        "Continuous support to follow up on any request or inquiry.",
+      "hotel.reservation.faqs1.question":
+        "Can I cancel my booking and get a refund?",
+      "hotel.reservation.faqs1.answer":
+        "Yes, depending on the hotel policy. Some bookings are refundable, others are not.",
+      "hotel.reservation.faqs2.question":
+        "Do prices include breakfast and taxes?",
+      "hotel.reservation.faqs2.answer":
+        "It depends on the hotel. We show you all details before confirming the booking.",
+      "hotel.reservation.faqs3.question":
+        "Can I book for a long stay (a month or more)?",
+      "hotel.reservation.faqs3.answer":
+        "Yes, we offer long-stay options at special rates.",
 
       // Countries
       "countries.badge": "Available Countries",
-      "countries.title": "Schengen Zone Countries",
+      "countries.title": "Schengen Area Countries",
       "countries.subtitle": "We Cover",
       "countries.description":
-        "We help you get a visa for all Schengen zone countries with specialized expertise in each country",
+        "We assist in obtaining visas for all Schengen countries with specialized expertise in each",
       "countries.processing_time": "Processing Time",
       "countries.popularity": "Destination Popularity",
-      "countries.request_visa": "Request Visa for",
+      "countries.request_visa": "Request Visa",
       "countries.one_visa.title": "One Visa for All Schengen Countries",
       "countries.one_visa.desc":
-        "With one Schengen visa, you can visit all 26 countries in the Schengen zone freely for up to 90 days within a 180-day period",
+        "With one Schengen visa, you can visit all 26 countries in the area for up to 90 days within a 180-day period",
       "country.norway": "Norway",
       "country.switzerland": "Switzerland",
       "country.czech_republic": "Czech Republic",
@@ -538,127 +648,127 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "country.sweden": "Sweden",
       "country.iceland": "Iceland",
       "country.liechtenstein": "Liechtenstein",
+      "countries.service_providers": "Service Providers",
+
       // About
       "about.badge": "About Us",
       "about.title": "Why Choose",
-      "about.subtitle": "Schengen Visa Office?",
+      "about.subtitle": "Prime Visa for Your Next Trip?",
       "about.description":
-        "We specialize in Schengen visa processing with a proven track record and thousands of satisfied clients.",
+        "We are not just a visa office or booking agency, we are your travel partner from the first step until you reach your destination. With us, you’ll find:",
+      "about.features1.title": "Integrated Solutions",
+      "about.features1.description":
+        "Visas, flight bookings, and hotels – everything in one place",
 
-      "about.commitmentTitle": "Our Commitment to You",
-      "about.commitmentItems.slug1":
-        "Free consultation and full price transparency",
-      "about.commitmentItems.slug2":
-        "Daily follow-up on your application status",
-      "about.commitmentItems.slug3":
-        "Resubmission guarantee in case of rejection",
-      "about.commitmentItems.slug4": "24/7 technical support",
-
-      "about.featuresTitle": "What Makes Us Different",
-      "about.features1.title": "Extensive Experience",
-      "about.features1.description": "Over 8 years in visa processing",
-
-      "about.features2.title": "Professional Team",
+      "about.features2.title": "Save Time & Effort",
       "about.features2.description":
-        "A specialized team of experts and consultants",
+        "We simplify and speed up the long procedures.",
 
-      "about.features3.title": "Safety & Confidentiality",
+      "about.features3.title": "Expertise & Knowledge",
       "about.features3.description":
-        "Complete protection of all your personal data",
+        "Our team knows the requirements of every embassy, airline, and hotel.",
 
-      "about.features4.title": "Fast Processing",
+      "about.features4.title": "Competitive Prices",
       "about.features4.description":
-        "Fastest processing with guaranteed quality",
+        "We guarantee the best deals without compromising quality.",
+
+      "about.features5.title": "Personal Support",
+      "about.features5.description":
+        "We follow up on your application step by step and are always available for inquiries.",
+
+      "about.features6.title": "Trust & Security",
+      "about.features6.description":
+        "All your dealings with us are safe and reliable, giving you peace of mind.",
 
       "about.testimonialsTitle": "What Our Clients Say",
       "about.testimonialsSubtitle":
-        "Real experiences from our clients who trusted us with their visa applications",
-
+        "Real experiences from clients who trusted us with their visas",
       "about.ctaTitle": "Join Thousands of Happy Clients",
       "about.ctaSubtitle":
-        "Start your journey to getting a Schengen visa today and enjoy an unforgettable travel experience",
-      "about.ctaButton": "Start Now",
-
+        "Start your journey today toward getting a Schengen visa and enjoy an unforgettable travel experience",
+      "about.ctaButton": "Start with Us Now",
       "about.visionTitle": "Our Vision & Mission",
       "about.visionText1":
-        "We aim to be the first choice for all Saudi travelers to obtain Schengen visas quickly with the highest success rate.",
+        "We aim to be the first choice for Saudi travelers to obtain Schengen visas quickly and successfully.",
       "about.visionText2":
-        "Our mission is to make travel easier for our clients and turn their dream of visiting Europe into reality with minimal effort and time.",
+        "Our mission is to make travel easier and turn the dream of visiting Europe into reality with minimal effort and time.",
 
       "about.testimonials.c1.name": "Ahmed Mohammed Al-Ghamdi",
       "about.testimonials.c1.location": "Riyadh",
       "about.testimonials.c1.text":
-        "Excellent and fast service. I got my German visa in just one week. Very professional team with continuous follow-up.",
+        "Excellent and fast service, I got my Germany visa in just one week. Very professional team and continuous follow-up.",
 
       "about.testimonials.c2.name": "Fatimah Abdullah",
       "about.testimonials.c2.location": "Jeddah",
       "about.testimonials.c2.text":
-        "I was worried about the visa process, but the team helped me with everything. I got my French visa without any issues.",
+        "I was worried about visa procedures, but the team helped with everything. I got my France visa without any issues.",
 
       "about.testimonials.c3.name": "Khalid Al-Otaibi",
       "about.testimonials.c3.location": "Dammam",
       "about.testimonials.c3.text":
-        "The best visa office in Saudi Arabia. Excellent customer service and a very high success rate. Highly recommended.",
-
+        "Best visa office in Saudi Arabia. High-class customer service and very high success rate. Strongly recommended.",
       "about.achievements.label1": "Years of Experience",
       "about.achievements.label2": "Satisfied Clients",
       "about.achievements.label3": "Success Rate",
       "about.achievements.label4": "Countries Covered",
 
       // FAQ
-      "faq.badge": "FAQs",
+      "faq.badge": "FAQ",
       "faq.title": "Answers to the Most",
       "faq.subtitle": "Common Questions",
       "faq.description":
-        "Comprehensive answers to all the questions you may have about Schengen visas and our services",
-
-      "faq.cta.title": "Didn’t Find Your Answer?",
+        "Comprehensive answers to all your questions about Schengen visas and our services",
+      "faq.cta.title": "Didn’t find your answer?",
       "faq.cta.desc":
-        "Our expert team is ready to answer all your inquiries and help solve any issue",
+        "Our expert team is ready to answer all your inquiries and help you with any issue",
       "faq.cta.button1": "Contact Us Now",
       "faq.cta.button2": "Direct WhatsApp",
 
-      "faqs1.question":
-        "How long does it take to process a Schengen visa application?",
+      "faqs1.question": "Is Prime Visa accredited by embassies?",
       "faqs1.answer":
-        "Processing usually takes 7–15 working days from submission at the embassy. In some special cases, it may take up to 30 days, while urgent cases can be processed in 3 days for an additional fee.",
+        "Yes, we comply with all official requirements and prepare files that meet embassy standards.",
 
-      "faqs2.question":
-        "What is the approval rate for Schengen visa applications?",
+      "faqs2.question": "Can I track my application after submission?",
       "faqs2.answer":
-        "We achieve up to a 95% success rate for our clients’ applications, thanks to our extensive experience, detailed document checks, and continuous follow-up with embassies.",
+        "Absolutely, we provide step-by-step updates on your application until the result is received.",
 
-      "faqs3.question": "What happens if my application is rejected?",
+      "faqs3.question":
+        "Do you provide complete travel packages (Visa + Flight + Hotel)?",
       "faqs3.answer":
-        "In the rare case of rejection, we review the reasons with the client and resubmit the application for free after addressing the issues. We also offer partial refunds under certain service conditions.",
+        "Yes, we provide comprehensive packages to help you plan your trip easily from start to finish.",
 
-      "faqs4.question": "Can I travel to multiple countries with one visa?",
+      "faqs4.question": "Are there separate consultation fees?",
       "faqs4.answer":
-        "Yes, the Schengen visa allows you to travel freely to all 26 countries in the Schengen Area with a single visa. You can stay up to 90 days within a 180-day period and move between countries without restrictions.",
+        "No, initial consultations are free. You only pay once the actual process begins.",
 
-      "faqs5.question": "What is the validity period of a Schengen visa?",
+      "faqs5.question":
+        "Are your services for individuals only or also for companies?",
       "faqs5.answer":
-        "Validity depends on the type of visa and applicant’s situation. Usually, it allows 90 days of stay within 180 days. In some cases, you may get multiple-entry visas valid for one year or more.",
+        "We serve individuals, families, and companies that wish to organize travel for their employees.",
 
-      "faqs6.question": "How much do your Schengen visa services cost?",
+      "faqs6.question": "How do I know my personal data is safe?",
       "faqs6.answer":
-        "Our service fees range between 800–1500 SAR depending on the service type and destination country, in addition to the embassy fee of €80. We offer free consultations to provide accurate pricing based on your case.",
+        "We adhere to high security and confidentiality standards. Your data is fully protected and safe.",
 
-      "faqs7.question": "Do you provide application follow-up services?",
+      "faqs7.question": "Do I need to visit the office in person?",
       "faqs7.answer":
-        "Yes, we provide full follow-up from submission until you receive your visa. You’ll get regular updates via SMS and WhatsApp, and you can also track your application status through our website.",
+        "Not always, most procedures can be completed online or by phone unless the embassy requires your attendance.",
 
-      "faqs8.question": "What are the basic required documents?",
+      "faqs8.question": "Can you help me choose the right destination?",
       "faqs8.answer":
-        "The basic documents include: valid passport, personal photos, bank statement, employment letter, health insurance, flight and hotel bookings, and completed application forms. Requirements may vary slightly depending on the country.",
+        "Yes, we provide personal consultations to help you choose the best destination based on your budget and interests.",
+
+      "faqs9.question": "What makes Prime Visa different?",
+      "faqs9.answer":
+        "We offer a unique mix of expertise, speed, and competitive pricing, with personal support that builds confidence throughout your journey.",
 
       // Contact
       "contact.badge": "Contact Us",
       "contact.title": "Get in Touch",
-      "contact.subtitle": "and Start Your Journey Today",
+      "contact.subtitle": "And Start Your Journey Today",
       "contact.description":
         "Our team is ready to answer all your questions and help you get your Schengen visa",
-      "contact.info.title": "Contact Information",
+      "contact.info.title": "Contact Info",
       "contact.phone.title": "Phone / WhatsApp",
       "contact.email.title": "Email",
       "contact.address.title": "Address",
@@ -669,11 +779,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "contact.quick.email": "Send Email",
       "contact.map.title": "Our Location on Map",
       "contact.map.desc":
-        "Visit us at our office in the heart of Riyadh for personal consultation",
+        "Visit our office in the heart of Riyadh for a personal consultation",
       "contact.map.button": "View on Google Maps",
       "contact.form.title": "Send Us a Message",
       "contact.form.desc":
-        "Fill out the form below and we will contact you within 24 hours",
+        "Fill in the form below and we’ll contact you within 24 hours",
       "contact.form.name": "Full Name",
       "contact.form.phone": "Phone Number",
       "contact.form.email": "Email",
@@ -681,11 +791,12 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "contact.form.message": "Inquiry Details",
       "contact.form.send": "Send Message",
       "contact.form.privacy":
-        "🔒 We respect your privacy. All information sent is protected and will not be shared with third parties. We will use your information only to respond to your inquiry and provide our services.",
-      "contact.hours.weekdays": " hours weekdays",
-      "contact.hours.weekend": "24 Hours at week",
-      "contact.address.line1": "Riyadh - Al-Malaz",
+        "🔒 We respect your privacy. All information is protected and will not be shared with third parties. We only use your info to respond to your inquiry and provide our services.",
+      "contact.hours.weekdays": "Working Hours",
+      "contact.hours.weekend": "Available 24/7 - All Week",
+      "contact.address.line1": "Riyadh - Al Malaz District",
       "contact.address.line2": "Riyadh",
+
       // Footer
       "footer.home": "Home",
       "footer.services": "Services",
@@ -705,10 +816,10 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "footer.enter_email": "Enter your email",
 
       "footer.company.desc":
-        "Your trusted partner for obtaining Schengen visas quickly with the highest success rate in Saudi Arabia.",
+        "Your trusted partner for obtaining Schengen visas quickly and successfully in Saudi Arabia.",
       "footer.quick_links": "Quick Links",
       "footer.service": "Our Services",
-      "footer.legal": "Legal Information",
+      "footer.legal": "Legal Info",
       "footer.follow": "Follow Us",
       "footer.newsletter.title": "Subscribe to Our Newsletter",
       "footer.newsletter.desc":
@@ -716,8 +827,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "footer.newsletter.button": "Subscribe",
       "footer.copyright": "© 2024 Schengen Visa Office. All rights reserved.",
       "footer.licensed": "Licensed by the Saudi Ministry of Commerce",
-      "footer.member": "Member of the Riyadh Chamber of Commerce",
-      "footer.address": "Riyadh - Al-Malaz",
+      "footer.member": "Member of Riyadh Chamber of Commerce",
+      "footer.address": "Riyadh - Al Malaz District",
     },
   };
 

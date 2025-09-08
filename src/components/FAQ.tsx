@@ -31,7 +31,7 @@ const FAQ = () => {
     },
     {
       question: t("faqs6.question"),
-      answer: t("faqs7.answer"),
+      answer: t("faqs6.answer"),
     },
     {
       question: t("faqs7.question"),
