@@ -22,6 +22,9 @@ import hotel14 from "../assets/hotels/h14.png";
 import hotel15 from "../assets/hotels/h15.png";
 import hotel16 from "../assets/hotels/h16.png";
 import hotel17 from "../assets/hotels/h17.png";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
 
 import { Navigation, Autoplay } from "swiper/modules";
 const HotelReservation = () => {
