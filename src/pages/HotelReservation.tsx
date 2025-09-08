@@ -91,6 +91,7 @@ const HotelReservation = () => {
               modules={[Navigation, Autoplay]}
               spaceBetween={20}
               slidesPerView={2}
+className="flex gap-4"
               breakpoints={{
                 640: { slidesPerView: 3 },
                 1024: { slidesPerView: 5 },
