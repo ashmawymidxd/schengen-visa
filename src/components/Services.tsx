@@ -14,25 +14,25 @@ const Services = () => {
       img: rquest,
       title: t("services.consultation.title"),
       color: "text-blue-500",
-      href:"/request-schengen"
+      href: "/request-schengen",
     },
     {
       img: visa,
       title: t("services.appointment.title"),
       color: "text-green-500",
-      href:"/tourist-visa"
+      href: "/tourist-visa",
     },
     {
       img: flay,
       title: t("services.forms.title"),
       color: "text-purple-500",
-      href:"/flight-reservation"
+      href: "/flight-reservation",
     },
     {
       img: hotel,
       title: t("services.insurance.title"),
       color: "text-red-500",
-      href:"/hotel-reservation"
+      href: "/hotel-reservation",
     },
   ];
 
@@ -66,11 +66,8 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <Link to={service.href}>
-              <Card
-                key ={index}
-                className="group hover:shadow-[var(--shadow-strong)] transition-all duration-300 hover:-translate-y-2 border-border/50 bg-white/70 backdrop-blur-sm"
-              >
+            <Link to={service.href} key={index}>
+              <Card className="group hover:shadow-[var(--shadow-strong)] transition-all duration-300 hover:-translate-y-2 border-border/50 bg-white/70 backdrop-blur-sm">
                 <CardHeader className="text-center pb-4">
                   <div className="flex justify-center mb-4">
                     <div
