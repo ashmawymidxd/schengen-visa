@@ -22,7 +22,6 @@ import { Navigation, Autoplay } from "swiper/modules";
 const FlightReservation = () => {
   const { t, isRTL } = useLanguage();
   const additionalDocuments = [
-    t("document.additional.pasport"),
     t("flight.reservation.why-us-answer1"),
     t("flight.reservation.why-us-answer2"),
     t("flight.reservation.why-us-answer3"),

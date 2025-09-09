@@ -13,12 +13,12 @@ const Loader = () => {
         
         {/* Text with fading animation */}
         <div className="flex space-x-1">
-          <span className="text-green-600 font-medium">Loading</span>
           <div className="flex space-x-0.5">
             <span className="text-green-500 animate-pulse delay-75">.</span>
             <span className="text-green-600 animate-pulse delay-150">.</span>
             <span className="text-green-700 animate-pulse delay-300">.</span>
           </div>
+          <span className="text-green-600 font-medium">Prime Visa✨</span>
         </div>
       </div>
     </div>

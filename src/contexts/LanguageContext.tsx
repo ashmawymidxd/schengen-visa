@@ -201,12 +201,13 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
         "مع برايم فيزا أصبح حجز فندقك أسهل من أي وقت مضى. نوفر خيارات متنوعة تناسب جميع الميزانيات، من الفنادق الاقتصادية إلى المنتجعات الفاخرة، مع تأكيد فوري وأسعار تنافسية.",
 
       "hotel.reservation.why-us": "شبكة واسعة من الفنادق حول العالم.",
-      "hotel.reservation.why-us-answer1": "أسعار حصرية تنافسية.",
-      "hotel.reservation.why-us-answer2":
-        "خيارات تناسب كل الميزانيات (اقتصادي – متوسط – فاخر).",
+      "hotel.reservation.why-us-answer1": "شبكة واسعة من الفنادق حول العالم.",
+      "hotel.reservation.why-us-answer2": "أسعار حصرية تنافسية.",
       "hotel.reservation.why-us-answer3":
-        "إمكانية تعديل أو إلغاء الحجز حسب سياسة الفندق",
+        "خيارات تناسب كل الميزانيات (اقتصادي – متوسط – فاخر).",
       "hotel.reservation.why-us-answer4":
+        "إمكانية تعديل أو إلغاء الحجز حسب سياسة الفندق",
+      "hotel.reservation.why-us-answer5":
         " دعم متواصل لمتابعة أي طلب أو استفسار.",
       "hotel.reservation.faqs1.question":
         "هل يمكنني إلغاء الحجز واسترداد المبلغ؟",
@@ -599,12 +600,13 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "hotel.reservation.description":
         "With Prime Visa, booking your hotel is easier than ever. We offer a wide range of options to suit all budgets, from economy hotels to luxury resorts, with instant confirmation and competitive prices.",
       "hotel.reservation.why-us": "Wide network of hotels worldwide.",
-      "hotel.reservation.why-us-answer1": "Exclusive competitive prices.",
-      "hotel.reservation.why-us-answer2":
-        "Options to suit all budgets (economy – mid-range – luxury).",
+      "hotel.reservation.why-us-answer1": "Wide network of hotels around the worled",
+      "hotel.reservation.why-us-answer2": "Exclusive competitive prices.",
       "hotel.reservation.why-us-answer3":
-        "Possibility to modify or cancel the booking according to hotel policy.",
+        "Options to suit all budgets (economy – mid-range – luxury).",
       "hotel.reservation.why-us-answer4":
+        "Possibility to modify or cancel the booking according to hotel policy.",
+      "hotel.reservation.why-us-answer5":
         "Continuous support to follow up on any request or inquiry.",
       "hotel.reservation.faqs1.question":
         "Can I cancel my booking and get a refund?",

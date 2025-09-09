@@ -30,11 +30,11 @@ import { Navigation, Autoplay } from "swiper/modules";
 const HotelReservation = () => {
   const { t, isRTL } = useLanguage();
   const additionalDocuments = [
-    t("document.additional.pasport"),
     t("hotel.reservation.why-us-answer1"),
     t("hotel.reservation.why-us-answer2"),
     t("hotel.reservation.why-us-answer3"),
     t("hotel.reservation.why-us-answer4"),
+    t("hotel.reservation.why-us-answer5"),
   ];
   return (
     <div className="min-h-screen">

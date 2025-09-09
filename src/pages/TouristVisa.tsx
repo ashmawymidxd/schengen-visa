@@ -6,7 +6,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const TouristVisa = () => {
   const { t, isRTL } = useLanguage();
   const additionalDocuments = [
-    t("document.additional.pasport"),
     t("tourist.why-us-answer1"),
     t("tourist.why-us-answer2"),
     t("tourist.why-us-answer3"),
