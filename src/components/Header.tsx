@@ -37,11 +37,11 @@ const Header = () => {
         {/* Top contact bar */}
         <div className="hidden lg:flex justify-between items-center py-2 text-sm border-b border-border">
           <div className="flex items-center gap-6 text-muted-foreground">
-            <div className="flex items-center gap-2 bg-green-700 rounded-md p-3 text-white">
+            <div className="flex items-center gap-2 bg-green-700 rounded-full p-3 text-white">
               <Phone className="w-4 h-4" />
               <span>+966 50 123 4567</span>
             </div>
-            <div className="flex items-center gap-2 rounded-md p-3">
+            <div className="flex items-center gap-2 rounded-full p-3">
               <Mail className="w-4 h-4" />
               <span>info@schengenvisasa.com</span>
             </div>
@@ -50,7 +50,7 @@ const Header = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="text-muted-foreground hover:text-foreground"
+              className="text-muted-foreground hover:text-foreground rounded-full"
               onClick={toggleLanguage}
             >
               <Globe className="w-4 h-4" /> |
@@ -88,7 +88,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-5">
             {menuItems.map((item) => (
               <div 
                 key={item.name}
@@ -98,7 +98,7 @@ const Header = () => {
               >
                 <a
                   href={item.href}
-                  className={`flex items-center text-foreground hover:text-primary ${
+                  className={`flex items-center text-foreground hover:bg-gray-100 duration-300 rounded-full p-2 hover:text-primary ${
                     isRTL ? "font-arabic" : ""
                   } font-medium transition-colors`}
                 >
@@ -133,16 +133,16 @@ const Header = () => {
           </nav>
 
           {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4 bg-gray-100 rounded-full p-1 border">
             <Button
               variant="outline"
               size="sm"
-              className={isRTL ? "font-arabic" : ""}
+              className={`rounded-full ${isRTL ? "font-arabic" : ""}`}
             >
               <Phone className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} />
               {t("header.call_now")}
             </Button>
-            <Button className={`btn-hero ${isRTL ? "font-arabic" : ""}`}>
+            <Button className={`btn-hero rounded-full ${isRTL ? "font-arabic" : ""}`}>
               {t("header.request_service")}
             </Button>
           </div>
@@ -152,7 +152,7 @@ const Header = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="text-muted-foreground hover:text-foreground bg-green-600 text-white"
+              className="rounded-full text-muted-foreground hover:text-foreground bg-gray-100"
               onClick={toggleLanguage}
             >
               <Globe className="w-4 h-4" /> |
@@ -161,6 +161,7 @@ const Header = () => {
             <Button
               variant="ghost"
               size="sm"
+              className="rounded-full"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <Menu className="w-6 h-6" />
@@ -204,29 +205,17 @@ const Header = () => {
                   )}
                 </div>
               ))}
-              
-              {/* Language toggle for mobile */}
-              <Button
-                variant="outline"
-                size="sm"
-                className={`w-full ${isRTL ? "font-arabic" : ""} mb-2`}
-                onClick={toggleLanguage}
-              >
-                <Languages className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} />
-                {language === "ar" ? "English" : "العربية"}
-              </Button>
-
               <div className="flex gap-4 mt-4">
                 <Button
                   variant="outline"
                   size="sm"
-                  className={`flex-1 ${isRTL ? "font-arabic" : ""}`}
+                  className={`rounded-full flex-1 ${isRTL ? "font-arabic" : ""}`}
                 >
                   <Phone className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} />
                   {t("header.call_now")}
                 </Button>
                 <Button
-                  className={`btn-hero flex-1 ${isRTL ? "font-arabic" : ""}`}
+                  className={`rounded-full btn-hero flex-1 ${isRTL ? "font-arabic" : ""}`}
                 >
                   {t("header.request_service")}
                 </Button>

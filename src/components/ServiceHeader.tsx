@@ -28,7 +28,7 @@ const ServiceHeader = () => {
         {/* Top contact bar */}
         <div className="hidden lg:flex justify-between items-center py-2 text-sm border-b border-border">
           <div className="flex items-center gap-6 text-muted-foreground">
-            <div className="flex items-center gap-2 bg-green-700 rounded-md p-3 text-white">
+            <div className="flex items-center gap-2 bg-green-700 rounded-full p-3 text-white">
               <Phone className="w-4 h-4" />
               <span>+966 50 123 4567</span>
             </div>
@@ -41,7 +41,7 @@ const ServiceHeader = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="text-muted-foreground hover:text-foreground"
+              className="rounded-full text-muted-foreground hover:text-foreground"
               onClick={toggleLanguage}
             >
               <Globe className="w-4 h-4" /> |
@@ -54,7 +54,7 @@ const ServiceHeader = () => {
         {/* Main navigation */}
         <div className="flex justify-between items-center py-4 px-[10px] sm:px-0">
           {/* Logo */}
-          <Link to={'/'} className="flex items-center">
+          <Link to={"/"} className="flex items-center">
             <div className="rounded-2xl">
               <span className="text-primary-foreground font-bold text-xl font-arabic">
                 <img src={logo} alt="" className="h-10 rounded-lg" />
@@ -79,12 +79,12 @@ const ServiceHeader = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-5">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-foreground hover:text-primary ${
+                className={`text-foreground hover:bg-gray-100 duration-300 rounded-full p-2 hover:text-primary ${
                   isRTL ? "font-arabic" : ""
                 } font-medium transition-colors`}
               >
@@ -94,16 +94,18 @@ const ServiceHeader = () => {
           </nav>
 
           {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4 bg-gray-100 rounded-full p-1 border">
             <Button
               variant="outline"
               size="sm"
-              className={isRTL ? "font-arabic" : ""}
+              className={`rounded-full ${isRTL ? "font-arabic" : ""}`}
             >
               <Phone className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} />
               {t("header.call_now")}
             </Button>
-            <Button className={`btn-hero ${isRTL ? "font-arabic" : ""}`}>
+            <Button
+              className={`btn-hero rounded-full ${isRTL ? "font-arabic" : ""}`}
+            >
               {t("header.request_service")}
             </Button>
           </div>
@@ -113,7 +115,7 @@ const ServiceHeader = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="text-muted-foreground hover:text-foreground bg-green-600 text-white"
+              className="rounded-full text-muted-foreground hover:text-foreground bg-gray-100"
               onClick={toggleLanguage}
             >
               <Globe className="w-4 h-4" /> |
@@ -122,6 +124,7 @@ const ServiceHeader = () => {
             <Button
               variant="ghost"
               size="sm"
+              className="rounded-full"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <Menu className="w-6 h-6" />
@@ -137,7 +140,7 @@ const ServiceHeader = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className={`text-foreground hover:text-primary ${
+                  className={`text-foreground  hover:text-primary ${
                     isRTL ? "font-arabic" : ""
                   } font-medium py-2`}
                   onClick={() => setIsMenuOpen(false)}
@@ -145,28 +148,21 @@ const ServiceHeader = () => {
                   {item.name}
                 </a>
               ))}
-              {/* Language toggle for mobile */}
-              <Button
-                variant="outline"
-                size="sm"
-                className={`w-full ${isRTL ? "font-arabic" : ""} mb-2`}
-                onClick={toggleLanguage}
-              >
-                <Languages className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} />
-                {language === "ar" ? "English" : "العربية"}
-              </Button>
-
               <div className="flex gap-4 mt-4">
                 <Button
                   variant="outline"
                   size="sm"
-                  className={`flex-1 ${isRTL ? "font-arabic" : ""}`}
+                  className={`rounded-full flex-1 ${
+                    isRTL ? "font-arabic" : ""
+                  }`}
                 >
                   <Phone className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} />
                   {t("header.call_now")}
                 </Button>
                 <Button
-                  className={`btn-hero flex-1 ${isRTL ? "font-arabic" : ""}`}
+                  className={`rounded-full btn-hero flex-1 ${
+                    isRTL ? "font-arabic" : ""
+                  }`}
                 >
                   {t("header.request_service")}
                 </Button>
