@@ -53,7 +53,7 @@ const Steps = () => {
   return (
     <section id="steps" className="section-padding bg-white">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <span
             className={`inline-block bg-primary/10 text-primary px-4 py-2 rounded-full ${
               isRTL ? "font-arabic" : ""
@@ -78,9 +78,9 @@ const Steps = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4">
           {steps.map((step, index) => (
-            <div key={index} className="flex flex-col md:flex-row items-center justify-center md:justify-start">
+            <div key={index} className="flex flex-col md:flex-col lg:flex-row items-center justify-center lg:justify-start relative">
               {/* Step Card */}
               <div className="border bg-gray-50 p-3 rounded-md h-[30vh] w-full m-1">
                 {/* Step Number and Icon */}
@@ -109,7 +109,7 @@ const Steps = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-10">
           <div className="bg-gradient-primary rounded-3xl p-8 text-white shadow-[var(--shadow-strong)] max-w-2xl mx-auto">
             <h3
               className={`text-2xl lg:text-3xl font-bold mb-4 ${

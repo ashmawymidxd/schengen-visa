@@ -37,7 +37,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="section-padding bg-gradient-subtle">
+    <section id="services" className="section-padding bg-gradient-subtle mt-[-50px]">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <span

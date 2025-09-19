@@ -38,7 +38,7 @@ const Contact = () => {
           <span className="inline-text-white bg-primary/10 text-primary px-4 py-2 rounded-full font-arabic font-medium mb-4">
             {t("contact.badge")}
           </span>
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 font-arabic">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mt-6 font-arabic">
             {t("contact.title")}
             <span className="text-white block text-primary">{t("contact.subtitle")}</span>
           </h2>

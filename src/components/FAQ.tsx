@@ -44,13 +44,13 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="section-padding bg-gradient-subtle">
+    <section id="faq" className="section-padding bg-gradient-subtle mt-[-50px]">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full font-arabic font-medium mb-4">
             {t("faq.badge")}
           </span>
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 font-arabic">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground my-6 font-arabic">
             {t("faq.title")}
             <span className="block text-primary"> {t("faq.subtitle")}</span>
           </h2>

@@ -91,29 +91,25 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-1 gap-16 items-center">
           {/* Left: Features */}
           <div className="space-y-8">
-            <div className="space-y-6">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 items-center">
-                {features.map((feature, index) => (
-                  <div
-                    key={index}
-                    className="flex flex-col items-center h-[27vh] gap-2 p-4 shadow-sm rounded-2xl  bg-muted/50  border border-border/30"
-                  >
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-white to-gray-200">
-                      <img src={feature.img} width={50} alt="" />
-                    </div>
-                    <h4 className="text-lg font-semibold text-foreground mb-1 font-arabic">
-                      {feature.title}
-                    </h4>
-                    <p className="text-muted-foreground font-arabic">
-                      {feature.description}
-                    </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-center">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center justify-center h-auto md:h-[27vh] gap-2 p-4 shadow-sm rounded-2xl  bg-muted/50  border border-border/30"
+                >
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-white to-gray-200">
+                    <img src={feature.img} width={50} alt="" />
                   </div>
-                ))}
-              </div>
+                  <h4 className="text-lg font-semibold text-foreground mb-1 font-arabic">
+                    {feature.title}
+                  </h4>
+                  <p className="text-muted-foreground font-arabic text-center">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
-
-         
         </div>
 
         {/* Testimonials */}
