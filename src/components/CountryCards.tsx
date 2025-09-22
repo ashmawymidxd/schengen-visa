@@ -10,10 +10,12 @@ export default function CountryCards() {
             key={idx}
             className="flex flex-col items-center justify-center bg-gray-100 shadow-md rounded-xl p-2 hover:shadow-lg transition"
           >
-            <img
-              src={country.flag}
-              className="text-5xl bg-gradient-to-br from-white to-gray-200 p-3 rounded-xl"
-            />
+            <div className="text-4xl bg-gradient-to-br from-white to-gray-200 rounded-md p-3">
+              <img
+                src={country.flag}
+                className=" w-[50px] h-[30px] object-cover"
+              ></img>
+            </div>
             <p className="mt-2 text-lg font-medium text-center">
               {isRTL ? country.name : country.nameEn}
             </p>
