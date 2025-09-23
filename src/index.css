@@ -25,6 +25,16 @@ body {
   transition: all 0.3s ease;
   background-color: green;
 }
+
+/* Tailwind example */
+section[id] {
+  @apply scroll-mt-28;  /* adjust 28 → height of your header */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   :root {
     /* Saudi Green Theme */

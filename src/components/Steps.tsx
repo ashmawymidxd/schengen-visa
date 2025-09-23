@@ -6,11 +6,19 @@ import {
   Plane,
   ArrowLeft,
   ArrowDown,
+  Sparkles,
+  ArrowRight,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useState, useEffect } from "react";
 
 const Steps = () => {
   const { t, isRTL } = useLanguage();
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   const steps = [
     {
@@ -18,120 +26,174 @@ const Steps = () => {
       number: "01",
       title: t("steps.step1.title"),
       description: t("steps.step1.desc"),
-      color: "from-blue-500 to-blue-600",
+      color: "from-emerald-500 to-green-600",
+      accent: "bg-emerald-500",
     },
     {
       icon: FileText,
       number: "02",
       title: t("steps.step2.title"),
       description: t("steps.step2.desc"),
-      color: "from-green-500 to-green-600",
+      color: "from-green-600 to-emerald-700",
+      accent: "bg-green-600",
     },
     {
       icon: CheckCircle,
       number: "03",
       title: t("steps.step3.title"),
       description: t("steps.step3.desc"),
-      color: "from-purple-500 to-purple-600",
+      color: "from-amber-500 to-yellow-600",
+      accent: "bg-amber-500",
     },
     {
       icon: Eye,
       number: "04",
       title: t("steps.step4.title"),
       description: t("steps.step4.desc"),
-      color: "from-orange-500 to-orange-600",
+      color: "from-emerald-600 to-green-700",
+      accent: "bg-emerald-600",
     },
     {
       icon: Plane,
       number: "05",
       title: t("steps.step5.title"),
       description: t("steps.step5.desc"),
-      color: "from-teal-500 to-teal-600",
+      color: "from-amber-600 to-yellow-700",
+      accent: "bg-amber-600",
     },
   ];
 
   return (
-    <section id="steps" className="section-padding bg-white">
-      <div className="container mx-auto">
-        <div className="text-center mb-10">
-          <span
-            className={`inline-block bg-primary/10 text-primary px-4 py-2 rounded-full ${
-              isRTL ? "font-arabic" : ""
-            } font-medium mb-4`}
-          >
-            {t("steps.badge")}
-          </span>
-          <h2
-            className={`text-4xl lg:text-5xl font-bold text-foreground mb-6 ${
-              isRTL ? "font-arabic" : ""
-            }`}
-          >
+    <section id="steps" className="section-padding bg-gradient-to-br from-gray-50 via-white to-emerald-50/30 relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-emerald-400/20 to-green-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-amber-400/20 to-yellow-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-gray-400/10 to-slate-400/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto relative z-10">
+        {/* Header Section */}
+        <div className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/10 to-amber-500/10 border border-emerald-200/50 text-emerald-700 px-6 py-3 rounded-full font-medium mb-6 backdrop-blur-sm">
+            <Sparkles className="w-4 h-4 text-amber-500" />
+            <span className={isRTL ? "font-arabic" : ""}>
+              {t("steps.badge")}
+            </span>
+            <Sparkles className="w-4 h-4 text-amber-500" />
+          </div>
+          <h2 className={`text-4xl lg:text-6xl font-bold text-gray-900 mb-6 ${isRTL ? "font-arabic" : ""}`}>
             {t("steps.title")}
-            <span className="block text-primary">{t("steps.subtitle")}</span>
+            <span className="block bg-gradient-to-r from-emerald-600 to-amber-600 bg-clip-text text-transparent">
+              {t("steps.subtitle")}
+            </span>
           </h2>
-          <p
-            className={`text-xl text-muted-foreground max-w-3xl mx-auto ${
-              isRTL ? "font-arabic" : ""
-            } leading-relaxed`}
-          >
+          <p className={`text-xl text-gray-600 max-w-3xl mx-auto ${isRTL ? "font-arabic" : ""} leading-relaxed bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/20`}>
             {t("steps.description")}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-4">
-          {steps.map((step, index) => (
-            <div key={index} className="flex flex-col md:flex-col lg:flex-row items-center justify-center lg:justify-start relative">
-              {/* Step Card */}
-              <div className="border bg-gray-50 p-3 rounded-md h-[30vh] w-full m-1">
-                {/* Step Number and Icon */}
-                <div className="flex flex-col items-center justify-center gap-3">
-                  <div className="p-4 rounded-2xl bg-gradient-to-br from-white to-gray-200">
-                    <step.icon className="w-10 h-10 md:w-12 md:h-12" />
-                  </div>
-                  <h2 className="text-lg text-center">{step.title}</h2>
-                  <p className="text-center text-gray-400">{step.description}</p>
-                </div>
-              </div>
+        {/* Steps Timeline */}
+        <div className={`relative transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          {/* Connecting Line */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-200 via-amber-200 to-emerald-200 rounded-full hidden lg:block"></div>
+          <div className="absolute left-1/2 top-0 h-full w-2 -translate-x-1/2">
+            <div className="h-full w-0.5 bg-gradient-to-b from-emerald-300/50 to-amber-300/50 rounded-full mx-auto"></div>
+          </div>
 
-              {/* Arrow connector - only for non-last items */}
-              {index < steps.length - 1 && (
-                <div className="flex justify-center mb-8 lg:mb-0">
-                  <div className="w-2 h-12 md:w-12 md:h-2 bg-gradient-to-b from-primary/30 to-primary/10 rounded-full relative">
-                    <div className="absolute -bottom-1 left-1 transform -translate-x-1/2">
-                      <ArrowLeft className="w-4 h-4 text-primary/60 hidden md:flex" />
-                      <ArrowDown className="w-4 h-4 text-primary/60 flex md:hidden" />
-                    </div>
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-4 relative">
+            {steps.map((step, index) => (
+              <div key={index} className="group relative">
+                {/* Step Number Badge */}
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
+                  <div className={`relative ${step.accent} text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg shadow-lg border-4 border-white`}>
+                    {step.number}
+                    <div className="absolute inset-0 rounded-full bg-white/20 animate-ping"></div>
                   </div>
                 </div>
-              )}
-            </div>
-          ))}
+
+                {/* Step Card */}
+                <div className="relative bg-white/80 backdrop-blur-md border border-white/50 rounded-2xl p-6 h-64 shadow-lg hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-500 ease-out transform group-hover:-translate-y-2 group-hover:border-emerald-200/70">
+                  {/* Gradient Border Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-amber-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -m-0.5"></div>
+                  
+                  <div className="relative z-10 flex flex-col items-center text-center h-full justify-center">
+                    {/* Icon Container */}
+                    <div className={`relative mb-4 transform group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500`}>
+                      <div className={`absolute inset-0 bg-gradient-to-br ${step.color} rounded-2xl blur-md opacity-30 group-hover:opacity-50 transition-opacity duration-500`}></div>
+                      <div className={`relative bg-gradient-to-br ${step.color} p-3 rounded-2xl shadow-lg`}>
+                        <step.icon className="w-8 h-8 text-white" />
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <h3 className={`text-lg font-bold text-gray-900 mb-2 ${isRTL ? "font-arabic" : ""}`}>
+                      {step.title}
+                    </h3>
+                    <p className={`text-gray-600 text-sm leading-relaxed ${isRTL ? "font-arabic" : ""}`}>
+                      {step.description}
+                    </p>
+
+                    {/* Hover Effect Line */}
+                    <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r ${step.color} rounded-full group-hover:w-3/4 transition-all duration-500 ease-out`}></div>
+                  </div>
+                </div>
+
+                {/* Arrow Connectors - Desktop */}
+                {index < steps.length - 1 && (
+                  <>
+                    <div className="hidden lg:block absolute top-1/2 left-full transform -translate-y-1/2 -translate-x-1/2 z-10">
+                      <div className="flex items-center">
+                        <div className="w-16 h-0.5 bg-gradient-to-r from-emerald-300 to-amber-300"></div>
+                        <ArrowLeft className="w-6 h-6 text-amber-500 transform group-hover:translate-x-1 transition-transform duration-300" />
+                      </div>
+                    </div>
+                    
+                    {/* Mobile Arrow */}
+                    <div className="lg:hidden flex justify-center my-6">
+                      <div className="flex flex-col items-center">
+                        <div className="h-8 w-0.5 bg-gradient-to-b from-emerald-300 to-amber-300"></div>
+                        <ArrowDown className="w-6 h-6 text-amber-500 transform group-hover:translate-y-1 transition-transform duration-300" />
+                      </div>
+                    </div>
+                  </>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-10">
-          <div className="bg-gradient-primary rounded-3xl p-8 text-white shadow-[var(--shadow-strong)] max-w-2xl mx-auto">
-            <h3
-              className={`text-2xl lg:text-3xl font-bold mb-4 ${
-                isRTL ? "font-arabic" : ""
-              }`}
-            >
-              {t("steps.bottom_cta.title")}
-            </h3>
-            <p
-              className={`text-lg mb-6 ${
-                isRTL ? "font-arabic" : ""
-              } opacity-90`}
-            >
-              {t("steps.bottom_cta.desc")}
-            </p>
-            <button
-              className={`btn-accent text-lg px-8 py-4 ${
-                isRTL ? "font-arabic" : ""
-              }`}
-            >
-              {t("steps.bottom_cta.button")}
-            </button>
+        <div className={`text-center mt-16 transform transition-all duration-1000 delay-900 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <div className="relative">
+            {/* Floating Elements */}
+            <div className="absolute -top-4 -left-4 w-8 h-8 bg-emerald-400/30 rounded-full blur-sm animate-pulse"></div>
+            <div className="absolute -bottom-4 -right-4 w-6 h-6 bg-amber-400/30 rounded-full blur-sm animate-pulse delay-1000"></div>
+            
+            <div className="bg-gradient-to-r from-emerald-600 via-green-600 to-amber-600 rounded-3xl p-8 text-white shadow-2xl shadow-emerald-500/30 max-w-2xl mx-auto relative overflow-hidden">
+              {/* Animated Background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm"></div>
+              <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-xl"></div>
+              <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-xl"></div>
+              
+              <div className="relative z-10">
+                <h3 className={`text-2xl lg:text-3xl font-bold mb-4 ${isRTL ? "font-arabic" : ""} drop-shadow-sm`}>
+                  {t("steps.bottom_cta.title")}
+                </h3>
+                <p className={`text-lg mb-6 ${isRTL ? "font-arabic" : ""} opacity-90 drop-shadow-sm`}>
+                  {t("steps.bottom_cta.desc")}
+                </p>
+                <button className="group relative inline-flex items-center gap-2 bg-white text-emerald-600 hover:text-emerald-700 text-lg px-8 py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
+                  <span className={isRTL ? "font-arabic" : ""}>
+                    {t("steps.bottom_cta.button")}
+                  </span>
+                  <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
+                  
+                  {/* Button Shine Effect */}
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

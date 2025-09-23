@@ -50,9 +50,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       // Hero
       "hero.badge": "✈️ خبراء فيزا الشنغن في السعودية",
       "hero.subtitle":
-        "سواء كانت رحلتك سیاحة، عمل أو مغامرة، نوفر لك كل ما تحتاجھ لتسافر براحة وثقة",
+        "سواء كانت رحلتك سیاحة، عمل أو مغامرة، نوفر لك كل ما تحتاجه لتسافر براحة وثقة",
       "hero.description": `في برایم فیزا لخدمات التأشیرات، نؤمن أن السفر ھو بدایة لاكتشاف العالم وصناعة ذكریات لا تُنسى. لذلك وفرنا حلول متكاملة وسھلة
-        لكل ما یخص التأشیرات السیاحیة، طلبات الشنغن، وحجوزات الطیران السفر، لنمنحك تجربة خالیة من التعقید وبأعلى درجات الاحترافیة.
+        لكل ما یخص التأشیرات السیاحیة، طلبات الشنغن، وحجوزات طيران السفر، لنمنحك تجربة خالیة من التعقید وبأعلى درجات الاحترافیة.
         ھدفنا في برایم فیزا لخدمات التأشیرات أن نكون شریكك الأول في رحلتك، من الفكرة وحتى الوصول`,
       "hero.request_now": "اطلب الخدمة الآن",
       "hero.free_consultation": "استشارة مجانية",
@@ -224,6 +224,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
         " نعم، نوفر خيارات للإقامات الطويلة بأسعار مميزة.",
 
       // Countries
+      "countries.visa_information": "معلومات عن فيزا الشنغن",
       "countries.badge": "الدول المتاحة",
       "countries.title": "دول منطقة الشنغن",
       "countries.subtitle": "التي نغطيها",
@@ -622,6 +623,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
         "Yes, we offer long-stay options at special rates.",
 
       // Countries
+      "countries.visa_information": "Schengen Visa Information",
       "countries.badge": "Available Countries",
       "countries.title": "Schengen Area Countries",
       "countries.subtitle": "We Cover",

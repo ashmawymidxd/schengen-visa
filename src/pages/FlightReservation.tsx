@@ -1,4 +1,6 @@
 import ServiceHeader from "@/components/ServiceHeader";
+import ContactInfo from "@/components/ContactInfo";
+import { Phone, Mail } from "lucide-react";
 import Footer from "@/components/Footer";
 import FlightReservationFAQ from "@/components/FlightReservationFAQ";
 import { CircleCheckIcon } from "lucide-react";
@@ -28,6 +30,21 @@ const FlightReservation = () => {
     t("flight.reservation.why-us-answer4"),
     t("flight.reservation.why-us-answer5"),
   ];
+  const contactInfo = [
+    {
+      icon: Phone,
+      title: t("contact.phone.title"),
+      details: ["+966 50 123 4567", "+966 11 234 5678"],
+      color: "text-green-500",
+    },
+    {
+      icon: Mail,
+      title: t("contact.email.title"),
+      details: ["info@schengenvisasa.com", "support@schengenvisasa.com"],
+      color: "text-blue-500",
+    },
+  ];
+
   return (
     <div className="min-h-screen">
       <ServiceHeader />
@@ -120,6 +137,7 @@ const FlightReservation = () => {
       </div>
 
       <FlightReservationFAQ />
+      <ContactInfo contactInfo={contactInfo} />
       <Footer />
     </div>
   );

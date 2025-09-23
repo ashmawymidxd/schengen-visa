@@ -1,4 +1,6 @@
 import ServiceHeader from "@/components/ServiceHeader";
+import ContactInfo from "@/components/ContactInfo";
+import { Phone, Mail } from "lucide-react";
 import Footer from "@/components/Footer";
 import HotelReservationFQA from "@/components/HotelReservationFQA";
 import { CircleCheckIcon } from "lucide-react";
@@ -35,6 +37,20 @@ const HotelReservation = () => {
     t("hotel.reservation.why-us-answer3"),
     t("hotel.reservation.why-us-answer4"),
     t("hotel.reservation.why-us-answer5"),
+  ];
+  const contactInfo = [
+    {
+      icon: Phone,
+      title: t("contact.phone.title"),
+      details: ["+966 50 123 4567", "+966 11 234 5678"],
+      color: "text-green-500",
+    },
+    {
+      icon: Mail,
+      title: t("contact.email.title"),
+      details: ["info@schengenvisasa.com", "support@schengenvisasa.com"],
+      color: "text-blue-500",
+    },
   ];
   return (
     <div className="min-h-screen">
@@ -79,73 +95,72 @@ const HotelReservation = () => {
           </div>
         </div>
       </section>
-       <div className="my-10">
+      <div className="my-10">
         <div className="bg-gradient-to-br from-white to-gray-200 w-[70px] h-[70px] m-auto flex items-center justify-center rounded-xl">
           <LucideHotel className="w-12 h-12 text-primary mx-auto" />
-
         </div>
-          <h3 className="text-2xl font-bold text-foreground mb-4 text-center">
-            {t("countries.service_providers")}
-          </h3>
+        <h3 className="text-2xl font-bold text-foreground mb-4 text-center">
+          {t("countries.service_providers")}
+        </h3>
 
-          <div className="container mt-10">
-            <Swiper
-              dir={isRTL ? "rtl" : "ltr"}
-              modules={[Navigation, Autoplay]}
-              spaceBetween={20}
-              slidesPerView={2}
-              breakpoints={{
-                640: { slidesPerView: 3 },
-                1024: { slidesPerView: 5 },
-                1280: { slidesPerView: 7 },
-              }}
-              navigation={false}
-              autoplay={{
-                delay: 2000,
-                disableOnInteraction: false,
-                reverseDirection: !isRTL, // ✅ autoplay goes left for LTR, right for RTL
-              }}
-              speed={500}
-              loop={true}
-              // force swiper to recalc on direction change
-              key={isRTL ? "rtl" : "ltr"}
-            >
-              {[
-                hotel1,
-                hotel2,
-                hotel3,
-                hotel4,
-                hotel5,
-                hotel6,
-                hotel7,
-                hotel8,
-                hotel9,
-                hotel10,
-                hotel11,
-                hotel12,
-                hotel13,
-                hotel14,
-                hotel15,
-                hotel16,
-                hotel17,
-              
-              ].map((img, index) => (
-                <SwiperSlide key={index}>
-                  <div className="p-5 rounded-md bg-gradient-to-br from-white to-gray-200">
-                    <img
-                      src={img}
-                      draggable="false"
-                      alt={`slide-${index}`}
-                      className="rounded-md"
-                    />
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+        <div className="container mt-10">
+          <Swiper
+            dir={isRTL ? "rtl" : "ltr"}
+            modules={[Navigation, Autoplay]}
+            spaceBetween={20}
+            slidesPerView={2}
+            breakpoints={{
+              640: { slidesPerView: 3 },
+              1024: { slidesPerView: 5 },
+              1280: { slidesPerView: 7 },
+            }}
+            navigation={false}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+              reverseDirection: !isRTL, // ✅ autoplay goes left for LTR, right for RTL
+            }}
+            speed={500}
+            loop={true}
+            // force swiper to recalc on direction change
+            key={isRTL ? "rtl" : "ltr"}
+          >
+            {[
+              hotel1,
+              hotel2,
+              hotel3,
+              hotel4,
+              hotel5,
+              hotel6,
+              hotel7,
+              hotel8,
+              hotel9,
+              hotel10,
+              hotel11,
+              hotel12,
+              hotel13,
+              hotel14,
+              hotel15,
+              hotel16,
+              hotel17,
+            ].map((img, index) => (
+              <SwiperSlide key={index}>
+                <div className="p-5 rounded-md bg-gradient-to-br from-white to-gray-200">
+                  <img
+                    src={img}
+                    draggable="false"
+                    alt={`slide-${index}`}
+                    className="rounded-md"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
+      </div>
 
-      <HotelReservationFQA/>
+      <HotelReservationFQA />
+      <ContactInfo contactInfo={contactInfo} />
       <Footer />
     </div>
   );
