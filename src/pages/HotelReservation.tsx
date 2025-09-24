@@ -279,13 +279,6 @@ const HotelReservation = () => {
               ))}
             </Swiper>
           </div>
-
-        {/* Progress Bar */}
-        <div className="max-w-4xl mx-auto mt-8">
-          <div className="relative h-1 bg-gray-200 rounded-full overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-amber-500 rounded-full animate-pulse"></div>
-          </div>
-        </div>
       </div>
 
       {/* Enhanced Contact Info */}

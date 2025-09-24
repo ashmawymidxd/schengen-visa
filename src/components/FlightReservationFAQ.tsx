@@ -28,7 +28,7 @@ function FlightReservationFAQ() {
   ];
   return (
     <div className="max-w-4xl m-auto p-10">
-      <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-[var(--shadow-medium)] border border-border/50">
+      <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-2 md:p-8 shadow-[var(--shadow-medium)] border border-border/50">
         <Accordion type="single" collapsible className="space-y-4">
          {faqs.map((faq, index) => (
             <AccordionItem
