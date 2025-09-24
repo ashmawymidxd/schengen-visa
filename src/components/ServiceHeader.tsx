@@ -28,14 +28,22 @@ const ServiceHeader = () => {
         {/* Top contact bar */}
         <div className="hidden lg:flex justify-between items-center py-2 text-sm border-b border-border">
           <div className="flex items-center gap-6 text-muted-foreground">
-            <div className="flex items-center gap-2 bg-green-700 rounded-full p-3 text-white">
+            <a
+              href="tel:+201554300351"
+              target="__blanck"
+              className="flex items-center gap-2 bg-green-700 rounded-full p-3 text-white"
+            >
               <Phone className="w-4 h-4" />
-              <span>+966 50 123 4567</span>
-            </div>
-            <div className="flex items-center gap-2 rounded-md p-3">
+              <span>+201554300351</span>
+            </a>
+            <a
+              href="mailto:uyu365656@gmail.com"
+              target="__blanck"
+              className="flex items-center gap-2 rounded-full p-3"
+            >
               <Mail className="w-4 h-4" />
-              <span>info@schengenvisasa.com</span>
-            </div>
+              <span>uyu365656@gmail.com</span>
+            </a>
           </div>
           <div className="flex items-center gap-4">
             <Button
@@ -94,20 +102,27 @@ const ServiceHeader = () => {
           </nav>
 
           {/* CTA Buttons */}
+
           <div className="hidden lg:flex items-center gap-4 bg-gray-100 rounded-full p-1 border">
-            <Button
-              variant="outline"
-              size="sm"
-              className={`rounded-full ${isRTL ? "font-arabic" : ""}`}
+            <a
+              href="tel:+201554300351"
+              target="__blanck"
+              className={`cursor-pointer border bg-white px-3 py-2 flex items-center rounded-full ${
+                isRTL ? "font-arabic" : ""
+              }`}
             >
               <Phone className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} />
               {t("header.call_now")}
-            </Button>
-            <Button
-              className={`btn-hero rounded-full ${isRTL ? "font-arabic" : ""}`}
+            </a>
+            <a
+              href="https://wa.me/+201554300351"
+              target="__blanck"
+              className={`cursor-pointer px-3 py-2 btn-hero rounded-full ${
+                isRTL ? "font-arabic" : ""
+              }`}
             >
               {t("header.request_service")}
-            </Button>
+            </a>
           </div>
 
           {/* Mobile language toggle and menu button */}
@@ -149,23 +164,25 @@ const ServiceHeader = () => {
                 </a>
               ))}
               <div className="flex gap-4 mt-4">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className={`rounded-full flex-1 ${
+                <a
+                  href="tel:+201554300351"
+                  target="__blanck"
+                  className={`flex-1 text-center cursor-pointer border bg-white px-3 py-2 flex items-center justify-center rounded-full ${
                     isRTL ? "font-arabic" : ""
                   }`}
                 >
                   <Phone className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} />
                   {t("header.call_now")}
-                </Button>
-                <Button
-                  className={`rounded-full btn-hero flex-1 ${
+                </a>
+                <a
+                  href="https://wa.me/+201554300351"
+                  target="__blanck"
+                  className={`flex-1 text-center cursor-pointer px-3 py-2 btn-hero rounded-full ${
                     isRTL ? "font-arabic" : ""
                   }`}
                 >
                   {t("header.request_service")}
-                </Button>
+                </a>
               </div>
             </div>
           </nav>

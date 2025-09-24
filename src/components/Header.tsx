@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
+import { link } from "fs";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,15 +13,15 @@ const Header = () => {
 
   const menuItems = [
     { name: t("header.home"), href: "#home" },
-    { 
-      name: t("header.services"), 
+    {
+      name: t("header.services"),
       href: "#services",
       submenu: [
         { name: t("header.service1"), href: "/request-schengen" },
         { name: t("header.service2"), href: "/tourist-visa" },
         { name: t("header.service3"), href: "/flight-reservation" },
-        { name: t("header.service4"), href: "/hotel-reservation" }
-      ]
+        { name: t("header.service4"), href: "/hotel-reservation" },
+      ],
     },
     { name: t("header.about"), href: "#about" },
     { name: t("header.faq"), href: "#faq" },
@@ -37,14 +38,22 @@ const Header = () => {
         {/* Top contact bar */}
         <div className="hidden lg:flex justify-between items-center py-2 text-sm border-b border-border">
           <div className="flex items-center gap-6 text-muted-foreground">
-            <div className="flex items-center gap-2 bg-green-700 rounded-full p-3 text-white">
+            <a
+              href="tel:+201554300351"
+              target="__blanck"
+              className="flex items-center gap-2 bg-green-700 rounded-full p-3 text-white"
+            >
               <Phone className="w-4 h-4" />
-              <span>+966 50 123 4567</span>
-            </div>
-            <div className="flex items-center gap-2 rounded-full p-3">
+              <span>+201554300351</span>
+            </a>
+            <a
+              href="mailto:uyu365656@gmail.com"
+              target="__blanck"
+              className="flex items-center gap-2 rounded-full p-3"
+            >
               <Mail className="w-4 h-4" />
-              <span>info@schengenvisasa.com</span>
-            </div>
+              <span>uyu365656@gmail.com</span>
+            </a>
           </div>
           <div className="flex items-center gap-4">
             <Button
@@ -63,7 +72,7 @@ const Header = () => {
         {/* Main navigation */}
         <div className="flex justify-between items-center py-4 px-[10px] sm:px-0">
           {/* Logo */}
-          <Link to={'/'} className="flex items-center">
+          <Link to={"/"} className="flex items-center">
             <div className="rounded-2xl">
               <span className="text-primary-foreground font-bold text-xl font-arabic">
                 <img src={logo} alt="" className="h-10 rounded-lg" />
@@ -90,7 +99,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-5">
             {menuItems.map((item) => (
-              <div 
+              <div
                 key={item.name}
                 className="relative group"
                 onMouseEnter={() => item.submenu && setIsServicesHovered(true)}
@@ -104,15 +113,21 @@ const Header = () => {
                 >
                   {item.name}
                   {item.submenu && (
-                    <ChevronDown className={`w-4 h-4 ${isRTL ? "mr-2" : "ml-2"} transition-transform ${isServicesHovered ? 'rotate-180' : ''}`} />
+                    <ChevronDown
+                      className={`w-4 h-4 ${
+                        isRTL ? "mr-2" : "ml-2"
+                      } transition-transform ${
+                        isServicesHovered ? "rotate-180" : ""
+                      }`}
+                    />
                   )}
                 </a>
-                
+
                 {/* Services Submenu */}
                 {item.submenu && isServicesHovered && (
-                  <div 
+                  <div
                     className={`absolute mt-0 w-48 bg-white rounded-lg py-3 z-50 ${
-                      isRTL ? 'right-0' : 'left-0'
+                      isRTL ? "right-0" : "left-0"
                     } bg-white`}
                     onMouseEnter={() => setIsServicesHovered(true)}
                     onMouseLeave={() => setIsServicesHovered(false)}
@@ -134,17 +149,25 @@ const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-4 bg-gray-100 rounded-full p-1 border">
-            <Button
-              variant="outline"
-              size="sm"
-              className={`rounded-full ${isRTL ? "font-arabic" : ""}`}
+            <a
+              href="tel:+201554300351"
+              target="__blanck"
+              className={`cursor-pointer border bg-white px-3 py-2 flex items-center rounded-full ${
+                isRTL ? "font-arabic" : ""
+              }`}
             >
               <Phone className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} />
               {t("header.call_now")}
-            </Button>
-            <Button className={`btn-hero rounded-full ${isRTL ? "font-arabic" : ""}`}>
+            </a>
+            <a
+              href="https://wa.me/+201554300351"
+              target="__blanck"
+              className={`cursor-pointer px-3 py-2 btn-hero rounded-full ${
+                isRTL ? "font-arabic" : ""
+              }`}
+            >
               {t("header.request_service")}
-            </Button>
+            </a>
           </div>
 
           {/* Mobile language toggle and menu button */}
@@ -183,11 +206,9 @@ const Header = () => {
                     onClick={() => !item.submenu && setIsMenuOpen(false)}
                   >
                     {item.name}
-                    {item.submenu && (
-                      <ChevronDown className="w-4 h-4" />
-                    )}
+                    {item.submenu && <ChevronDown className="w-4 h-4" />}
                   </a>
-                  
+
                   {/* Mobile submenu */}
                   {item.submenu && (
                     <div className="pl-4 mt-2 border-l border-border">
@@ -206,19 +227,25 @@ const Header = () => {
                 </div>
               ))}
               <div className="flex gap-4 mt-4">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className={`rounded-full flex-1 ${isRTL ? "font-arabic" : ""}`}
+                <a
+                  href="tel:+201554300351"
+                  target="__blanck"
+                  className={`flex-1 text-center cursor-pointer border bg-white px-3 py-2 flex items-center justify-center rounded-full ${
+                    isRTL ? "font-arabic" : ""
+                  }`}
                 >
                   <Phone className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} />
                   {t("header.call_now")}
-                </Button>
-                <Button
-                  className={`rounded-full btn-hero flex-1 ${isRTL ? "font-arabic" : ""}`}
+                </a>
+                <a
+                  href="https://wa.me/+201554300351"
+                  target="__blanck"
+                  className={`flex-1 text-center cursor-pointer px-3 py-2 btn-hero rounded-full ${
+                    isRTL ? "font-arabic" : ""
+                  }`}
                 >
                   {t("header.request_service")}
-                </Button>
+                </a>
               </div>
             </div>
           </nav>
