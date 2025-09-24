@@ -12,18 +12,22 @@ function TouristVisaFAQ() {
     {
       question: t("tourist-visa.faqs1.question"),
       answer: t("tourist-visa.faqs1.answer"),
+      icon: "🌍",
     },
     {
       question: t("tourist-visa.faqs2.question"),
       answer: t("tourist-visa.faqs2.answer"),
+      icon: "🛂",
     },
     {
       question: t("tourist-visa.faqs3.question"),
       answer: t("tourist-visa.faqs3.answer"),
+      icon: "📅",
     },
     {
       question: t("tourist-visa.faqs4.question"),
       answer: t("tourist-visa.faqs4.answer"),
+      icon: "🛂",
     },
   ];
   return (
@@ -34,21 +38,35 @@ function TouristVisaFAQ() {
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="border border-border/30 rounded-xl px-6 bg-white/50 backdrop-blur-sm"
+              className="border border-emerald-200/50 rounded-xl bg-white/60 backdrop-blur-sm hover:bg-white/80 transition-all duration-300 group overflow-hidden"
             >
-              <AccordionTrigger className="text-right hover:no-underline py-6">
-                <div className="flex items-center gap-4 w-full">
-                  <HelpCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-lg font-semibold text-foreground font-arabic text-right flex-1">
-                    {faq.question}
-                  </span>
+              {/* Animated Background on Hover */}
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-amber-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              <AccordionTrigger className="text-right hover:no-underline py-6 px-6 relative z-10 group-hover:shadow-sm transition-shadow duration-300">
+                <div className="flex items-center justify-between w-full gap-4">
+                  <div className="flex items-center gap-4 flex-1">
+                    <div className="flex items-center gap-3">
+                      <span className="text-2xl">{faq.icon}</span>
+                      <HelpCircle className="w-5 h-5 text-emerald-500 flex-shrink-0 group-hover:text-amber-500 transition-colors duration-300" />
+                    </div>
+                    <span className="text-lg font-semibold text-gray-800 font-arabic text-right flex-1 group-hover:text-emerald-700 transition-colors duration-300">
+                      {faq.question}
+                    </span>
+                  </div>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="text-right pb-6 pt-2">
-                <p className="text-muted-foreground leading-relaxed font-arabic pr-9">
-                  {faq.answer}
-                </p>
+
+              <AccordionContent className="text-right pb-6 pt-2 px-6 relative z-10">
+                <div className="border-r-2 border-amber-300/50 mr-4">
+                  <p className="text-gray-600 leading-relaxed font-arabic pr-4 text-lg group-hover:text-gray-700 transition-colors duration-300">
+                    {faq.answer}
+                  </p>
+                </div>
               </AccordionContent>
+
+              {/* Animated Indicator */}
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-emerald-400 to-amber-400 group-data-[state=open]:w-full transition-all duration-500 ease-out"></div>
             </AccordionItem>
           ))}
         </Accordion>

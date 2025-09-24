@@ -136,6 +136,18 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       سجل جنائي نظيف (قد تطلب بعض السفارات شهادة عدم محكومية).
       أسباب قوية للعودة إلى بلدك (وظيفة، التزامات أسرية، ممتلكات...).
       `,
+      "request.faqTitle": "أسئلة شائعة",
+      "request.faqHeading": "أسئلة متكررة",
+      "request.faqSubtitle":
+        "ابحث عن إجابات للأسئلة الأكثر شيوعاً حول تأشيرة الشنغن",
+      "request.faqFooter": "لم تجد إجابتك؟ نحن هنا لمساعدتك",
+      "request.contactButton": "اتصل بنا",
+      "request.info1.title": "دعم فوري",
+      "request.info1.desc": "ردود سريعة خلال 24 ساعة",
+      "request.info2.title": "خبراء معتمدون",
+      "request.info2.desc": "فريق من المحترفين المعتمدين",
+      "request.info3.title": "متاح 24/7",
+      "request.info3.desc": "دعم مستمر على مدار الساعة",
 
       // tourist visa service
       "tourist.description":
@@ -540,6 +552,18 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 - Travel medical insurance covering the stay within Schengen countries.
 - Clean criminal record (some embassies may require a police clearance certificate).
 - Strong reasons to return to your home country (job, family obligations, property...).`,
+      "request.faqTitle": "Frequently Asked Questions",
+      "request.faqHeading": "Common Questions",
+      "request.faqSubtitle":
+        "Find answers to the most common questions about Schengen visas and our services",
+      "request.faqFooter": "Didn't find your answer? We're here to help",
+      "request.contactButton": "Contact Us",
+      "request.info1.title": "Instant Support",
+      "request.info1.desc": "Quick responses within 24 hours",
+      "request.info2.title": "Certified Experts",
+      "request.info2.desc": "A team of certified professionals",
+      "request.info3.title": "Available 24/7",
+      "request.info3.desc": "Continuous support around the clock",
 
       // Tourist Visa Service
       "tourist.description":
@@ -601,7 +625,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "hotel.reservation.description":
         "With Prime Visa, booking your hotel is easier than ever. We offer a wide range of options to suit all budgets, from economy hotels to luxury resorts, with instant confirmation and competitive prices.",
       "hotel.reservation.why-us": "Wide network of hotels worldwide.",
-      "hotel.reservation.why-us-answer1": "Wide network of hotels around the worled",
+      "hotel.reservation.why-us-answer1":
+        "Wide network of hotels around the worled",
       "hotel.reservation.why-us-answer2": "Exclusive competitive prices.",
       "hotel.reservation.why-us-answer3":
         "Options to suit all budgets (economy – mid-range – luxury).",
@@ -717,7 +742,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "about.achievements.label4": "Countries Covered",
 
       // FAQ
-      "faq.badge": "FAQ",
+      "faq.badge": "Frequently Asked Questions",
       "faq.title": "Answers to the Most",
       "faq.subtitle": "Common Questions",
       "faq.description":

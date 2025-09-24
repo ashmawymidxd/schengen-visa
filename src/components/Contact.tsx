@@ -3,6 +3,7 @@ import ContactInfo from "@/components/ContactInfo";
 import { Phone, Mail } from "lucide-react";
 
 import Testimonials from "@/components/Testimonials";
+import { text } from "stream/consumers";
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -21,10 +22,31 @@ const Contact = () => {
     },
   ];
 
+  const testimonials = [
+    {
+      name : t('about.testimonials.c1.name'),
+      location : t('about.testimonials.c1.location'),
+      text : t('about.testimonials.c1.text'),
+      rating : 5,
+    },
+    {
+      name : t('about.testimonials.c2.name'),
+      location : t('about.testimonials.c2.location'),
+      text : t('about.testimonials.c2.text'),
+      rating : 4,
+    },
+    {
+      name : t('about.testimonials.c3.name'),
+      location : t('about.testimonials.c3.location'),
+      text : t('about.testimonials.c3.text'),
+      rating : 3,
+    },
+  ];
+
   return (
     <section id="contact" className="section-padding bg-gradient-subtle">
       <Testimonials
-        testimonials={[]}
+        testimonials={testimonials}
         isVisible={true}
         title={t("about.testimonialsTitle")}
         subtitle={t("about.testimonialsSubtitle")}
