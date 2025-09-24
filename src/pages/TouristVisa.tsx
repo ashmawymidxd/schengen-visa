@@ -1,6 +1,6 @@
 import ServiceHeader from "@/components/ServiceHeader";
 import Footer from "@/components/Footer";
-import ContactInfo from "@/components/ContactInfo";
+import ContactForm from "@/components/ContactForm";
 import TouristVisaFAQ from "@/components/TouristVisaFAQ";
 import {
   Zap,
@@ -71,13 +71,7 @@ const TouristVisa = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-emerald-50/30 relative overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-emerald-400/20 to-green-400/20 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-amber-400/20 to-yellow-400/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-400/10 to-emerald-400/10 rounded-full blur-3xl"></div>
-      </div>
+    <div className="min-h-screen">
 
       <div className="relative z-10">
         <ServiceHeader />
@@ -86,7 +80,7 @@ const TouristVisa = () => {
         <section className="section-padding">
           <div className="container mx-auto">
             <div
-              className={`bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-md shadow-green-500/10 border border-white/20 transform transition-all duration-1000 ${
+              className={`bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-md shadow-green-500/10 border border-green-200/50 transform transition-all duration-1000 ${
                 isVisible
                   ? "translate-y-0 opacity-100"
                   : "translate-y-10 opacity-0"
@@ -167,7 +161,7 @@ const TouristVisa = () => {
           </div>
         </section>
         <TouristVisaFAQ />
-        <ContactInfo contactInfo={contactInfo} />
+        <ContactForm contactInfo={contactInfo} />
         <Footer />
       </div>
     </div>

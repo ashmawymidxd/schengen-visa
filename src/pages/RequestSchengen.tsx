@@ -3,10 +3,10 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import Footer from "@/components/Footer";
 import Documents from "@/components/Documents";
 import CountryCards from "@/components/CountryCards";
-import ContactInfo from "@/components/ContactInfo";
+import ContactForm from "@/components/ContactForm";
 import { Phone, Mail } from "lucide-react";
-
 import RequestSchengenFAQ from "@/components/RequestSchengenFAQ";
+
 const RequestSchengen = () => {
   const { t } = useLanguage();
   const contactInfo = [
@@ -29,7 +29,7 @@ const RequestSchengen = () => {
       <Documents />
       <RequestSchengenFAQ />
       <CountryCards />
-      <ContactInfo contactInfo={contactInfo} />
+      <ContactForm contactInfo={contactInfo} />
       <Footer />
     </div>
   );

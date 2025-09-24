@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import emailjs from 'emailjs-com';
 
-const ContactInfo = ({ contactInfo }) => {
+const ContactForm = ({ contactInfo }) => {
   const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
@@ -71,12 +71,7 @@ const ContactInfo = ({ contactInfo }) => {
             {t("contact.title") || "Get In Touch"}
             <Sparkles className="w-4 h-4" />
           </div>
-          <h2 className="text-4xl lg:text-6xl font-bold mb-6 font-arabic bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
-            {t("contact.heading") || "Contact Us"}
-            <span className="block bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
-              {t("contact.subheading") || "Let's Connect"}
-            </span>
-          </h2>
+          
           <p className="text-xl text-gray-600 max-w-3xl mx-auto font-arabic leading-relaxed bg-white/50 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
             {t("contact.description") || "We'd love to hear from you. Send us a message and we'll respond as soon as possible."}
           </p>
@@ -90,38 +85,6 @@ const ContactInfo = ({ contactInfo }) => {
               <h3 className="text-2xl font-bold text-gray-800 mb-8 font-arabic bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
                 {t("contact.info.title")}
               </h3>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {contactInfo.map((info, index) => (
-                  <div key={index} className="group">
-                    <Card className="border-white/20 bg-white/60 backdrop-blur-md hover:bg-white/80 hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-500 ease-out transform group-hover:-translate-y-2 relative overflow-hidden">
-                      {/* Gold Accent Border */}
-                      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 to-yellow-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-                      
-                      <CardHeader className="pb-4">
-                        <div className="flex items-center gap-3">
-                          <div className="p-3 rounded-xl bg-gradient-to-br from-emerald-500 to-green-600 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                            <info.icon className="w-6 h-6 text-white" />
-                          </div>
-                          <CardTitle className="text-lg font-arabic text-gray-800">
-                            {info.title}
-                          </CardTitle>
-                        </div>
-                      </CardHeader>
-                      <CardContent className="pt-0">
-                        {info.details.map((detail, idx) => (
-                          <p
-                            key={idx}
-                            className="text-gray-600 font-arabic text-sm mb-1 group-hover:text-gray-800 transition-colors duration-300"
-                          >
-                            {detail}
-                          </p>
-                        ))}
-                      </CardContent>
-                    </Card>
-                  </div>
-                ))}
-              </div>
             </div>
 
             {/* Quick Actions */}
@@ -199,7 +162,7 @@ const ContactInfo = ({ contactInfo }) => {
           <div className={`transform transition-all duration-1000 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="relative group">
               {/* Form Background Glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 via-green-600 to-lime-600 rounded-3xl shadow-2xl shadow-emerald-500/30 transform group-hover:scale-105 transition-transform duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 via-green-600 to-lime-600 rounded-3xl shadow-2xl shadow-emerald-500/30 transform group-hover:scale-101 transition-transform duration-500"></div>
               
               {/* Gold Accent Border */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-400 opacity-20 blur-sm group-hover:opacity-40 transition-opacity duration-500 -m-0.5"></div>
@@ -310,4 +273,4 @@ const ContactInfo = ({ contactInfo }) => {
   );
 };
 
-export default ContactInfo;
+export default ContactForm;

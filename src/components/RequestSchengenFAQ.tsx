@@ -63,7 +63,7 @@ function RequestSchengenFAQ() {
         <div className="absolute -top-6 -left-6 w-12 h-12 bg-amber-400/20 rounded-full blur-lg"></div>
         <div className="absolute -bottom-6 -right-6 w-12 h-12 bg-green-400/20 rounded-full blur-lg"></div>
         
-        <div className="max-w-4xl m-auto bg-gradient-to-br from-white/80 via-white/60 to-emerald-50/30 backdrop-blur-md rounded-3xl p-8 shadow-2xl shadow-green-500/10 border border-white/50 relative overflow-hidden">
+        <div className="max-w-4xl m-auto bg-gradient-to-br from-white/80 via-white/60 to-emerald-50/30 backdrop-blur-md rounded-3xl p-2 md:p-8 shadow-2xl shadow-green-500/10 border border-white/50 relative overflow-hidden">
           {/* Subtle Pattern Overlay */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-green-500/5 to-transparent opacity-30"></div>
           
@@ -155,15 +155,6 @@ function RequestSchengenFAQ() {
           </div>
         ))}
       </div>
-
-      <style jsx>{`
-        .accordion-chevron {
-          transition: transform 0.3s ease;
-        }
-        [data-state="open"] .accordion-chevron {
-          transform: rotate(180deg);
-        }
-      `}</style>
     </div>
   );
 }

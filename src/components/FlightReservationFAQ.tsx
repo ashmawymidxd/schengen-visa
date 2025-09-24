@@ -6,30 +6,31 @@ import {
 } from "@/components/ui/accordion";
 import { HelpCircle, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+
 function FlightReservationFAQ() {
   const { t, isRTL } = useLanguage();
   const faqs = [
     {
       question: t("flight.reservation-visa.faqs1.question"),
       answer: t("flight.reservation-visa.faqs1.answer"),
-      icon: "✈️",
+      icon:"🌤️"
     },
     {
       question: t("flight.reservation-visa.faqs2.question"),
       answer: t("flight.reservation-visa.faqs2.answer"),
-      icon: "🛬",
+      icon:"🌂"
     },
     {
       question: t("flight.reservation-visa.faqs3.question"),
       answer: t("flight.reservation-visa.faqs3.answer"),
-      icon: "📅",
+      icon:"📺"
     },
   ];
   return (
     <div className="max-w-4xl m-auto p-10">
       <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-[var(--shadow-medium)] border border-border/50">
         <Accordion type="single" collapsible className="space-y-4">
-          {faqs.map((faq, index) => (
+         {faqs.map((faq, index) => (
             <AccordionItem
               key={index}
               value={`item-${index}`}

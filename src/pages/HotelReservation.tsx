@@ -1,12 +1,30 @@
+import { useState, useEffect } from "react";
 import ServiceHeader from "@/components/ServiceHeader";
-import ContactInfo from "@/components/ContactInfo";
-import { Phone, Mail } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
+import {
+  Phone,
+  Mail,
+  Star,
+  ChevronRight,
+  Sparkles,
+  Shield,
+  Clock,
+  Users,
+  CheckCircle,
+  Award,
+  Zap,
+  Heart,
+} from "lucide-react";
 import Footer from "@/components/Footer";
 import HotelReservationFQA from "@/components/HotelReservationFQA";
-import { CircleCheckIcon } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { LucideHotel } from "lucide-react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
+import { Navigation, Autoplay } from "swiper/modules";
+
+// Import hotel images
 import hotel1 from "../assets/hotels/h1.png";
 import hotel2 from "../assets/hotels/h2.png";
 import hotel3 from "../assets/hotels/h3.png";
@@ -24,143 +42,300 @@ import hotel14 from "../assets/hotels/h14.png";
 import hotel15 from "../assets/hotels/h15.png";
 import hotel16 from "../assets/hotels/h16.png";
 import hotel17 from "../assets/hotels/h17.png";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/autoplay";
 
-import { Navigation, Autoplay } from "swiper/modules";
 const HotelReservation = () => {
   const { t, isRTL } = useLanguage();
-  const additionalDocuments = [
-    t("hotel.reservation.why-us-answer1"),
-    t("hotel.reservation.why-us-answer2"),
-    t("hotel.reservation.why-us-answer3"),
-    t("hotel.reservation.why-us-answer4"),
-    t("hotel.reservation.why-us-answer5"),
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const features = [
+    {
+      icon: Shield,
+      title: t("hotel.reservation.why-us-answer1"),
+      description: "",
+      gradient: "from-emerald-500 to-green-500",
+    },
+    {
+      icon: Clock,
+      title: t("hotel.reservation.why-us-answer2"),
+      description: "",
+      gradient: "from-amber-500 to-yellow-500",
+    },
+    {
+      icon: Users,
+      title: t("hotel.reservation.why-us-answer3"),
+      description: "",
+      gradient: "from-emerald-500 to-green-500",
+    },
+    {
+      icon: Award,
+      title: t("hotel.reservation.why-us-answer4"),
+      description: "",
+      gradient: "from-amber-500 to-yellow-500",
+    },
+    {
+      icon: Zap,
+      title: t("hotel.reservation.why-us-answer5"),
+      description: "",
+      gradient: "from-emerald-500 to-green-500",
+    },
+    {
+      icon: Heart,
+      title: t("hotel.reservation.why-us-answer6") || "24/7 Customer Support",
+      description: "",
+      gradient: "from-amber-500 to-yellow-500",
+    },
   ];
+
   const contactInfo = [
     {
       icon: Phone,
       title: t("contact.phone.title"),
       details: ["+966 50 123 4567", "+966 11 234 5678"],
-      color: "text-green-500",
+      gradient: "from-emerald-500 to-green-500",
     },
     {
       icon: Mail,
       title: t("contact.email.title"),
       details: ["info@schengenvisasa.com", "support@schengenvisasa.com"],
-      color: "text-blue-500",
+      gradient: "from-amber-500 to-yellow-500",
     },
   ];
+
+  const hotelImages = [
+    hotel1,
+    hotel2,
+    hotel3,
+    hotel4,
+    hotel5,
+    hotel6,
+    hotel7,
+    hotel8,
+    hotel9,
+    hotel10,
+    hotel11,
+    hotel12,
+    hotel13,
+    hotel14,
+    hotel15,
+    hotel16,
+    hotel17,
+  ];
+
   return (
     <div className="min-h-screen">
+
       <ServiceHeader />
-      <section className="section-padding bg-gradient-subtle">
+
+      {/* Why Choose Us Section */}
+      <section className="section-padding relative z-10">
         <div className="container mx-auto">
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-10 shadow-[var(--shadow-medium)] border border-border/50">
-            <div className="text-center mb-8">
+          <div
+            className={`bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-2xl shadow-emerald-500/10 border border-emerald-200/50 transform transition-all duration-1000 ${
+              isVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-10 opacity-0"
+            }`}
+          >
+            {/* Header */}
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/10 to-green-500/10 border border-emerald-200/50 text-emerald-600 px-6 py-3 rounded-full font-medium mb-6 backdrop-blur-sm">
+                <Sparkles className="w-4 h-4" />
+                {t("hotel.reservation.why-us")}
+                <Sparkles className="w-4 h-4" />
+              </div>
+
               <h3
-                className={`text-2xl font-bold text-foreground mb-4 ${
+                className={`text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-4 ${
                   isRTL ? "font-arabic" : ""
                 }`}
               >
                 {t("hotel.reservation.why-us")}
               </h3>
+
               <p
-                className={`text-muted-foreground ${
+                className={`text-lg text-gray-600 max-w-3xl mx-auto ${
                   isRTL ? "font-arabic" : ""
-                }`}
+                } leading-relaxed`}
               >
                 {t("hotel.reservation.description")}
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {additionalDocuments.map((doc, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-3 p-4 rounded-xl bg-gradient-to-r from-muted/50 to-muted/30 border border-border/50"
-                >
-                  <CircleCheckIcon className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span
-                    className={`text-sm ${
-                      isRTL ? "font-arabic" : ""
-                    } text-muted-foreground`}
-                  >
-                    {doc}
-                  </span>
+            {/* Features Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {features.map((feature, index) => (
+                <div key={index} className="group relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/90 to-gray-100/90 rounded-2xl shadow-lg border border-white/50 backdrop-blur-sm transform group-hover:scale-105 transition-all duration-500 ease-out"></div>
+
+                  <div className="relative z-10 flex items-start gap-4 p-6 h-full">
+                    {/* Icon Container */}
+                    <div
+                      className={`relative transform group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500`}
+                    >
+                      <div
+                        className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} rounded-xl blur-md opacity-30 group-hover:opacity-50 transition-opacity duration-500`}
+                      ></div>
+                      <div
+                        className={`relative bg-gradient-to-br ${feature.gradient} p-3 rounded-xl shadow-lg`}
+                      >
+                        <feature.icon className="w-6 h-6 text-white" />
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1">
+                      <h4
+                        className={`font-semibold text-gray-800 mb-2 ${
+                          isRTL ? "font-arabic" : ""
+                        }`}
+                      >
+                        {feature.title}
+                      </h4>
+                      {feature.description && (
+                        <p
+                          className={`text-sm text-gray-600 ${
+                            isRTL ? "font-arabic" : ""
+                          }`}
+                        >
+                          {feature.description}
+                        </p>
+                      )}
+                    </div>
+
+                    {/* Hover Effect Line */}
+                    <div
+                      className={`absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r ${feature.gradient} rounded-full group-hover:w-full transition-all duration-500 ease-out`}
+                    ></div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
       </section>
-      <div className="my-10">
-        <div className="bg-gradient-to-br from-white to-gray-200 w-[70px] h-[70px] m-auto flex items-center justify-center rounded-xl">
-          <LucideHotel className="w-12 h-12 text-primary mx-auto" />
-        </div>
-        <h3 className="text-2xl font-bold text-foreground mb-4 text-center">
-          {t("countries.service_providers")}
-        </h3>
 
-        <div className="container mt-10">
-          <Swiper
-            dir={isRTL ? "rtl" : "ltr"}
-            modules={[Navigation, Autoplay]}
-            spaceBetween={20}
-            slidesPerView={2}
-            breakpoints={{
-              640: { slidesPerView: 3 },
-              1024: { slidesPerView: 5 },
-              1280: { slidesPerView: 7 },
-            }}
-            navigation={false}
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-              reverseDirection: !isRTL, // ✅ autoplay goes left for LTR, right for RTL
-            }}
-            speed={500}
-            loop={true}
-            // force swiper to recalc on direction change
-            key={isRTL ? "rtl" : "ltr"}
-          >
-            {[
-              hotel1,
-              hotel2,
-              hotel3,
-              hotel4,
-              hotel5,
-              hotel6,
-              hotel7,
-              hotel8,
-              hotel9,
-              hotel10,
-              hotel11,
-              hotel12,
-              hotel13,
-              hotel14,
-              hotel15,
-              hotel16,
-              hotel17,
-            ].map((img, index) => (
-              <SwiperSlide key={index}>
-                <div className="p-5 rounded-md bg-gradient-to-br from-white to-gray-200">
-                  <img
-                    src={img}
-                    draggable="false"
-                    alt={`slide-${index}`}
-                    className="rounded-md"
-                  />
+      {/* Hotel Partners Section */}
+      <div
+        className={`my-16 relative z-10 transform transition-all duration-1000 delay-300 ${
+          isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+        }`}
+      >
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <div className="relative inline-block">
+            <div className="absolute -inset-4 bg-gradient-to-r from-emerald-400/20 to-amber-400/20 rounded-full blur-lg"></div>
+            <div className="relative bg-gradient-to-br from-emerald-500 to-green-500 w-20 h-20 m-auto flex items-center justify-center rounded-2xl shadow-2xl shadow-emerald-500/30">
+              <Star className="w-10 h-10 text-white" />
+            </div>
+          </div>
+
+          <h3 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mt-6 mb-4">
+            {t("countries.service_providers")}
+          </h3>
+
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            Partnering with the world's finest hotels for your perfect stay
+          </p>
+        </div>
+
+        {/* Swiper */}
+       <div className="container mx-auto mt-8">
+            <Swiper
+              dir={isRTL ? "rtl" : "ltr"}
+              modules={[Navigation, Autoplay]}
+              spaceBetween={30}
+              slidesPerView={2}
+              breakpoints={{
+                640: { slidesPerView: 3 },
+                768: { slidesPerView: 4 },
+                1024: { slidesPerView: 5 },
+                1280: { slidesPerView: 6 },
+              }}
+              navigation={false}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+                reverseDirection: isRTL,
+              }}
+              speed={600}
+              loop={true}
+              key={isRTL ? "rtl" : "ltr"}
+            >
+              {hotelImages.map((img, index) => (
+                <SwiperSlide key={index}>
+                  <div className="p-5 rounded-md bg-gradient-to-br from-white to-gray-200">
+                    <img
+                      src={img}
+                      draggable="false"
+                      alt={`slide-${index}`}
+                      className="rounded-md"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
+        {/* Progress Bar */}
+        <div className="max-w-4xl mx-auto mt-8">
+          <div className="relative h-1 bg-gray-200 rounded-full overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-amber-500 rounded-full animate-pulse"></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Enhanced Contact Info */}
+      <div
+        className={`container mx-auto px-4 mb-16 transform transition-all duration-1000 delay-600 ${
+          isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+        }`}
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {contactInfo.map((contact, index) => (
+            <div key={index} className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/90 to-gray-100/90 rounded-2xl shadow-lg border border-white/50 backdrop-blur-sm transform group-hover:scale-105 transition-all duration-500"></div>
+
+              <div className="relative z-10 flex items-center gap-4 p-6">
+                <div
+                  className={`relative bg-gradient-to-br ${contact.gradient} p-3 rounded-xl shadow-lg transform group-hover:scale-110 transition-transform duration-300`}
+                >
+                  <contact.icon className="w-6 h-6 text-white" />
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+
+                <div className="flex-1">
+                  <h4 className="font-semibold text-gray-800 mb-2">
+                    {contact.title}
+                  </h4>
+                  <div className="space-y-1">
+                    {contact.details.map((detail, idx) => (
+                      <p key={idx} className="text-gray-600 text-sm">
+                        {detail}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+
+                <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-emerald-500 transform group-hover:translate-x-1 transition-all duration-300" />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
       <HotelReservationFQA />
-      <ContactInfo contactInfo={contactInfo} />
+
+      {/* Enhanced Contact Form */}
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/50 to-amber-50/50"></div>
+        <div className="relative z-10">
+          <ContactForm contactInfo={contactInfo} />
+        </div>
+      </div>
+
       <Footer />
     </div>
   );

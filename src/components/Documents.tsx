@@ -85,13 +85,13 @@ const Documents = () => {
             {t("documents.badge")}
             <Sparkles className="w-4 h-4" />
           </div>
-          <h2 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
-            {t("documents.title")}
-            <span className="block bg-gradient-to-r from-emerald-600 mt-5 to-green-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-6xl font-bold p-5 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+            <span>{t("documents.title")}</span>
+            <span className="mx-5 bg-gradient-to-r from-emerald-600 mt-5 to-green-600 bg-clip-text text-transparent">
               {t("documents.subtitle")}
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed bg-white/50 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed bg-white/50 backdrop-blur-sm rounded-2xl p-5 border border-white/20">
             {t("documents.description")}
           </p>
         </div>
