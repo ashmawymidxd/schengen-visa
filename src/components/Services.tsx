@@ -144,7 +144,7 @@ const Services = () => {
                 <p className={`text-lg mb-6 ${isRTL ? "font-arabic" : ""} opacity-90 drop-shadow-sm`}>
                   {t("services.cta.desc")}
                 </p>
-                <button className={`group relative inline-flex items-center gap-2 bg-white text-emerald-600 hover:text-emerald-700 text-lg px-8 py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out ${isRTL ? "font-arabic" : ""}`}>
+                <a href="https://wa.me/+201554300351" target="__blanck" className={`group relative inline-flex items-center gap-2 bg-white text-emerald-600 hover:text-emerald-700 text-lg px-8 py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out ${isRTL ? "font-arabic" : ""}`}>
                   {t("services.cta.button")}
                   {isRTL ? (
                     <ArrowLeftCircle className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform duration-300" />
@@ -154,7 +154,7 @@ const Services = () => {
                   
                   {/* Button Shine Effect */}
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                </button>
+                </a>
               </div>
             </div>
           </div>

@@ -84,7 +84,7 @@ const Steps = () => {
           </div>
           <h2 className={`text-4xl lg:text-6xl font-bold text-gray-900 mb-6 ${isRTL ? "font-arabic" : ""}`}>
             {t("steps.title")}
-            <span className="block bg-gradient-to-r from-emerald-600 to-amber-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-emerald-600 to-amber-600 p-5 bg-clip-text text-transparent">
               {t("steps.subtitle")}
             </span>
           </h2>
@@ -183,7 +183,7 @@ const Steps = () => {
                 <p className={`text-lg mb-6 ${isRTL ? "font-arabic" : ""} opacity-90 drop-shadow-sm`}>
                   {t("steps.bottom_cta.desc")}
                 </p>
-                <button className="group relative inline-flex items-center gap-2 bg-white text-emerald-600 hover:text-emerald-700 text-lg px-8 py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
+                <a href="https://wa.me/+201554300351" target="__blanck" className="group relative inline-flex items-center gap-2 bg-white text-emerald-600 hover:text-emerald-700 text-lg px-8 py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
                   <span className={isRTL ? "font-arabic" : ""}>
                     {t("steps.bottom_cta.button")}
                   </span>
@@ -191,7 +191,7 @@ const Steps = () => {
                   
                   {/* Button Shine Effect */}
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                </button>
+                </a>
               </div>
             </div>
           </div>

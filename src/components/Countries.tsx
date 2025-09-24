@@ -404,7 +404,7 @@ const Countries = () => {
           </div>
           <h2 className="text-4xl lg:text-6xl font-bold  mb-6 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
             {t("countries.title")}
-            <span className="block bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-emerald-600 to-green-600 p-5 bg-clip-text text-transparent">
               {t("countries.subtitle")}
             </span>
           </h2>
@@ -493,7 +493,7 @@ const Countries = () => {
 
                   {/* CTA Button */}
                   <div className="mt-4 pt-4 border-t border-gray-200/50 group-hover:border-emerald-200/50 transition-colors duration-300">
-                    <button className="group/btn w-full flex items-center justify-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium text-sm transition-all duration-300 hover:gap-3">
+                    <a href="https://wa.me/+201554300351" target="__blanck" className="group/btn w-full flex items-center justify-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium text-sm transition-all duration-300 hover:gap-3">
                       {t("countries.request_visa")}{" "}
                       {isRTL ? country.name : country.nameEn}
                       <ArrowRight
@@ -503,7 +503,7 @@ const Countries = () => {
                             : "group-hover/btn:translate-x-1"
                         }`}
                       />
-                    </button>
+                    </a>
                   </div>
 
                   {/* Hover Effect Line */}

@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { StarIcon, Quote } from "lucide-react";
 
-
 export default function Testimonials({
   testimonials = [],
   isVisible = true,
@@ -32,12 +31,7 @@ export default function Testimonials({
               <CardContent className="relative z-10 p-6">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-1">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <StarIcon
-                        key={i}
-                        className="w-5 h-5 fill-yellow-400 text-yellow-400 drop-shadow-sm"
-                      />
-                    ))}
+                    {[...Array(testimonial.rating)].map((_, i) => "⭐")}
                   </div>
                 </div>
 

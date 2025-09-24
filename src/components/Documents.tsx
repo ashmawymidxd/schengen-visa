@@ -182,10 +182,10 @@ const Documents = () => {
                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                   </a>
                   
-                  <button className="group relative inline-flex items-center gap-2 bg-transparent border-2 border-white/30 hover:border-white/50 text-white hover:bg-white/10 text-lg px-8 py-4 rounded-2xl font-semibold backdrop-blur-sm transition-all duration-300 ease-out">
+                  <a href="https://wa.me/+201554300351" target="__blanck" className="group relative inline-flex items-center gap-2 bg-transparent border-2 border-white/30 hover:border-white/50 text-white hover:bg-white/10 text-lg px-8 py-4 rounded-2xl font-semibold backdrop-blur-sm transition-all duration-300 ease-out">
                     {t("documents.help.button2")}
                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

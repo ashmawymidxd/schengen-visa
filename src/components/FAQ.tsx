@@ -177,10 +177,10 @@ const FAQ = () => {
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button className="group relative inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-300 text-emerald-900 font-semibold text-lg px-8 py-4 rounded-2xl font-arabic shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
+                    <a href="https://wa.me/+201554300351" target="__blanck" className="group relative inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-300 text-emerald-900 font-semibold text-lg px-8 py-4 rounded-2xl font-arabic shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
                       {t("faq.cta.button1")}
                       <div className="w-0 h-0.5 bg-emerald-700 absolute bottom-2 left-4 group-hover:w-8 transition-all duration-300 ease-out"></div>
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>

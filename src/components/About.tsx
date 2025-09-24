@@ -172,13 +172,13 @@ const About = () => {
                 <p className="text-lg mb-6 font-arabic opacity-90 drop-shadow-sm">
                   {t("about.ctaSubtitle")}
                 </p>
-                <button className="group relative inline-flex items-center gap-2 bg-white text-purple-600 hover:text-purple-700 text-lg px-8 py-4 rounded-2xl font-arabic font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
+                <a href="https://wa.me/+201554300351" target="__blanck" className="group relative inline-flex items-center gap-2 bg-white text-purple-600 hover:text-purple-700 text-lg px-8 py-4 rounded-2xl font-arabic font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
                   {t("about.ctaButton")}
                   <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
 
                   {/* Button Shine Effect */}
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                </button>
+                </a>
               </div>
             </div>
           </div>

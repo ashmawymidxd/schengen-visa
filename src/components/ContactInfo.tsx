@@ -2,10 +2,20 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useState, useEffect } from "react";
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, MessageSquare, Phone, Mail, Sparkles, Send, ArrowRight, Clock, Users } from "lucide-react";
+import {
+  MapPin,
+  MessageSquare,
+  Phone,
+  Mail,
+  Sparkles,
+  Send,
+  ArrowRight,
+  Clock,
+  Users,
+} from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
 const ContactInfo = ({ contactInfo }) => {
   const { t } = useLanguage();
@@ -31,18 +41,23 @@ const ContactInfo = ({ contactInfo }) => {
     setLoading(true);
     setStatus("");
 
-    const serviceID = 'service_7qzj7ci';
-    const templateID = 'template_m7q5e2b';
-    const userID = 'vK1Pii72N3tTdskj7';
+    const serviceID = "service_7qzj7ci";
+    const templateID = "template_m7q5e2b";
+    const userID = "vK1Pii72N3tTdskj7";
 
     try {
-      await emailjs.send(serviceID, templateID, {
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        message: formData.message,
-        to_email: 'uyu365666@gmail.com',
-      }, userID);
+      await emailjs.send(
+        serviceID,
+        templateID,
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          to_email: "uyu365666@gmail.com",
+        },
+        userID
+      );
 
       setStatus("✅ Message sent successfully!");
       setFormData({ name: "", phone: "", email: "", message: "" });
@@ -65,26 +80,36 @@ const ContactInfo = ({ contactInfo }) => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header Section */}
-        <div className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+        <div
+          className={`text-center mb-16 transform transition-all duration-1000 ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
+        >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/10 to-green-500/10 border border-emerald-200/50 text-emerald-600 px-6 py-3 rounded-full font-arabic font-medium mb-6 backdrop-blur-sm">
             <Sparkles className="w-4 h-4" />
-            {t("contact.title") || "Get In Touch"}
+            {t("contact.badge")}
             <Sparkles className="w-4 h-4" />
           </div>
           <h2 className="text-4xl lg:text-6xl font-bold mb-6 font-arabic bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
-            {t("contact.heading") || "Contact Us"}
-            <span className="block bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
-              {t("contact.subheading") || "Let's Connect"}
+            {t("contact.title")}
+            <span className="block bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text p-5 text-transparent">
+              {t("contact.subtitle")}
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto font-arabic leading-relaxed bg-white/50 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-            {t("contact.description") || "We'd love to hear from you. Send us a message and we'll respond as soon as possible."}
+            {t("contact.description")}
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left Column - Contact Info */}
-          <div className={`space-y-8 transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <div
+            className={`space-y-8 transform transition-all duration-1000 delay-300 ${
+              isVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-10 opacity-0"
+            }`}
+          >
             {/* Contact Info Cards */}
             <div>
               <h3 className="text-2xl font-bold text-gray-800 mb-8 font-arabic bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
@@ -97,7 +122,7 @@ const ContactInfo = ({ contactInfo }) => {
                     <Card className="border-white/20 bg-white/60 backdrop-blur-md hover:bg-white/80 hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-500 ease-out transform group-hover:-translate-y-2 relative overflow-hidden">
                       {/* Gold Accent Border */}
                       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 to-yellow-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-                      
+
                       <CardHeader className="pb-4">
                         <div className="flex items-center gap-3">
                           <div className="p-3 rounded-xl bg-gradient-to-br from-emerald-500 to-green-600 shadow-lg group-hover:scale-110 transition-transform duration-300">
@@ -128,7 +153,7 @@ const ContactInfo = ({ contactInfo }) => {
             <div className="bg-white/60 backdrop-blur-md rounded-2xl p-6 border border-white/20 relative overflow-hidden group hover:shadow-2xl hover:shadow-emerald-500/5 transition-all duration-500">
               {/* Gold Corner Accent */}
               <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-amber-400 to-yellow-500 rounded-bl-2xl transform translate-x-8 -translate-y-8 rotate-45 opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
-              
+
               <h4 className="text-xl font-bold text-gray-800 mb-6 font-arabic relative z-10">
                 {t("contact.quick.title")}
               </h4>
@@ -137,31 +162,43 @@ const ContactInfo = ({ contactInfo }) => {
                   className="w-full justify-start gap-3 h-14 font-arabic bg-white/80 hover:bg-white border border-emerald-200/50 hover:border-emerald-300 hover:shadow-lg transition-all duration-300 group/btn"
                   variant="outline"
                 >
-                  <div className="p-2 rounded-lg bg-gradient-to-br from-green-500 to-emerald-600 group-hover/btn:scale-110 transition-transform duration-300">
+                  <a
+                    href="https://wa.me/+201554300351"
+                    target="__blanck"
+                    className="p-2 rounded-lg bg-gradient-to-br from-green-500 to-emerald-600 group-hover/btn:scale-110 transition-transform duration-300"
+                  >
                     <MessageSquare className="w-5 h-5 text-white" />
-                  </div>
+                  </a>
                   {t("contact.quick.whatsapp")}
                   <ArrowRight className="w-4 h-4 ml-auto text-gray-400 group-hover/btn:text-emerald-600 group-hover/btn:translate-x-1 transition-all duration-300" />
                 </Button>
-                
+
                 <Button
                   className="w-full justify-start gap-3 h-14 font-arabic bg-white/80 hover:bg-white border border-amber-200/50 hover:border-amber-300 hover:shadow-lg transition-all duration-300 group/btn"
                   variant="outline"
                 >
-                  <div className="p-2 rounded-lg bg-gradient-to-br from-amber-500 to-yellow-600 group-hover/btn:scale-110 transition-transform duration-300">
+                  <a
+                    href="tel:+201554300351"
+                    target="__blanck"
+                    className="p-2 rounded-lg bg-gradient-to-br from-amber-500 to-yellow-600 group-hover/btn:scale-110 transition-transform duration-300"
+                  >
                     <Phone className="w-5 h-5 text-white" />
-                  </div>
+                  </a>
                   {t("contact.quick.call")}
                   <ArrowRight className="w-4 h-4 ml-auto text-gray-400 group-hover/btn:text-amber-600 group-hover/btn:translate-x-1 transition-all duration-300" />
                 </Button>
-                
+
                 <Button
                   className="w-full justify-start gap-3 h-14 font-arabic bg-white/80 hover:bg-white border border-gray-200/50 hover:border-gray-300 hover:shadow-lg transition-all duration-300 group/btn"
                   variant="outline"
                 >
-                  <div className="p-2 rounded-lg bg-gradient-to-br from-gray-500 to-gray-600 group-hover/btn:scale-110 transition-transform duration-300">
+                  <a
+                    href="mailto:uyu365656@gmail.com"
+                    target="__blanck"
+                    className="p-2 rounded-lg bg-gradient-to-br from-gray-500 to-gray-600 group-hover/btn:scale-110 transition-transform duration-300"
+                  >
                     <Mail className="w-5 h-5 text-white" />
-                  </div>
+                  </a>
                   {t("contact.quick.email")}
                   <ArrowRight className="w-4 h-4 ml-auto text-gray-400 group-hover/btn:text-gray-600 group-hover/btn:translate-x-1 transition-all duration-300" />
                 </Button>
@@ -174,7 +211,7 @@ const ContactInfo = ({ contactInfo }) => {
                 {/* Floating Elements */}
                 <div className="absolute -top-2 -right-2 w-4 h-4 bg-amber-400/30 rounded-full blur-sm animate-pulse"></div>
                 <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-emerald-400/30 rounded-full blur-sm animate-pulse delay-1000"></div>
-                
+
                 <div className="p-4 rounded-2xl bg-gradient-to-br from-amber-400 to-yellow-500 w-16 h-16 mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <MapPin className="w-8 h-8 text-white mx-auto" />
                 </div>
@@ -184,11 +221,11 @@ const ContactInfo = ({ contactInfo }) => {
                 <p className="text-gray-600 font-arabic mb-4">
                   {t("contact.map.desc")}
                 </p>
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   className="font-arabic border-emerald-300 text-emerald-600 hover:bg-emerald-50 hover:border-emerald-400 group/btn"
                 >
-                  {t("contact.map.button")}
+                  <a href="https://facebook.com" target="__blank"> {t("contact.map.button")}</a>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
                 </Button>
               </div>
@@ -196,19 +233,25 @@ const ContactInfo = ({ contactInfo }) => {
           </div>
 
           {/* Right Column - Contact Form */}
-          <div className={`transform transition-all duration-1000 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <div
+            className={`transform transition-all duration-1000 delay-600 ${
+              isVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-10 opacity-0"
+            }`}
+          >
             <div className="relative group">
               {/* Form Background Glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 via-green-600 to-lime-600 rounded-3xl shadow-2xl shadow-emerald-500/30 transform group-hover:scale-105 transition-transform duration-500"></div>
-              
+
               {/* Gold Accent Border */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-400 opacity-20 blur-sm group-hover:opacity-40 transition-opacity duration-500 -m-0.5"></div>
-              
+
               <div className="relative bg-gradient-to-br from-emerald-600 via-green-600 to-emerald-700 rounded-3xl p-8 h-full shadow-2xl">
                 {/* Floating Icons */}
                 <div className="absolute top-4 right-4 w-8 h-8 bg-amber-400/20 rounded-full backdrop-blur-sm"></div>
                 <div className="absolute bottom-4 left-4 w-6 h-6 bg-white/10 rounded-full backdrop-blur-sm"></div>
-                
+
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="p-3 rounded-2xl bg-gradient-to-br from-amber-400 to-yellow-500 shadow-lg">
@@ -242,7 +285,7 @@ const ContactInfo = ({ contactInfo }) => {
                         />
                       </div>
                     </div>
-                    
+
                     <div className="group">
                       <Input
                         name="email"
@@ -254,7 +297,7 @@ const ContactInfo = ({ contactInfo }) => {
                         required
                       />
                     </div>
-                    
+
                     <div className="group">
                       <Textarea
                         name="message"
@@ -285,17 +328,19 @@ const ContactInfo = ({ contactInfo }) => {
                           </>
                         )}
                       </span>
-                      
+
                       {/* Button Shine Effect */}
                       <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000"></div>
                     </Button>
 
                     {status && (
-                      <p className={`text-center mt-3 font-semibold backdrop-blur-sm rounded-lg p-3 ${
-                        status.includes("✅") 
-                          ? "bg-green-400/20 text-green-100 border border-green-400/30" 
-                          : "bg-red-400/20 text-red-100 border border-red-400/30"
-                      }`}>
+                      <p
+                        className={`text-center mt-3 font-semibold backdrop-blur-sm rounded-lg p-3 ${
+                          status.includes("✅")
+                            ? "bg-green-400/20 text-green-100 border border-green-400/30"
+                            : "bg-red-400/20 text-red-100 border border-red-400/30"
+                        }`}
+                      >
                         {status}
                       </p>
                     )}

@@ -103,14 +103,14 @@ const Footer = () => {
                 <div className="p-2 rounded-lg bg-gradient-to-r from-emerald-500 to-green-500 group-hover:from-amber-500 group-hover:to-yellow-500 transition-all duration-300">
                   <Phone className="w-4 h-4 text-white" />
                 </div>
-                <span className="text-emerald-50 font-medium">+966 50 123 4567</span>
+                <span className="text-emerald-50 font-medium">+201554300351</span>
               </div>
               
               <div className="flex items-center gap-4 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300 group border border-emerald-400/10 hover:border-amber-400/30">
                 <div className="p-2 rounded-lg bg-gradient-to-r from-emerald-500 to-green-500 group-hover:from-amber-500 group-hover:to-yellow-500 transition-all duration-300">
                   <Mail className="w-4 h-4 text-white" />
                 </div>
-                <span className="text-emerald-50 font-medium">info@schengenvisasa.com</span>
+                <span className="text-emerald-50 font-medium">uyu365656@gmail.com</span>
               </div>
               
               <div className="flex items-center gap-4 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300 group border border-emerald-400/10 hover:border-amber-400/30">
@@ -254,7 +254,7 @@ const Footer = () => {
         <div className="container mx-auto px-6">
           <div className={`flex flex-col md:flex-row justify-between items-center gap-4 transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="text-sm text-emerald-200/70 font-arabic flex items-center gap-2">
-              <span>© 2024 {t("header.company_name")}</span>
+              <span>© 2025 {t("header.company_name")}</span>
               <div className="w-1 h-1 bg-amber-400 rounded-full"></div>
               <span>{t("footer.copyright")}</span>
             </div>
