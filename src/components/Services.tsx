@@ -72,7 +72,7 @@ const Services = () => {
           </div>
           <h2 className={`text-4xl lg:text-6xl font-bold text-foreground mb-4 ${isRTL ? "font-arabic" : ""} bg-gradient-to-r from-emerald-800 to-green-700 bg-clip-text text-transparent`}>
             {t("services.title")}
-            <span className="block text-amber-600 text-transparent mt-5">
+            <span className="block text-amber-600 text-transparent mt-5 p-5">
               {t("services.subtitle")}
             </span>
           </h2>

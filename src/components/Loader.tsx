@@ -1,6 +1,4 @@
-// components/Loader.jsx (alternative version)
-import React from "react";
-
+import logo from "../assets/logo.png";
 const Loader = () => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-90 z-50">

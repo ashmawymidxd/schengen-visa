@@ -28,31 +28,31 @@ const TouristVisa = () => {
       text: t("tourist.why-us-answer1"),
       icon: Zap,
       gradient: "from-emerald-500 to-green-400",
-      description: "Fast Processing",
+      description: t("tourist.badge1"),
     },
     {
       text: t("tourist.why-us-answer2"),
       icon: Shield,
       gradient: "from-amber-500 to-yellow-400",
-      description: "Secure & Reliable",
+      description: t("tourist.badge2"),
     },
     {
       text: t("tourist.why-us-answer3"),
       icon: Clock,
       gradient: "from-green-600 to-emerald-500",
-      description: "Time Efficient",
+      description: t("tourist.badge3"),
     },
     {
       text: t("tourist.why-us-answer4"),
       icon: Users,
       gradient: "from-amber-600 to-orange-400",
-      description: "Expert Team",
+      description: t("tourist.badge4"),
     },
     {
       text: t("tourist.why-us-answer5"),
       icon: Star,
       gradient: "from-emerald-600 to-teal-400",
-      description: "Premium Service",
+      description: t("tourist.badge5"),
     },
   ];
   const contactInfo = [

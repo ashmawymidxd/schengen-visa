@@ -44,7 +44,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-gradient-subtle">
+    <section id="contact" className=" bg-gradient-subtle">
       <Testimonials
         testimonials={testimonials}
         isVisible={true}

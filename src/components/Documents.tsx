@@ -28,49 +28,49 @@ const Documents = () => {
       text: t("document.additional.pasport"),
       icon: FileCheck,
       gradient: "from-emerald-500 to-green-500",
-      description: "Passport verification"
+      description: t("document.description1")
     },
     {
       text: t("document.additional.towImg"),
       icon: UserCheck,
       gradient: "from-amber-500 to-yellow-500",
-      description: "Photograph requirements"
+      description: t("document.description2")
     },
     {
       text: t("document.additional.piemetrice"),
       icon: ShieldCheck,
       gradient: "from-emerald-600 to-teal-500",
-      description: "Biometric data"
+      description: t("document.description3")
     },
     {
       text: t("document.additional.insurance"),
       icon: BadgeCheck,
       gradient: "from-amber-600 to-orange-500",
-      description: "Insurance coverage"
+      description: t("document.description4")
     },
     {
       text: t("document.additional.reserveFlight"),
       icon: Plane,
       gradient: "from-green-600 to-emerald-600",
-      description: "Travel arrangements"
+      description: t("document.description5")
     },
     {
       text: t("document.additional.profe"),
       icon: CalendarCheck,
       gradient: "from-yellow-600 to-amber-600",
-      description: "Professional documents"
+      description: t("document.description6")
     },
     {
       text: t("document.additional.home"),
       icon: Home,
       gradient: "from-emerald-700 to-green-700",
-      description: "Accommodation proof"
+      description: t("document.description7")
     },
     {
       text: t("document.additional.invetation"),
       icon: MailCheck,
       gradient: "from-amber-700 to-yellow-700",
-      description: "Invitation letters"
+      description: t("document.description8")
     },
   ];
 

@@ -82,12 +82,6 @@ const HotelReservation = () => {
       description: "",
       gradient: "from-emerald-500 to-green-500",
     },
-    {
-      icon: Heart,
-      title: t("hotel.reservation.why-us-answer6") || "24/7 Customer Support",
-      description: "",
-      gradient: "from-amber-500 to-yellow-500",
-    },
   ];
 
   const contactInfo = [

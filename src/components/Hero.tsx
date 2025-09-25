@@ -84,7 +84,7 @@ const Hero = () => {
                 isRTL ? "font-arabic" : ""
               } leading-tight`}
             >
-              <span className="block bg-gradient-to-r from-amber-400 to-amber-300 bg-clip-text text-transparent drop-shadow-lg">
+              <span className="block bg-gradient-to-r from-amber-400 to-amber-300 bg-clip-text text-transparent drop-shadow-lg p-5">
                 {t("hero.subtitle")}
               </span>
             </h1>
@@ -212,9 +212,9 @@ const Hero = () => {
             {/* Gold glow */}
             <div className="absolute inset-0 bg-amber-400/20 rounded-full blur-sm group-hover:blur-md transition-all duration-300"></div>
           </div>
-          <div className="text-amber-300/80 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <a href="#contact" className="text-amber-300/80 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             {t("hero.scroll_down")}
-          </div>
+          </a>
         </div>
       </div>
 

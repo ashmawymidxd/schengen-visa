@@ -56,7 +56,7 @@ const FAQ = () => {
     {
       question: t("faqs8.question"),
       answer: t("faqs8.answer"),
-      icon: "🌟",
+      icon: "🌍",
     },
     {
       question: t("faqs9.question"),

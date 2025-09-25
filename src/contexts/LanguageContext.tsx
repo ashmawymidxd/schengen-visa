@@ -62,6 +62,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "hero.stats.success_label": "معدل النجاح",
       "hero.stats.processing": "7 أيام",
       "hero.stats.processing_label": "متوسط المعالجة",
+      "hero.scroll_down": "النزول الي الاسفل",
 
       // Services
       "services.badge": "خدماتنا المتكاملة",
@@ -111,7 +112,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "document.additional.pasport": "جواز سفر ساري المفعول",
       "document.additional.towImg": "صورتان شخصيتان بحجم صور جواز السفر",
       "document.additional.piemetrice": "البصمات (البيومترية)",
-      "document.additional.insurance": "البصمات (البيومترية)",
+      "document.additional.insurance": "معاير السفر الطبية",
       "document.additional.reserveFlight": "حجز طيران ذهاب وعودة",
       "document.additional.profe":
         "إثبات القدرة المالية (كشف حساب بنكي أو شهادة راتب)",
@@ -122,6 +123,14 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
         "نحن هنا لمساعدتك في تحضير وتنظيم جميع المستندات المطلوبة بشكل صحيح",
       "documents.help.button1": "قائمة المستندات PDF",
       "documents.help.button2": "اطلب المساعدة",
+      "document.description1": "توثيق جواز السفر",
+      "document.description2": "الصور المطلوبة",
+      "document.description3": "بينات البصمة",
+      "document.description4": "تغطية المعاير ",
+      "document.description5": "ترتيبات السفر ",
+      "document.description6": "مستندات احترافية ",
+      "document.description7": "اثباتات",
+      "document.description8": "خطابات الدعوة ",
       "request.faqs1.question": "كم مدة صلاحية تأشيرة الشنغن؟",
       "request.faqs1.answer":
         "عادة من 90 يومًا إلى 180 يومًا حسب نوع التأشيرة.",
@@ -155,13 +164,18 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 
       "tourist.why-us": "ما يميزنا",
       "tourist.why-us-answer1": "سرعة في تجهيز الملفات والتقديم.",
+      "tourist.badge1": "سرعة المعالجة",
       "tourist.why-us-answer2": "متابعة مستمرة مع السفارات والجهات الرسمية.",
+      "tourist.badge2": "الامان والموثقية",
       "tourist.why-us-answer3":
         "استشارات مخصصة لاختيار الوجهة المناسبة حسب احتياجاتك.",
+      "tourist.badge3": "كفات الوقت",
       "tourist.why-us-answer4":
         " رفع فرص قبول التأشيرة عبر مراجعة دقيقة للأوراق.",
+      "tourist.badge4": "كادر خبير",
       "tourist.why-us-answer5":
         "أسعار مناسبة وخدمة دعم متوفرة للإجابة على جميع استفساراتك.",
+      "tourist.badge5": "خدمات ممتاذة",
       "tourist-visa.faqs1.question": "كم تستغرق مدة استخراج التأشيرة السياحية؟",
       "tourist-visa.faqs1.answer":
         " تختلف من دولة لأخرى، وتتراوح عادة بين 3 أيام و3 أسابيع.",
@@ -207,6 +221,13 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
         "هل أستطيع اختيار مقعدي مسبقًا؟",
       "flight.reservation-visa.faqs3.answer":
         " بالتأكيد، يمكنك اختيار مقعدك عند الحجز أو لاحقًا حسب توافر المقاعد.",
+
+      "flight.reservation.why-us-desc1": "حجوزات طيران آمنة وموثقة",
+      "flight.reservation.why-us-desc2": "معالجة سريعة خلال ساعات",
+      "flight.reservation.why-us-desc3": "استشارات سفر من خبراء",
+      "flight.reservation.why-us-desc4": "تغطية واسعة لشركات الطيران",
+      "flight.reservation.why-us-desc5": "خيارات تواريخ مرنة",
+      "flight.reservation.why-us-desc6": "ضمان أفضل سعر",
 
       // Hotel Reservation
       "hotel.reservation.description":
@@ -437,7 +458,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "footer.newsletter.desc":
         "احصل على آخر التحديثات حول متطلبات التأشيرات والعروض الخاصة",
       "footer.newsletter.button": "اشتراك",
-      "footer.copyright": "© 2024 مكتب فيزا الشنغن. جميع الحقوق محفوظة.",
+      "footer.copyright": "© 2025 مكتب فيزا الشنغن. جميع الحقوق محفوظة.",
       "footer.licensed": "مرخص من وزارة التجارة السعودية",
       "footer.member": "عضو غرفة الرياض التجارية",
       "footer.address": "الرياض - حي الملز",
@@ -472,6 +493,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "hero.stats.success_label": "Success Rate",
       "hero.stats.processing": "7 Days",
       "hero.stats.processing_label": "Avg. Processing Time",
+      "hero.scroll_down": "Scroll Down",
 
       // Services
       "services.badge": "Our Services",
@@ -537,6 +559,14 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
         "We are here to help you prepare and organize all required documents correctly",
       "documents.help.button1": "Documents List PDF",
       "documents.help.button2": "Request Assistance",
+      "document.description1": "Passport verification",
+      "document.description2": "Photograph requirements",
+      "document.description3": "Biometric data",
+      "document.description4": "Insurance coverage",
+      "document.description5": "Travel arrangements",
+      "document.description6": "Professional documents",
+      "document.description7": "Accommodation proof",
+      "document.description8": "Invitation letters",
       "request.faqs1.question": "How long is the Schengen visa valid?",
       "request.faqs1.answer":
         "Usually from 90 to 180 days depending on the type of visa.",
@@ -570,6 +600,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
         "At Prime Visa, we provide tourist visa services for a wide range of global destinations, with careful follow-up on every detail of your application to ensure a smooth and hassle-free travel experience. Our goal is to simplify all procedures so you can focus only on enjoying your trip.",
       "tourist.why-us": "Why Choose Us",
       "tourist.why-us-answer1": "Fast processing of files and applications.",
+      "tourist.badge1": "Fast Processing",
+      "tourist.badge2": "Secure & Reliable",
+      "tourist.badge3": "Time Efficient",
+      "tourist.badge4": "Expert Team",
+      "tourist.badge5": "Premium Service",
       "tourist.why-us-answer2":
         "Continuous follow-up with embassies and official authorities.",
       "tourist.why-us-answer3":
@@ -620,7 +655,13 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
         "Can I choose my seat in advance?",
       "flight.reservation-visa.faqs3.answer":
         "Of course, you can select your seat at booking or later depending on availability.",
-
+      "flight.reservation.why-us-desc1":
+        "Secure and verified flight reservations",
+      "flight.reservation.why-us-desc2": "Quick processing within hours",
+      "flight.reservation.why-us-desc3": "Expert travel consultation",
+      "flight.reservation.why-us-desc4": "Worldwide airline coverage",
+      "flight.reservation.why-us-desc5": "Flexible date options",
+      "flight.reservation.why-us-desc6": "Best price guarantee",
       // Hotel Reservation
       "hotel.reservation.description":
         "With Prime Visa, booking your hotel is easier than ever. We offer a wide range of options to suit all budgets, from economy hotels to luxury resorts, with instant confirmation and competitive prices.",
@@ -854,7 +895,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "footer.newsletter.desc":
         "Get the latest updates on visa requirements and special offers",
       "footer.newsletter.button": "Subscribe",
-      "footer.copyright": "© 2024 Schengen Visa Office. All rights reserved.",
+      "footer.copyright": "© 2025 Schengen Visa Office. All rights reserved.",
       "footer.licensed": "Licensed by the Saudi Ministry of Commerce",
       "footer.member": "Member of Riyadh Chamber of Commerce",
       "footer.address": "Riyadh - Al Malaz District",

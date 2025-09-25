@@ -51,37 +51,31 @@ const FlightReservation = () => {
       icon: ShieldCheck,
       title: t("flight.reservation.why-us-answer1"),
       gradient: "from-green-500 to-emerald-500",
-      description: "Secure and verified flight reservations",
+      description: t("flight.reservation.why-us-desc1"),
     },
     {
       icon: Clock,
       title: t("flight.reservation.why-us-answer2"),
       gradient: "from-amber-500 to-yellow-500",
-      description: "Quick processing within hours",
+      description: t("flight.reservation.why-us-desc2"),
     },
     {
       icon: Users,
       title: t("flight.reservation.why-us-answer3"),
       gradient: "from-green-600 to-teal-500",
-      description: "Expert travel consultation",
+      description: t("flight.reservation.why-us-desc3"),
     },
     {
       icon: Globe,
       title: t("flight.reservation.why-us-answer4"),
       gradient: "from-amber-600 to-orange-500",
-      description: "Worldwide airline coverage",
+      description: t("flight.reservation.why-us-desc4"),
     },
     {
       icon: Calendar,
       title: t("flight.reservation.why-us-answer5"),
       gradient: "from-emerald-500 to-green-400",
-      description: "Flexible date options",
-    },
-    {
-      icon: Ticket,
-      title: t("flight.reservation.why-us-answer6"),
-      gradient: "from-yellow-500 to-amber-500",
-      description: "Best price guarantee",
+      description: t("flight.reservation.why-us-desc5"),
     },
   ];
 
