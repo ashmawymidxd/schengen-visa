@@ -1,21 +1,57 @@
 import { Phone, Mail, Globe, Menu, Languages, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
-import { link } from "fs";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesHovered, setIsServicesHovered] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
   const { language, setLanguage, t, isRTL } = useLanguage();
+  const location = useLocation();
+
+  // Update active section based on scroll or route
+  useEffect(() => {
+    if (location.pathname !== "/") {
+      setActiveSection(location.pathname);
+      return;
+    }
+
+    const handleScroll = () => {
+      const sections = ["home", "services", "about", "faq", "contact"];
+      const scrollPosition = window.scrollY + 100;
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetHeight = element.offsetHeight;
+
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Check initial position
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [location.pathname]);
 
   const menuItems = [
-    { name: t("header.home"), href: "#home" },
+    { name: t("header.home"), href: "#home", id: "home" },
     {
       name: t("header.services"),
       href: "#services",
+      id: "services",
       submenu: [
         { name: t("header.service1"), href: "/request-schengen" },
         { name: t("header.service2"), href: "/tourist-visa" },
@@ -23,13 +59,30 @@ const Header = () => {
         { name: t("header.service4"), href: "/hotel-reservation" },
       ],
     },
-    { name: t("header.about"), href: "#about" },
-    { name: t("header.faq"), href: "#faq" },
-    { name: t("header.contact"), href: "#contact" },
+    { name: t("header.about"), href: "#about", id: "about" },
+    { name: t("header.faq"), href: "#faq", id: "faq" },
+    { name: t("header.contact"), href: "#contact", id: "contact" },
   ];
 
   const toggleLanguage = () => {
     setLanguage(language === "ar" ? "en" : "ar");
+  };
+
+  // Check if item is active
+  const isActive = (itemId: string) => {
+    return activeSection === itemId;
+  };
+
+  // Handle smooth scroll for hash links
+  const handleHashClick = (href: string, id: string) => {
+    if (href.startsWith("#")) {
+      setActiveSection(id);
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    setIsMenuOpen(false);
   };
 
   return (
@@ -40,16 +93,16 @@ const Header = () => {
           <div className="flex items-center gap-6 text-muted-foreground">
             <a
               href="tel:+201554300351"
-              target="__blanck"
-              className="flex items-center gap-2 bg-green-700 rounded-full p-3 text-white"
+              target="_blank"
+              className="flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white rounded-full px-4 py-2 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               <Phone className="w-4 h-4" />
               <span>+201554300351</span>
             </a>
             <a
               href="mailto:uyu365656@gmail.com"
-              target="__blanck"
-              className="flex items-center gap-2 rounded-full p-3"
+              target="_blank"
+              className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 rounded-full px-4 py-2 transition-all duration-300 hover:text-foreground"
             >
               <Mail className="w-4 h-4" />
               <span>uyu365656@gmail.com</span>
@@ -59,7 +112,7 @@ const Header = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="text-muted-foreground hover:text-foreground rounded-full"
+              className="rounded-full text-muted-foreground hover:text-foreground hover:bg-primary/10 transition-all duration-300"
               onClick={toggleLanguage}
             >
               <Globe className="w-4 h-4" /> |
@@ -72,22 +125,26 @@ const Header = () => {
         {/* Main navigation */}
         <div className="flex justify-between items-center py-4 px-[10px] sm:px-0">
           {/* Logo */}
-          <Link to={"/"} className="flex items-center">
-            <div className="rounded-2xl">
+          <Link
+            to={"/"}
+            className="flex items-center group"
+            onClick={() => setActiveSection("home")}
+          >
+            <div className="rounded-2xl transform group-hover:scale-105 transition-transform duration-300">
               <span className="text-primary-foreground font-bold text-xl font-arabic">
                 <img src={logo} alt="" className="h-10 rounded-lg" />
               </span>
             </div>
             <div className={isRTL ? "mr-4" : "ml-4"}>
               <h1
-                className={`text-xl font-bold text-primary ${
+                className={`text-xl font-bold text-primary group-hover:text-primary/80 transition-colors duration-300 ${
                   isRTL ? "font-arabic" : ""
                 }`}
               >
                 {t("header.company_name")}
               </h1>
               <p
-                className={`text-sm text-muted-foreground ${
+                className={`text-sm text-muted-foreground group-hover:text-foreground/70 transition-colors duration-300 ${
                   isRTL ? "font-arabic" : ""
                 }`}
               >
@@ -97,7 +154,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-5">
+          <nav className="hidden lg:flex items-center gap-2">
             {menuItems.map((item) => (
               <div
                 key={item.name}
@@ -107,16 +164,31 @@ const Header = () => {
               >
                 <a
                   href={item.href}
-                  className={`flex items-center text-foreground hover:bg-gray-100 duration-300 rounded-full p-2 hover:text-primary ${
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleHashClick(item.href, item.id);
+                  }}
+                  className={`flex items-center relative font-medium transition-all duration-300 rounded-full px-4 py-2 ${
                     isRTL ? "font-arabic" : ""
-                  } font-medium transition-colors`}
+                  } ${
+                    isActive(item.id)
+                      ? "bg-gradient-to-r from-primary to-primary/80 text-white"
+                      : "text-foreground hover:bg-gray-100 hover:text-primary"
+                  }`}
                 >
-                  {item.name}
+                  {/* Hover effect */}
+                  <div
+                    className={`absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
+                      isActive(item.id) ? "opacity-0" : ""
+                    }`}
+                  ></div>
+
+                  <span className="relative z-10">{item.name}</span>
                   {item.submenu && (
                     <ChevronDown
                       className={`w-4 h-4 ${
                         isRTL ? "mr-2" : "ml-2"
-                      } transition-transform ${
+                      } transition-transform duration-300 relative z-10 ${
                         isServicesHovered ? "rotate-180" : ""
                       }`}
                     />
@@ -124,11 +196,11 @@ const Header = () => {
                 </a>
 
                 {/* Services Submenu */}
-                {item.submenu && isServicesHovered && (
+                {item.submenu && (isServicesHovered) && (
                   <div
-                    className={`absolute mt-0 w-48 bg-white rounded-lg py-3 z-50 ${
+                    className={`absolute mt-0 w-56 bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 py-2 z-50 ${
                       isRTL ? "right-0" : "left-0"
-                    } bg-white`}
+                    }`}
                     onMouseEnter={() => setIsServicesHovered(true)}
                     onMouseLeave={() => setIsServicesHovered(false)}
                   >
@@ -136,7 +208,8 @@ const Header = () => {
                       <Link
                         key={subItem.name}
                         to={subItem.href}
-                        className="block px-4 py-3 text-sm text-foreground hover:bg-gray-100 hover:text-primary"
+                        className="block px-4 py-3 text-sm text-foreground hover:bg-gradient-to-r hover:from-primary/5 hover:to-primary/10 hover:text-primary transition-all duration-300 border-l-2 border-transparent hover:border-primary"
+                        onClick={() => setActiveSection(subItem.href)}
                       >
                         {subItem.name}
                       </Link>
@@ -148,12 +221,16 @@ const Header = () => {
           </nav>
 
           {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center gap-4 bg-gray-100 rounded-full p-1 border">
+          <div className="hidden lg:flex items-center gap-2 bg-gray-100 rounded-full p-1 border shadow-sm">
             <a
               href="tel:+201554300351"
-              target="__blanck"
-              className={`cursor-pointer border bg-white px-3 py-2 flex items-center rounded-full ${
+              target="_blank"
+              className={`cursor-pointer border bg-white px-4 py-2 flex items-center rounded-full transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 ${
                 isRTL ? "font-arabic" : ""
+              } ${
+                activeSection === "contact"
+                  ? "bg-primary text-white border-primary"
+                  : "hover:bg-gray-50"
               }`}
             >
               <Phone className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} />
@@ -161,8 +238,8 @@ const Header = () => {
             </a>
             <a
               href="https://wa.me/+201554300351"
-              target="__blanck"
-              className={`cursor-pointer px-3 py-2 btn-hero rounded-full ${
+              target="_blank"
+              className={`cursor-pointer px-4 py-2 btn-hero rounded-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white font-medium transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg ${
                 isRTL ? "font-arabic" : ""
               }`}
             >
@@ -175,7 +252,7 @@ const Header = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="rounded-full text-muted-foreground hover:text-foreground bg-gray-100"
+              className="rounded-full text-muted-foreground hover:text-foreground bg-gray-100 hover:bg-gray-200 transition-all duration-300"
               onClick={toggleLanguage}
             >
               <Globe className="w-4 h-4" /> |
@@ -184,7 +261,7 @@ const Header = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="rounded-full"
+              className="rounded-full hover:bg-gray-100 transition-all duration-300"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <Menu className="w-6 h-6" />
@@ -194,30 +271,50 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="lg:hidden pb-4 border-t border-border px-[10px]">
-            <div className="flex flex-col gap-4 mt-4">
+          <nav className="lg:hidden pb-4 border-t border-border px-[10px] bg-white/95 backdrop-blur-sm">
+            <div className="flex flex-col gap-1 mt-4">
               {menuItems.map((item) => (
                 <div key={item.name}>
                   <a
                     href={item.href}
-                    className={`text-foreground hover:text-primary ${
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleHashClick(item.href, item.id);
+                    }}
+                    className={`relative py-3 px-4 rounded-xl transition-all duration-300 flex items-center justify-between ${
                       isRTL ? "font-arabic" : ""
-                    } font-medium py-2 flex items-center justify-between`}
-                    onClick={() => !item.submenu && setIsMenuOpen(false)}
+                    } ${
+                      isActive(item.id)
+                        ? "bg-gradient-to-r from-primary to-primary/80 text-white shadow-md"
+                        : "text-foreground hover:bg-gray-100 hover:text-primary"
+                    }`}
                   >
-                    {item.name}
-                    {item.submenu && <ChevronDown className="w-4 h-4" />}
+                    <span className="font-medium">{item.name}</span>
+                    <div className="flex items-center gap-2">
+                      {isActive(item.id) && (
+                        <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                      )}
+                      {item.submenu && <ChevronDown className="w-4 h-4" />}
+                    </div>
+
+                    {/* Active indicator for mobile */}
+                    {isActive(item.id) && (
+                      <div className="absolute right-3 top-1/2 transform -translate-y-1/2 w-1 h-6 bg-white rounded-full"></div>
+                    )}
                   </a>
 
                   {/* Mobile submenu */}
                   {item.submenu && (
-                    <div className="pl-4 mt-2 border-l border-border">
+                    <div className="pl-6 mt-2 border-l-2 border-gray-200 ml-4">
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
                           to={subItem.href}
-                          className="block py-2 text-sm text-muted-foreground hover:text-primary"
-                          onClick={() => setIsMenuOpen(false)}
+                          className="block py-2 px-4 text-sm text-muted-foreground hover:text-primary rounded-lg hover:bg-gray-50 transition-all duration-300"
+                          onClick={() => {
+                            setActiveSection(subItem.href);
+                            setIsMenuOpen(false);
+                          }}
                         >
                           {subItem.name}
                         </Link>
@@ -226,12 +323,17 @@ const Header = () => {
                   )}
                 </div>
               ))}
-              <div className="flex gap-4 mt-4">
+
+              <div className="flex gap-2 mt-4 pt-4 border-t border-gray-200">
                 <a
                   href="tel:+201554300351"
-                  target="__blanck"
-                  className={`flex-1 text-center cursor-pointer border bg-white px-3 py-2 flex items-center justify-center rounded-full ${
+                  target="_blank"
+                  className={`flex-1 text-center cursor-pointer border bg-white px-3 py-3 flex items-center justify-center rounded-xl transition-all duration-300 ${
                     isRTL ? "font-arabic" : ""
+                  } ${
+                    activeSection === "contact"
+                      ? "bg-primary text-white border-primary"
+                      : "hover:bg-gray-50"
                   }`}
                 >
                   <Phone className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} />
@@ -239,8 +341,8 @@ const Header = () => {
                 </a>
                 <a
                   href="https://wa.me/+201554300351"
-                  target="__blanck"
-                  className={`flex-1 text-center cursor-pointer px-3 py-2 btn-hero rounded-full ${
+                  target="_blank"
+                  className={`flex-1 text-center cursor-pointer px-3 py-3 btn-hero rounded-xl bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white font-medium transition-all duration-300 ${
                     isRTL ? "font-arabic" : ""
                   }`}
                 >

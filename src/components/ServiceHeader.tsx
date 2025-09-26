@@ -1,14 +1,21 @@
 import { Phone, Mail, Globe, Menu, Languages, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const ServiceHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesHovered, setIsServicesHovered] = useState(false);
+  const [activePath, setActivePath] = useState("/");
   const { language, setLanguage, t, isRTL } = useLanguage();
+  const location = useLocation();
+
+  // Update active path when location changes
+  useEffect(() => {
+    setActivePath(location.pathname);
+  }, [location.pathname]);
 
   const menuItems = [
     { name: t("header.home"), href: "/" },
@@ -22,6 +29,11 @@ const ServiceHeader = () => {
     setLanguage(language === "ar" ? "en" : "ar");
   };
 
+  // Check if item is active
+  const isActive = (href: string) => {
+    return activePath === href;
+  };
+
   return (
     <header className="bg-white/95 backdrop-blur-sm shadow-[var(--shadow-soft)] sticky top-0 z-50 border-b border-border">
       <div className="container mx-auto px-[10px] sm:px-6">
@@ -30,16 +42,16 @@ const ServiceHeader = () => {
           <div className="flex items-center gap-6 text-muted-foreground">
             <a
               href="tel:+201554300351"
-              target="__blanck"
-              className="flex items-center gap-2 bg-green-700 rounded-full p-3 text-white"
+              target="__blank"
+              className="flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white rounded-full px-4 py-2 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               <Phone className="w-4 h-4" />
               <span>+201554300351</span>
             </a>
             <a
               href="mailto:uyu365656@gmail.com"
-              target="__blanck"
-              className="flex items-center gap-2 rounded-full p-3"
+              target="__blank"
+              className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 rounded-full px-4 py-2 transition-all duration-300 hover:text-foreground"
             >
               <Mail className="w-4 h-4" />
               <span>uyu365656@gmail.com</span>
@@ -49,7 +61,7 @@ const ServiceHeader = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="rounded-full text-muted-foreground hover:text-foreground"
+              className="rounded-full text-muted-foreground hover:text-foreground hover:bg-primary/10 transition-all duration-300"
               onClick={toggleLanguage}
             >
               <Globe className="w-4 h-4" /> |
@@ -62,22 +74,22 @@ const ServiceHeader = () => {
         {/* Main navigation */}
         <div className="flex justify-between items-center py-4 px-[10px] sm:px-0">
           {/* Logo */}
-          <Link to={"/"} className="flex items-center">
-            <div className="rounded-2xl">
+          <Link to={"/"} className="flex items-center group">
+            <div className="rounded-2xl transform group-hover:scale-105 transition-transform duration-300">
               <span className="text-primary-foreground font-bold text-xl font-arabic">
                 <img src={logo} alt="" className="h-10 rounded-lg" />
               </span>
             </div>
             <div className={isRTL ? "mr-4" : "ml-4"}>
               <h1
-                className={`text-xl font-bold text-primary ${
+                className={`text-xl font-bold text-primary group-hover:text-primary/80 transition-colors duration-300 ${
                   isRTL ? "font-arabic" : ""
                 }`}
               >
                 {t("header.company_name")}
               </h1>
               <p
-                className={`text-sm text-muted-foreground ${
+                className={`text-sm text-muted-foreground group-hover:text-foreground/70 transition-colors duration-300 ${
                   isRTL ? "font-arabic" : ""
                 }`}
               >
@@ -87,28 +99,42 @@ const ServiceHeader = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-5">
+          <nav className="hidden lg:flex items-center gap-2">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-foreground hover:bg-gray-100 duration-300 rounded-full p-2 hover:text-primary ${
+                className={`relative group font-medium transition-all duration-300 rounded-full px-4 py-2 ${
                   isRTL ? "font-arabic" : ""
-                } font-medium transition-colors`}
+                } ${
+                  isActive(item.href)
+                    ? "bg-gradient-to-r from-primary to-primary/80 text-white"
+                    : "text-foreground hover:bg-gray-100 hover:text-primary"
+                }`}
+                onMouseEnter={() => setIsServicesHovered(true)}
+                onMouseLeave={() => setIsServicesHovered(false)}
               >
-                {item.name}
+                {/* Hover effect */}
+                <div className={`absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
+                  isActive(item.href) ? "opacity-0" : ""
+                }`}></div>
+                
+                <span className="relative z-10">{item.name}</span>
               </Link>
             ))}
           </nav>
 
           {/* CTA Buttons */}
-
-          <div className="hidden lg:flex items-center gap-4 bg-gray-100 rounded-full p-1 border">
+          <div className="hidden lg:flex items-center gap-2 bg-gray-100 rounded-full p-1 border shadow-sm">
             <a
               href="tel:+201554300351"
-              target="__blanck"
-              className={`cursor-pointer border bg-white px-3 py-2 flex items-center rounded-full ${
+              target="__blank"
+              className={`cursor-pointer border bg-white px-4 py-2 flex items-center rounded-full transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 ${
                 isRTL ? "font-arabic" : ""
+              } ${
+                activePath === "/contact" 
+                  ? "bg-primary text-white border-primary" 
+                  : "hover:bg-gray-50"
               }`}
             >
               <Phone className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} />
@@ -116,8 +142,8 @@ const ServiceHeader = () => {
             </a>
             <a
               href="https://wa.me/+201554300351"
-              target="__blanck"
-              className={`cursor-pointer px-3 py-2 btn-hero rounded-full ${
+              target="__blank"
+              className={`cursor-pointer px-4 py-2 btn-hero rounded-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white font-medium transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg ${
                 isRTL ? "font-arabic" : ""
               }`}
             >
@@ -130,7 +156,7 @@ const ServiceHeader = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="rounded-full text-muted-foreground hover:text-foreground bg-gray-100"
+              className="rounded-full text-muted-foreground hover:text-foreground bg-gray-100 hover:bg-gray-200 transition-all duration-300"
               onClick={toggleLanguage}
             >
               <Globe className="w-4 h-4" /> |
@@ -139,7 +165,7 @@ const ServiceHeader = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="rounded-full"
+              className="rounded-full hover:bg-gray-100 transition-all duration-300"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <Menu className="w-6 h-6" />
@@ -149,26 +175,45 @@ const ServiceHeader = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="lg:hidden pb-4 border-t border-border px-[10px]">
-            <div className="flex flex-col gap-4 mt-4">
+          <nav className="lg:hidden pb-4 border-t border-border px-[10px] bg-white/95 backdrop-blur-sm">
+            <div className="flex flex-col gap-1 mt-4">
               {menuItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
-                  className={`text-foreground  hover:text-primary ${
+                  to={item.href}
+                  className={`relative py-3 px-4 rounded-xl transition-all duration-300 ${
                     isRTL ? "font-arabic" : ""
-                  } font-medium py-2`}
+                  } ${
+                    isActive(item.href)
+                      ? "bg-gradient-to-r from-primary to-primary/80 text-white shadow-md"
+                      : "text-foreground hover:bg-gray-100 hover:text-primary"
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {item.name}
-                </a>
+                  <div className="flex items-center justify-between">
+                    <span className="font-medium">{item.name}</span>
+                    {isActive(item.href) && (
+                      <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                    )}
+                  </div>
+                  
+                  {/* Active indicator for mobile */}
+                  {isActive(item.href) && (
+                    <div className="absolute right-3 top-1/2 transform -translate-y-1/2 w-1 h-6 bg-white rounded-full"></div>
+                  )}
+                </Link>
               ))}
-              <div className="flex gap-4 mt-4">
+              
+              <div className="flex gap-2 mt-4 pt-4 border-t border-gray-200">
                 <a
                   href="tel:+201554300351"
-                  target="__blanck"
-                  className={`flex-1 text-center cursor-pointer border bg-white px-3 py-2 flex items-center justify-center rounded-full ${
+                  target="__blank"
+                  className={`flex-1 text-center cursor-pointer border bg-white px-3 py-3 flex items-center justify-center rounded-xl transition-all duration-300 ${
                     isRTL ? "font-arabic" : ""
+                  } ${
+                    activePath === "/contact" 
+                      ? "bg-primary text-white border-primary" 
+                      : "hover:bg-gray-50"
                   }`}
                 >
                   <Phone className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} />
@@ -176,8 +221,8 @@ const ServiceHeader = () => {
                 </a>
                 <a
                   href="https://wa.me/+201554300351"
-                  target="__blanck"
-                  className={`flex-1 text-center cursor-pointer px-3 py-2 btn-hero rounded-full ${
+                  target="__blank"
+                  className={`flex-1 text-center cursor-pointer px-3 py-3 btn-hero rounded-xl bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white font-medium transition-all duration-300 ${
                     isRTL ? "font-arabic" : ""
                   }`}
                 >
