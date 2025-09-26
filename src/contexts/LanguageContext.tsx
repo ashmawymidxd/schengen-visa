@@ -229,6 +229,10 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "flight.reservation.why-us-desc5": "خيارات تواريخ مرنة",
       "flight.reservation.why-us-desc6": "ضمان أفضل سعر",
 
+      "flight.plain.reservations.title": "مستعد لحجز رحلتك؟",
+      "flight.plain.reservations.description":
+        "احصل على أفضل العروض وامنح حجز رحلتك اليوم!",
+      "flight.plain.reservations.btn": " احجز الآن",
       // Hotel Reservation
       "hotel.reservation.description":
         "مع برايم فيزا أصبح حجز فندقك أسهل من أي وقت مضى. نوفر خيارات متنوعة تناسب جميع الميزانيات، من الفنادق الاقتصادية إلى المنتجعات الفاخرة، مع تأكيد فوري وأسعار تنافسية.",
@@ -293,6 +297,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "country.iceland": "أيسلندا",
       "country.liechtenstein": "ليختنشتاين",
       "countries.service_providers": "مزود الخدمة",
+      "countries.service_providers.description": "الشراكة مع أفخم فنادق العالم لإقامتك المثالية",
       // About
       "about.badge": "عن الشركة",
       "about.title": "لماذا اختار",
@@ -668,6 +673,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "flight.reservation.why-us-desc4": "Worldwide airline coverage",
       "flight.reservation.why-us-desc5": "Flexible date options",
       "flight.reservation.why-us-desc6": "Best price guarantee",
+
+      "flight.plain.reservations.title": "Ready to Book Your Flight?",
+      "flight.plain.reservations.description":
+        "Get the best deals and secure your flight reservation today!",
+      "flight.plain.reservations.btn": " Book Now",
       // Hotel Reservation
       "hotel.reservation.description":
         "With Prime Visa, booking your hotel is easier than ever. We offer a wide range of options to suit all budgets, from economy hotels to luxury resorts, with instant confirmation and competitive prices.",
@@ -730,6 +740,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "country.iceland": "Iceland",
       "country.liechtenstein": "Liechtenstein",
       "countries.service_providers": "Service Providers",
+      "countries.service_providers.description":
+        "Partnering with the world's finest hotels for your perfect stay",
 
       // About
       "about.badge": "About Us",

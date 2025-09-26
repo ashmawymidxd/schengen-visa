@@ -232,7 +232,8 @@ const features = [
           </h3>
 
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Partnering with the world's finest hotels for your perfect stay
+             {t("countries.service_providers.description")}
+            
           </p>
         </div>
 

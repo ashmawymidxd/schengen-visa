@@ -85,7 +85,7 @@ const FAQ = () => {
           </div>
           <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 font-arabic">
             {t("faq.title")}
-            <span className="block bg-gradient-to-r from-emerald-600 to-green-600 mt-5 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r p-3 from-emerald-600 to-green-600 mt-5 bg-clip-text text-transparent">
               {t("faq.subtitle")}
             </span>
           </h2>

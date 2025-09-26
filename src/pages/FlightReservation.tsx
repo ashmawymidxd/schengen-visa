@@ -254,7 +254,7 @@ const FlightReservation = () => {
 
         {/* CTA Section */}
         <div
-          className={`container mx-auto px-4 mb-16 transform transition-all duration-1000 delay-600 ${
+          className={`max-w-2xl mx-auto px-4 mb-16 transform transition-all duration-1000 delay-600 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
@@ -271,17 +271,17 @@ const FlightReservation = () => {
 
               <div className="relative z-10 text-center">
                 <h3 className="text-2xl lg:text-3xl font-bold mb-4 font-arabic drop-shadow-sm">
-                  Ready to Book Your Flight?
+                  {t("flight.plain.reservations.title")}
                 </h3>
                 <p className="text-lg mb-6 font-arabic opacity-90 drop-shadow-sm">
-                  Get the best deals and secure your flight reservation today!
+                   {t("flight.plain.reservations.description")}
                 </p>
-                <button className="group relative inline-flex items-center gap-2 bg-white text-green-600 hover:text-green-700 text-lg px-8 py-4 rounded-2xl font-arabic font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                  Book Now
+                <a href="https://wa.me/+201554300351" className="group relative inline-flex items-center gap-2 bg-white text-green-600 hover:text-green-700 text-lg px-8 py-4 rounded-2xl font-arabic font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
+                  {t("flight.plain.reservations.btn")}
                   <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
                   {/* Button Shine Effect */}
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                </button>
+                </a>
               </div>
             </div>
           </div>
