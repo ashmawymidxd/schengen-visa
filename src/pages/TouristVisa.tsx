@@ -95,7 +95,7 @@ const TouristVisa = () => {
                 </div>
 
                 <h3
-                  className={`text-3xl lg:text-4xl font-bold mb-6 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent ${
+                  className={`text-3xl lg:text-4xl font-bold  bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent ${
                     isRTL ? "font-arabic" : ""
                   }`}
                 >

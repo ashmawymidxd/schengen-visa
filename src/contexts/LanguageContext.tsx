@@ -256,6 +256,12 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "hotel.reservation.faqs3.answer":
         " نعم، نوفر خيارات للإقامات الطويلة بأسعار مميزة.",
 
+      "hotel.reservation.why-us-desc1": "حجوزات فنادق آمنة وموثقة",
+      "hotel.reservation.why-us-desc2": "معالجة سريعة خلال ساعات",
+      "hotel.reservation.why-us-desc3": "استشارات سفر من خبراء",
+      "hotel.reservation.why-us-desc4": "إقامة مضمونة الجودة",
+      "hotel.reservation.why-us-desc5": "تأكيد فوري",
+
       // Countries
       "countries.visa_information": "معلومات عن فيزا الشنغن",
       "countries.badge": "الدول المتاحة",
@@ -687,7 +693,12 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
         "Can I book for a long stay (a month or more)?",
       "hotel.reservation.faqs3.answer":
         "Yes, we offer long-stay options at special rates.",
-
+      "hotel.reservation.why-us-desc1":
+        "Secure and verified hotel reservations",
+      "hotel.reservation.why-us-desc2": "Quick processing within hours",
+      "hotel.reservation.why-us-desc3": "Expert travel consultation",
+      "hotel.reservation.why-us-desc4": "Quality guaranteed accommodations",
+      "hotel.reservation.why-us-desc5": "Instant confirmation",
       // Countries
       "countries.visa_information": "Schengen Visa Information",
       "countries.badge": "Available Countries",

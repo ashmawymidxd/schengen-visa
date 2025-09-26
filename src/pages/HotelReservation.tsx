@@ -51,35 +51,35 @@ const HotelReservation = () => {
     setIsVisible(true);
   }, []);
 
-  const features = [
+const features = [
     {
       icon: Shield,
       title: t("hotel.reservation.why-us-answer1"),
-      description: "",
+      description: t("hotel.reservation.why-us-desc1"),
       gradient: "from-emerald-500 to-green-500",
     },
     {
       icon: Clock,
       title: t("hotel.reservation.why-us-answer2"),
-      description: "",
+      description: t("hotel.reservation.why-us-desc2"),
       gradient: "from-amber-500 to-yellow-500",
     },
     {
       icon: Users,
       title: t("hotel.reservation.why-us-answer3"),
-      description: "",
+      description: t("hotel.reservation.why-us-desc3"),
       gradient: "from-emerald-500 to-green-500",
     },
     {
       icon: Award,
       title: t("hotel.reservation.why-us-answer4"),
-      description: "",
+      description: t("hotel.reservation.why-us-desc4"),
       gradient: "from-amber-500 to-yellow-500",
     },
     {
       icon: Zap,
       title: t("hotel.reservation.why-us-answer5"),
-      description: "",
+      description: t("hotel.reservation.why-us-desc5"),
       gradient: "from-emerald-500 to-green-500",
     },
   ];
@@ -143,7 +143,7 @@ const HotelReservation = () => {
               </div>
 
               <h3
-                className={`text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-4 ${
+                className={`text-3xl lg:text-4xl font-bold bg-gradient-to-r p-3 from-gray-800 to-gray-600 bg-clip-text text-transparent mb-4 ${
                   isRTL ? "font-arabic" : ""
                 }`}
               >
