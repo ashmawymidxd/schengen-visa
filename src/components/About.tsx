@@ -29,55 +29,55 @@ const About = () => {
       title: t("about.features1.title"),
       description: t("about.features1.description"),
       icon: Sparkles,
-      gradient: "from-green-800 to-emerald-500",
+      gradient: "from-blue-800 to-blue-500",
     },
     {
       img: time,
       title: t("about.features2.title"),
       description: t("about.features2.description"),
       icon: Clock,
-      gradient: "from-green-800 to-emerald-500",
+      gradient: "from-blue-800 to-blue-500",
     },
     {
       img: knowen,
       title: t("about.features3.title"),
       description: t("about.features3.description"),
       icon: Users,
-      gradient: "from-green-800 to-emerald-500",
+      gradient: "from-blue-800 to-blue-500",
     },
     {
       img: price,
       title: t("about.features4.title"),
       description: t("about.features4.description"),
       icon: CheckCircle2,
-      gradient: "from-amber-500 to-yellow-400",
+      gradient: "from-blue-600 to-blue-400",
     },
     {
       img: supprt,
       title: t("about.features5.title"),
       description: t("about.features5.description"),
       icon: Shield,
-      gradient: "from-amber-500 to-yellow-400",
+      gradient: "from-blue-600 to-blue-400",
     },
     {
       img: safe,
       title: t("about.features6.title"),
       description: t("about.features6.description"),
       icon: Shield,
-      gradient: "from-amber-500 to-yellow-400",
+      gradient: "from-blue-600 to-blue-400",
     },
   ];
 
   return (
     <section
       id="about"
-      className="section-padding bg-gradient-to-br from-slate-50 via-white to-green-50/30 relative overflow-hidden"
+      className="section-padding bg-gradient-to-br from-slate-50 via-white to-blue-50/30 relative overflow-hidden"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-green-400/20 to-emerald-400/20 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-400/10 to-emerald-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-blue-400/20 to-sky-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-400/10 to-cyan-400/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto relative z-10">
@@ -87,14 +87,14 @@ const About = () => {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-200/50 text-primary px-6 py-3 rounded-full font-arabic font-medium mb-6 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-200/50 text-primary px-6 py-3 rounded-full font-arabic font-medium mb-6 backdrop-blur-sm">
             <Sparkles className="w-4 h-4" />
             {t("about.badge")}
             <Sparkles className="w-4 h-4" />
           </div>
           <h2 className="text-4xl lg:text-6xl font-bold  mb-6 font-arabic bg-gradient-to-r bg-clip-text">
             {t("about.title")}
-            <span className="block bg-gradient-to-r text-green-800">
+            <span className="block bg-gradient-to-r text-blue-800">
               {t("about.subtitle")}
             </span>
           </h2>
@@ -156,10 +156,10 @@ const About = () => {
         >
           <div className="relative">
             {/* Floating Elements */}
-            <div className="absolute -top-4 -left-4 w-8 h-8 bg-green-400/30 rounded-full blur-sm animate-pulse"></div>
-            <div className="absolute -bottom-4 -right-4 w-6 h-6 bg-green-400/30 rounded-full blur-sm animate-pulse delay-1000"></div>
+            <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-400/30 rounded-full blur-sm animate-pulse"></div>
+            <div className="absolute -bottom-4 -right-4 w-6 h-6 bg-blue-400/30 rounded-full blur-sm animate-pulse delay-1000"></div>
 
-            <div className="bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 rounded-3xl p-8 text-white shadow-2xl shadow-green-500/30 max-w-2xl mx-auto relative overflow-hidden">
+            <div className="bg-gradient-to-r from-blue-600 via-sky-600 to-cyan-600 rounded-3xl p-8 text-white shadow-2xl shadow-blue-500/30 max-w-2xl mx-auto relative overflow-hidden">
               {/* Animated Background */}
               <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm"></div>
               <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-xl"></div>
@@ -172,7 +172,7 @@ const About = () => {
                 <p className="text-lg mb-6 font-arabic opacity-90 drop-shadow-sm">
                   {t("about.ctaSubtitle")}
                 </p>
-                <a href="https://wa.me/+201554300351" target="__blanck" className="group relative inline-flex items-center gap-2 bg-white text-purple-600 hover:text-purple-700 text-lg px-8 py-4 rounded-2xl font-arabic font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
+                <a href="https://wa.me/+201554300351" target="__blanck" className="group relative inline-flex items-center gap-2 bg-white text-blue-600 hover:text-blue-700 text-lg px-8 py-4 rounded-2xl font-arabic font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
                   {t("about.ctaButton")}
                   <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
 

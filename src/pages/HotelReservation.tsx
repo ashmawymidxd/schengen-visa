@@ -51,36 +51,36 @@ const HotelReservation = () => {
     setIsVisible(true);
   }, []);
 
-const features = [
+  const features = [
     {
       icon: Shield,
       title: t("hotel.reservation.why-us-answer1"),
       description: t("hotel.reservation.why-us-desc1"),
-      gradient: "from-emerald-500 to-green-500",
+      gradient: "from-blue-600 to-blue-700",
     },
     {
       icon: Clock,
       title: t("hotel.reservation.why-us-answer2"),
       description: t("hotel.reservation.why-us-desc2"),
-      gradient: "from-amber-500 to-yellow-500",
+      gradient: "from-blue-500 to-blue-600",
     },
     {
       icon: Users,
       title: t("hotel.reservation.why-us-answer3"),
       description: t("hotel.reservation.why-us-desc3"),
-      gradient: "from-emerald-500 to-green-500",
+      gradient: "from-blue-600 to-blue-700",
     },
     {
       icon: Award,
       title: t("hotel.reservation.why-us-answer4"),
       description: t("hotel.reservation.why-us-desc4"),
-      gradient: "from-amber-500 to-yellow-500",
+      gradient: "from-blue-500 to-blue-600",
     },
     {
       icon: Zap,
       title: t("hotel.reservation.why-us-answer5"),
       description: t("hotel.reservation.why-us-desc5"),
-      gradient: "from-emerald-500 to-green-500",
+      gradient: "from-blue-600 to-blue-700",
     },
   ];
 
@@ -89,13 +89,13 @@ const features = [
       icon: Phone,
       title: t("contact.phone.title"),
       details: ["+966 50 123 4567", "+966 11 234 5678"],
-      gradient: "from-emerald-500 to-green-500",
+      gradient: "from-blue-600 to-blue-700",
     },
     {
       icon: Mail,
       title: t("contact.email.title"),
       details: ["info@schengenvisasa.com", "support@schengenvisasa.com"],
-      gradient: "from-amber-500 to-yellow-500",
+      gradient: "from-blue-500 to-blue-600",
     },
   ];
 
@@ -121,14 +121,13 @@ const features = [
 
   return (
     <div className="min-h-screen">
-
       <ServiceHeader />
 
       {/* Why Choose Us Section */}
       <section className="section-padding relative z-10">
         <div className="container mx-auto">
           <div
-            className={`bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-2xl shadow-emerald-500/10 border border-emerald-200/50 transform transition-all duration-1000 ${
+            className={`bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-2xl shadow-blue-500/10 border border-blue-200/50 transform transition-all duration-1000 ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-10 opacity-0"
@@ -136,7 +135,7 @@ const features = [
           >
             {/* Header */}
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/10 to-green-500/10 border border-emerald-200/50 text-emerald-600 px-6 py-3 rounded-full font-medium mb-6 backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200/50 text-blue-600 px-6 py-3 rounded-full font-medium mb-6 backdrop-blur-sm">
                 <Sparkles className="w-4 h-4" />
                 {t("hotel.reservation.why-us")}
                 <Sparkles className="w-4 h-4" />
@@ -221,8 +220,8 @@ const features = [
         {/* Section Header */}
         <div className="text-center mb-12">
           <div className="relative inline-block">
-            <div className="absolute -inset-4 bg-gradient-to-r from-emerald-400/20 to-amber-400/20 rounded-full blur-lg"></div>
-            <div className="relative bg-gradient-to-br from-emerald-500 to-green-500 w-20 h-20 m-auto flex items-center justify-center rounded-2xl shadow-2xl shadow-emerald-500/30">
+            <div className="absolute -inset-4 bg-gradient-to-r from-blue-400/20 to-blue-500/20 rounded-full blur-lg"></div>
+            <div className="relative bg-gradient-to-br from-blue-600 to-blue-700 w-20 h-20 m-auto flex items-center justify-center rounded-2xl shadow-2xl shadow-blue-500/30">
               <Star className="w-10 h-10 text-white" />
             </div>
           </div>
@@ -232,48 +231,47 @@ const features = [
           </h3>
 
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-             {t("countries.service_providers.description")}
-            
+            {t("countries.service_providers.description")}
           </p>
         </div>
 
         {/* Swiper */}
-       <div className="container mx-auto mt-8">
-            <Swiper
-              dir={isRTL ? "rtl" : "ltr"}
-              modules={[Navigation, Autoplay]}
-              spaceBetween={30}
-              slidesPerView={2}
-              breakpoints={{
-                640: { slidesPerView: 3 },
-                768: { slidesPerView: 4 },
-                1024: { slidesPerView: 5 },
-                1280: { slidesPerView: 6 },
-              }}
-              navigation={false}
-              autoplay={{
-                delay: 2000,
-                disableOnInteraction: false,
-                reverseDirection: isRTL,
-              }}
-              speed={600}
-              loop={true}
-              key={isRTL ? "rtl" : "ltr"}
-            >
-              {hotelImages.map((img, index) => (
-                <SwiperSlide key={index}>
-                  <div className="p-5 rounded-md bg-gradient-to-br from-white to-gray-200">
-                    <img
-                      src={img}
-                      draggable="false"
-                      alt={`slide-${index}`}
-                      className="rounded-md"
-                    />
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+        <div className="container mx-auto mt-8">
+          <Swiper
+            dir={isRTL ? "rtl" : "ltr"}
+            modules={[Navigation, Autoplay]}
+            spaceBetween={30}
+            slidesPerView={2}
+            breakpoints={{
+              640: { slidesPerView: 3 },
+              768: { slidesPerView: 4 },
+              1024: { slidesPerView: 5 },
+              1280: { slidesPerView: 6 },
+            }}
+            navigation={false}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+              reverseDirection: isRTL,
+            }}
+            speed={600}
+            loop={true}
+            key={isRTL ? "rtl" : "ltr"}
+          >
+            {hotelImages.map((img, index) => (
+              <SwiperSlide key={index}>
+                <div className="p-5 rounded-md bg-gradient-to-br from-white to-gray-200">
+                  <img
+                    src={img}
+                    draggable="false"
+                    alt={`slide-${index}`}
+                    className="rounded-md"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
 
       {/* Enhanced Contact Info */}
@@ -307,7 +305,7 @@ const features = [
                   </div>
                 </div>
 
-                <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-emerald-500 transform group-hover:translate-x-1 transition-all duration-300" />
+                <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-blue-500 transform group-hover:translate-x-1 transition-all duration-300" />
               </div>
             </div>
           ))}
@@ -318,7 +316,7 @@ const features = [
 
       {/* Enhanced Contact Form */}
       <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/50 to-amber-50/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-blue-100/50"></div>
         <div className="relative z-10">
           <ContactForm contactInfo={contactInfo} />
         </div>

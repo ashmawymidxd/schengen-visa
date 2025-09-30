@@ -7,7 +7,6 @@ import {
   Sparkles,
   Star,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "../assets/hero-schengen.jpg";
 import { useState, useEffect } from "react";
@@ -32,12 +31,12 @@ const Hero = () => {
           backgroundImage: `url(${heroImage})`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/95 via-emerald-800/85 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 via-blue-800/85 to-transparent"></div>
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-20 -right-20 w-60 h-60 bg-amber-400/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-emerald-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/3 left-1/3 w-40 h-40 bg-amber-300/15 rounded-full blur-2xl animate-pulse delay-500"></div>
+          <div className="absolute -top-20 -right-20 w-60 h-60 bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-blue-600/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/3 left-1/3 w-40 h-40 bg-blue-300/15 rounded-full blur-2xl animate-pulse delay-500"></div>
         </div>
       </div>
 
@@ -46,7 +45,7 @@ const Hero = () => {
         {[...Array(15)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-2 h-2 bg-amber-400/40 rounded-full animate-float"
+            className="absolute w-2 h-2 bg-blue-300/40 rounded-full animate-float"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -67,7 +66,7 @@ const Hero = () => {
           {/* Badge with Magic Effect */}
           <div className="mb-8">
             <div
-              className={`inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/20 to-emerald-600/20 border border-amber-400/30 text-amber-300 px-6 py-3 rounded-full ${
+              className={`inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-blue-600/20 border border-blue-400/30 text-blue-300 px-6 py-3 rounded-full ${
                 isRTL ? "font-arabic" : ""
               } font-medium mb-6 backdrop-blur-sm relative overflow-hidden`}
             >
@@ -75,7 +74,7 @@ const Hero = () => {
               {t("hero.badge")}
               <Sparkles className="w-4 h-4" />
               {/* Shine effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-200/30 to-transparent -translate-x-full animate-shine"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-200/30 to-transparent -translate-x-full animate-shine"></div>
             </div>
 
             {/* Main Heading */}
@@ -84,7 +83,7 @@ const Hero = () => {
                 isRTL ? "font-arabic" : ""
               } leading-tight`}
             >
-              <span className="block bg-gradient-to-r from-amber-400 to-amber-300 bg-clip-text text-transparent drop-shadow-lg p-5">
+              <span className="block bg-gradient-to-r from-gray-100 to-gray-100 bg-clip-text text-transparent drop-shadow-lg p-5">
                 {t("hero.subtitle")}
               </span>
             </h1>
@@ -102,7 +101,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-6 mb-12">
             <a
               href="tel:+201554300351" target="__blanck"
-              className={`flex items-center justify-center group relative overflow-hidden bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white text-xl px-5 py-3 rounded-2xl font-semibold shadow-2xl shadow-amber-500/25 hover:shadow-amber-500/40 hover:scale-105 transform transition-all duration-300 ease-out ${
+              className={`flex items-center justify-center group relative overflow-hidden bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white text-xl px-5 py-3 rounded-2xl font-semibold shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105 transform transition-all duration-300 ease-out ${
                 isRTL ? "font-arabic" : ""
               }`}
             >
@@ -120,15 +119,15 @@ const Hero = () => {
 
             <a
               href="https://wa.me/+201554300351" target="__blanck"
-              className={`text-center group relative overflow-hidden text-white border-amber-400/50 hover:border-white hover:bg-amber-400/10 bg-amber-400/10 text-xl px-5 py-3 rounded-2xl backdrop-blur-sm ${
+              className={`text-center group relative overflow-hidden text-white border-blue-400/50 hover:border-white hover:bg-blue-400/10 bg-blue-400/10 text-xl px-5 py-3 rounded-2xl backdrop-blur-sm ${
                 isRTL ? "font-arabic" : ""
               } hover:scale-105 transform transition-all duration-300 ease-out`}
             >
               <span className="relative z-10">
                 {t("hero.free_consultation")}
               </span>
-              {/* Gold glow effect on hover */}
-              <div className="absolute inset-0 rounded-2xl bg-amber-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+              {/* Blue glow effect on hover */}
+              <div className="absolute inset-0 rounded-2xl bg-blue-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
             </a>
           </div>
 
@@ -166,14 +165,14 @@ const Hero = () => {
                 style={{ transitionDelay: `${stat.delay}ms` }}
               >
                 {/* Animated border gradient */}
-                <div className="absolute inset-0 bg-gradient-to-r from-amber-500/30 to-emerald-500/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -m-0.5"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400/30 to-blue-600/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -m-0.5"></div>
 
-                <div className="relative bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 group-hover:border-amber-400/30 transition-all duration-500 ease-out transform group-hover:-translate-y-2">
+                <div className="relative bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20 group-hover:border-blue-400/30 transition-all duration-500 ease-out transform group-hover:-translate-y-2">
                   <div className="flex justify-center mb-4">
                     <div className="relative">
                       {/* Icon glow effect */}
-                      <div className="absolute inset-0 bg-amber-400/20 rounded-full blur-md group-hover:blur-lg transition-all duration-500"></div>
-                      <div className="relative bg-gradient-to-br from-amber-400 to-amber-500 p-3 rounded-full shadow-lg">
+                      <div className="absolute inset-0 bg-blue-400/20 rounded-full blur-md group-hover:blur-lg transition-all duration-500"></div>
+                      <div className="relative bg-gradient-to-br from-blue-400 to-blue-500 p-3 rounded-full shadow-lg">
                         <stat.icon className="w-8 h-8 text-white" />
                       </div>
                     </div>
@@ -182,7 +181,7 @@ const Hero = () => {
                   <h3
                     className={`text-3xl font-bold text-white mb-2 ${
                       isRTL ? "font-arabic" : ""
-                    } bg-gradient-to-r from-amber-300 to-amber-200 bg-clip-text text-transparent`}
+                    } bg-gradient-to-r from-blue-300 to-blue-200 bg-clip-text text-transparent`}
                   >
                     {stat.value}
                   </h3>
@@ -190,13 +189,13 @@ const Hero = () => {
                   <p
                     className={`text-white/80 ${
                       isRTL ? "font-arabic" : ""
-                    } group-hover:text-amber-100 transition-colors duration-300`}
+                    } group-hover:text-blue-100 transition-colors duration-300`}
                   >
                     {stat.label}
                   </p>
 
                   {/* Hover effect line */}
-                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-amber-400 to-emerald-400 rounded-full group-hover:w-3/4 transition-all duration-500 ease-out"></div>
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full group-hover:w-3/4 transition-all duration-500 ease-out"></div>
                 </div>
               </div>
             ))}
@@ -207,19 +206,19 @@ const Hero = () => {
       {/* Enhanced Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
         <div className="group cursor-pointer">
-          <div className="w-6 h-10 border-2 border-amber-400/50 rounded-full flex justify-center relative overflow-hidden backdrop-blur-sm">
-            <div className="w-1 h-3 bg-amber-400 rounded-full mt-2 animate-bounce"></div>
-            {/* Gold glow */}
-            <div className="absolute inset-0 bg-amber-400/20 rounded-full blur-sm group-hover:blur-md transition-all duration-300"></div>
+          <div className="w-6 h-10 border-2 border-blue-400/50 rounded-full flex justify-center relative overflow-hidden backdrop-blur-sm">
+            <div className="w-1 h-3 bg-blue-400 rounded-full mt-2 animate-bounce"></div>
+            {/* Blue glow */}
+            <div className="absolute inset-0 bg-blue-400/20 rounded-full blur-sm group-hover:blur-md transition-all duration-300"></div>
           </div>
-          <a href="#contact" className="text-amber-300/80 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <a href="#contact" className="text-blue-300/80 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             {t("hero.scroll_down")}
           </a>
         </div>
       </div>
 
       {/* Bottom Gradient Fade */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-emerald-900/50 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-blue-900/50 to-transparent"></div>
 
       <style jsx>{`
         @keyframes float {

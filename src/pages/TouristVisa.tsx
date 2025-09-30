@@ -27,31 +27,31 @@ const TouristVisa = () => {
     {
       text: t("tourist.why-us-answer1"),
       icon: Zap,
-      gradient: "from-emerald-500 to-green-400",
+      gradient: "from-blue-500 to-blue-600",
       description: t("tourist.badge1"),
     },
     {
       text: t("tourist.why-us-answer2"),
       icon: Shield,
-      gradient: "from-amber-500 to-yellow-400",
+      gradient: "from-blue-600 to-blue-400",
       description: t("tourist.badge2"),
     },
     {
       text: t("tourist.why-us-answer3"),
       icon: Clock,
-      gradient: "from-green-600 to-emerald-500",
+      gradient: "from-blue-700 to-blue-500",
       description: t("tourist.badge3"),
     },
     {
       text: t("tourist.why-us-answer4"),
       icon: Users,
-      gradient: "from-amber-600 to-orange-400",
+      gradient: "from-blue-800 to-blue-600",
       description: t("tourist.badge4"),
     },
     {
       text: t("tourist.why-us-answer5"),
       icon: Star,
-      gradient: "from-emerald-600 to-teal-400",
+      gradient: "from-blue-700 to-blue-400",
       description: t("tourist.badge5"),
     },
   ];
@@ -60,7 +60,7 @@ const TouristVisa = () => {
       icon: Phone,
       title: t("contact.phone.title"),
       details: ["+966 50 123 4567", "+966 11 234 5678"],
-      color: "text-green-500",
+      color: "text-blue-600",
     },
     {
       icon: Mail,
@@ -72,7 +72,6 @@ const TouristVisa = () => {
 
   return (
     <div className="min-h-screen">
-
       <div className="relative z-10">
         <ServiceHeader />
 
@@ -80,7 +79,7 @@ const TouristVisa = () => {
         <section className="section-padding">
           <div className="container mx-auto">
             <div
-              className={`bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-md shadow-green-500/10 border border-green-200/50 transform transition-all duration-1000 ${
+              className={`bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-md shadow-blue-500/10 border border-blue-200/50 transform transition-all duration-1000 ${
                 isVisible
                   ? "translate-y-0 opacity-100"
                   : "translate-y-10 opacity-0"
@@ -88,7 +87,7 @@ const TouristVisa = () => {
             >
               {/* Header Section */}
               <div className="text-center mb-12">
-                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/10 to-green-500/10 border border-emerald-200/50 text-emerald-600 px-6 py-3 rounded-full font-medium mb-6 backdrop-blur-sm">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200/50 text-blue-600 px-6 py-3 rounded-full font-medium mb-6 backdrop-blur-sm">
                   <Sparkles className="w-4 h-4" />
                   {t("tourist.why-us")}
                   <Sparkles className="w-4 h-4" />
@@ -136,7 +135,7 @@ const TouristVisa = () => {
                       {/* Content */}
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
-                          <span className="text-sm font-semibold text-amber-600 bg-amber-100 px-2 py-1 rounded-full">
+                          <span className="text-sm font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
                             {feature.description}
                           </span>
                         </div>

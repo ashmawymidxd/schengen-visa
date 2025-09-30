@@ -27,67 +27,67 @@ const Documents = () => {
     {
       text: t("document.additional.pasport"),
       icon: FileCheck,
-      gradient: "from-emerald-500 to-green-500",
+      gradient: "from-blue-500 to-sky-500",
       description: t("document.description1")
     },
     {
       text: t("document.additional.towImg"),
       icon: UserCheck,
-      gradient: "from-amber-500 to-yellow-500",
+      gradient: "from-blue-400 to-cyan-400",
       description: t("document.description2")
     },
     {
       text: t("document.additional.piemetrice"),
       icon: ShieldCheck,
-      gradient: "from-emerald-600 to-teal-500",
+      gradient: "from-blue-600 to-cyan-500",
       description: t("document.description3")
     },
     {
       text: t("document.additional.insurance"),
       icon: BadgeCheck,
-      gradient: "from-amber-600 to-orange-500",
+      gradient: "from-blue-500 to-indigo-500",
       description: t("document.description4")
     },
     {
       text: t("document.additional.reserveFlight"),
       icon: Plane,
-      gradient: "from-green-600 to-emerald-600",
+      gradient: "from-sky-600 to-blue-600",
       description: t("document.description5")
     },
     {
       text: t("document.additional.profe"),
       icon: CalendarCheck,
-      gradient: "from-yellow-600 to-amber-600",
+      gradient: "from-cyan-600 to-blue-500",
       description: t("document.description6")
     },
     {
       text: t("document.additional.home"),
       icon: Home,
-      gradient: "from-emerald-700 to-green-700",
+      gradient: "from-blue-700 to-sky-700",
       description: t("document.description7")
     },
     {
       text: t("document.additional.invetation"),
       icon: MailCheck,
-      gradient: "from-amber-700 to-yellow-700",
+      gradient: "from-indigo-600 to-blue-600",
       description: t("document.description8")
     },
   ];
 
   return (
-    <section id="requirements" className="section-padding bg-gradient-to-br from-slate-50 via-white to-emerald-50/30 relative overflow-hidden">
+    <section id="requirements" className="section-padding bg-gradient-to-br from-slate-50 via-white to-blue-50/30 relative overflow-hidden">
 
       <div className="container mx-auto relative z-10">
         {/* Header Section */}
         <div className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/10 to-green-500/10 border border-emerald-200/50 text-emerald-600 px-6 py-3 rounded-full font-medium mb-6 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-sky-500/10 border border-blue-200/50 text-blue-600 px-6 py-3 rounded-full font-medium mb-6 backdrop-blur-sm">
             <Sparkles className="w-4 h-4" />
             {t("documents.badge")}
             <Sparkles className="w-4 h-4" />
           </div>
           <h2 className="text-4xl lg:text-6xl font-bold p-5 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
             <span>{t("documents.title")}</span>
-            <span className="mx-3 bg-gradient-to-r from-emerald-600 mt-5 to-green-600 bg-clip-text text-transparent">
+            <span className="mx-3 bg-gradient-to-r from-blue-600 mt-5 to-sky-600 bg-clip-text text-transparent">
               {t("documents.subtitle")}
             </span>
           </h2>
@@ -97,10 +97,10 @@ const Documents = () => {
         </div>
 
         {/* Additional Documents Section */}
-        <div className={`bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl shadow-emerald-500/10 border border-white/20 mb-16 transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+        <div className={`bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl shadow-blue-500/10 border border-white/20 mb-16 transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-3 mb-4">
-              <div className="bg-gradient-to-r from-emerald-500 to-green-500 p-2 rounded-full">
+              <div className="bg-gradient-to-r from-blue-500 to-sky-500 p-2 rounded-full">
                 <FileText className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-2xl lg:text-3xl font-bold  bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
@@ -149,10 +149,10 @@ const Documents = () => {
         <div className={`text-center transform transition-all duration-1000 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <div className="relative">
             {/* Floating Elements */}
-            <div className="absolute -top-4 -left-4 w-8 h-8 bg-emerald-400/30 rounded-full blur-sm animate-pulse"></div>
-            <div className="absolute -bottom-4 -right-4 w-6 h-6 bg-amber-400/30 rounded-full blur-sm animate-pulse delay-1000"></div>
+            <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-400/30 rounded-full blur-sm animate-pulse"></div>
+            <div className="absolute -bottom-4 -right-4 w-6 h-6 bg-sky-400/30 rounded-full blur-sm animate-pulse delay-1000"></div>
             
-            <div className="bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 rounded-3xl p-8 text-white shadow-2xl shadow-emerald-500/30 max-w-2xl mx-auto relative overflow-hidden">
+            <div className="bg-gradient-to-r from-blue-600 via-sky-600 to-cyan-600 rounded-3xl p-8 text-white shadow-2xl shadow-blue-500/30 max-w-2xl mx-auto relative overflow-hidden">
               {/* Animated Background */}
               <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm"></div>
               <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-xl"></div>
@@ -173,7 +173,7 @@ const Documents = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a 
                     href="#requirements"
-                    className="group relative inline-flex items-center gap-2 bg-white text-emerald-600 hover:text-emerald-700 text-lg px-8 py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out"
+                    className="group relative inline-flex items-center gap-2 bg-white text-blue-600 hover:text-blue-700 text-lg px-8 py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out"
                   >
                     {t("documents.help.button1")}
                     <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
@@ -193,8 +193,8 @@ const Documents = () => {
         </div>
 
         {/* Decorative Elements */}
-        <div className="absolute bottom-10 left-10 w-20 h-20 bg-amber-200/20 rounded-full blur-xl animate-bounce"></div>
-        <div className="absolute top-20 right-10 w-16 h-16 bg-emerald-200/20 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-10 left-10 w-20 h-20 bg-sky-200/20 rounded-full blur-xl animate-bounce"></div>
+        <div className="absolute top-20 right-10 w-16 h-16 bg-blue-200/20 rounded-full blur-xl animate-pulse"></div>
       </div>
     </section>
   );

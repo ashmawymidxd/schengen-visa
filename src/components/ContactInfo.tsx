@@ -70,12 +70,12 @@ const ContactInfo = ({ contactInfo }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-lime-50/30 relative overflow-hidden py-20">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-sky-50/30 relative overflow-hidden py-20">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-emerald-400/20 to-green-400/20 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-lime-400/20 to-emerald-400/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-amber-400/10 to-yellow-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-sky-400/20 to-blue-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-400/10 to-cyan-400/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -85,14 +85,14 @@ const ContactInfo = ({ contactInfo }) => {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/10 to-green-500/10 border border-emerald-200/50 text-emerald-600 px-6 py-3 rounded-full font-arabic font-medium mb-6 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-200/50 text-blue-600 px-6 py-3 rounded-full font-arabic font-medium mb-6 backdrop-blur-sm">
             <Sparkles className="w-4 h-4" />
             {t("contact.badge")}
             <Sparkles className="w-4 h-4" />
           </div>
           <h2 className="text-4xl lg:text-6xl font-bold mb-6 font-arabic bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
             {t("contact.title")}
-            <span className="block bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text p-5 text-transparent">
+            <span className="block bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text p-5 text-transparent">
               {t("contact.subtitle")}
             </span>
           </h2>
@@ -119,13 +119,13 @@ const ContactInfo = ({ contactInfo }) => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="group">
-                    <Card className="border-white/20 bg-white/60 backdrop-blur-md hover:bg-white/80 hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-500 ease-out transform group-hover:-translate-y-2 relative overflow-hidden">
-                      {/* Gold Accent Border */}
-                      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 to-yellow-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    <Card className="border-white/20 bg-white/60 backdrop-blur-md hover:bg-white/80 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 ease-out transform group-hover:-translate-y-2 relative overflow-hidden">
+                      {/* Blue Accent Border */}
+                      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-cyan-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
 
                       <CardHeader className="pb-4">
                         <div className="flex items-center gap-3">
-                          <div className="p-3 rounded-xl bg-gradient-to-br from-emerald-500 to-green-600 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                          <div className="p-3 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 shadow-lg group-hover:scale-110 transition-transform duration-300">
                             <info.icon className="w-6 h-6 text-white" />
                           </div>
                           <CardTitle className="text-lg font-arabic text-gray-800">
@@ -150,42 +150,42 @@ const ContactInfo = ({ contactInfo }) => {
             </div>
 
             {/* Quick Actions */}
-            <div className="bg-white/60 backdrop-blur-md rounded-2xl p-6 border border-white/20 relative overflow-hidden group hover:shadow-2xl hover:shadow-emerald-500/5 transition-all duration-500">
-              {/* Gold Corner Accent */}
-              <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-amber-400 to-yellow-500 rounded-bl-2xl transform translate-x-8 -translate-y-8 rotate-45 opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+            <div className="bg-white/60 backdrop-blur-md rounded-2xl p-6 border border-white/20 relative overflow-hidden group hover:shadow-2xl hover:shadow-blue-500/5 transition-all duration-500">
+              {/* Blue Corner Accent */}
+              <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-blue-400 to-cyan-500 rounded-bl-2xl transform translate-x-8 -translate-y-8 rotate-45 opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
 
               <h4 className="text-xl font-bold text-gray-800 mb-6 font-arabic relative z-10">
                 {t("contact.quick.title")}
               </h4>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
                 <Button
-                  className="w-full justify-start gap-3 h-14 font-arabic bg-white/80 hover:bg-white border border-emerald-200/50 hover:border-emerald-300 hover:shadow-lg transition-all duration-300 group/btn"
+                  className="w-full justify-start gap-3 h-14 font-arabic bg-white/80 hover:bg-white border border-blue-200/50 hover:border-blue-300 hover:shadow-lg transition-all duration-300 group/btn"
                   variant="outline"
                 >
                   <a
                     href="https://wa.me/+201554300351"
                     target="__blanck"
-                    className="p-2 rounded-lg bg-gradient-to-br from-green-500 to-emerald-600 group-hover/btn:scale-110 transition-transform duration-300"
+                    className="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-600 group-hover/btn:scale-110 transition-transform duration-300"
                   >
                     <MessageSquare className="w-5 h-5 text-white" />
                   </a>
                   {t("contact.quick.whatsapp")}
-                  <ArrowRight className="w-4 h-4 ml-auto text-gray-400 group-hover/btn:text-emerald-600 group-hover/btn:translate-x-1 transition-all duration-300" />
+                  <ArrowRight className="w-4 h-4 ml-auto text-gray-400 group-hover/btn:text-blue-600 group-hover/btn:translate-x-1 transition-all duration-300" />
                 </Button>
 
                 <Button
-                  className="w-full justify-start gap-3 h-14 font-arabic bg-white/80 hover:bg-white border border-amber-200/50 hover:border-amber-300 hover:shadow-lg transition-all duration-300 group/btn"
+                  className="w-full justify-start gap-3 h-14 font-arabic bg-white/80 hover:bg-white border border-blue-200/50 hover:border-blue-300 hover:shadow-lg transition-all duration-300 group/btn"
                   variant="outline"
                 >
                   <a
                     href="tel:+201554300351"
                     target="__blanck"
-                    className="p-2 rounded-lg bg-gradient-to-br from-amber-500 to-yellow-600 group-hover/btn:scale-110 transition-transform duration-300"
+                    className="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-sky-600 group-hover/btn:scale-110 transition-transform duration-300"
                   >
                     <Phone className="w-5 h-5 text-white" />
                   </a>
                   {t("contact.quick.call")}
-                  <ArrowRight className="w-4 h-4 ml-auto text-gray-400 group-hover/btn:text-amber-600 group-hover/btn:translate-x-1 transition-all duration-300" />
+                  <ArrowRight className="w-4 h-4 ml-auto text-gray-400 group-hover/btn:text-blue-600 group-hover/btn:translate-x-1 transition-all duration-300" />
                 </Button>
 
                 <Button
@@ -207,12 +207,12 @@ const ContactInfo = ({ contactInfo }) => {
 
             {/* Map Section */}
             <div className="group relative">
-              <div className="bg-gradient-to-br from-emerald-500/10 to-green-500/10 rounded-2xl p-8 text-center border border-emerald-200/30 backdrop-blur-sm hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-500 overflow-hidden">
+              <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl p-8 text-center border border-blue-200/30 backdrop-blur-sm hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 overflow-hidden">
                 {/* Floating Elements */}
-                <div className="absolute -top-2 -right-2 w-4 h-4 bg-amber-400/30 rounded-full blur-sm animate-pulse"></div>
-                <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-emerald-400/30 rounded-full blur-sm animate-pulse delay-1000"></div>
+                <div className="absolute -top-2 -right-2 w-4 h-4 bg-blue-400/30 rounded-full blur-sm animate-pulse"></div>
+                <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-cyan-400/30 rounded-full blur-sm animate-pulse delay-1000"></div>
 
-                <div className="p-4 rounded-2xl bg-gradient-to-br from-amber-400 to-yellow-500 w-16 h-16 mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="p-4 rounded-2xl bg-gradient-to-br from-blue-400 to-cyan-500 w-16 h-16 mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <MapPin className="w-8 h-8 text-white mx-auto" />
                 </div>
                 <h4 className="text-xl font-bold text-gray-800 mb-2 font-arabic">
@@ -223,7 +223,7 @@ const ContactInfo = ({ contactInfo }) => {
                 </p>
                 <Button
                   variant="outline"
-                  className="font-arabic border-emerald-300 text-emerald-600 hover:bg-emerald-50 hover:border-emerald-400 group/btn"
+                  className="font-arabic border-blue-300 text-blue-600 hover:bg-blue-50 hover:border-blue-400 group/btn"
                 >
                   <a href="https://facebook.com" target="__blank"> {t("contact.map.button")}</a>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
@@ -242,19 +242,19 @@ const ContactInfo = ({ contactInfo }) => {
           >
             <div className="relative group">
               {/* Form Background Glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 via-green-600 to-lime-600 rounded-3xl shadow-2xl shadow-emerald-500/30 transform group-hover:scale-105 transition-transform duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-cyan-600 to-sky-600 rounded-3xl shadow-2xl shadow-blue-500/30 transform group-hover:scale-105 transition-transform duration-500"></div>
 
-              {/* Gold Accent Border */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-400 opacity-20 blur-sm group-hover:opacity-40 transition-opacity duration-500 -m-0.5"></div>
+              {/* Blue Accent Border */}
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-400 via-cyan-500 to-blue-400 opacity-20 blur-sm group-hover:opacity-40 transition-opacity duration-500 -m-0.5"></div>
 
-              <div className="relative bg-gradient-to-br from-emerald-600 via-green-600 to-emerald-700 rounded-3xl p-8 h-full shadow-2xl">
+              <div className="relative bg-gradient-to-br from-blue-600 via-cyan-600 to-blue-700 rounded-3xl p-8 h-full shadow-2xl">
                 {/* Floating Icons */}
-                <div className="absolute top-4 right-4 w-8 h-8 bg-amber-400/20 rounded-full backdrop-blur-sm"></div>
+                <div className="absolute top-4 right-4 w-8 h-8 bg-blue-400/20 rounded-full backdrop-blur-sm"></div>
                 <div className="absolute bottom-4 left-4 w-6 h-6 bg-white/10 rounded-full backdrop-blur-sm"></div>
 
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="p-3 rounded-2xl bg-gradient-to-br from-amber-400 to-yellow-500 shadow-lg">
+                    <div className="p-3 rounded-2xl bg-gradient-to-br from-blue-400 to-cyan-500 shadow-lg">
                       <Send className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-2xl font-bold text-white font-arabic">
@@ -270,7 +270,7 @@ const ContactInfo = ({ contactInfo }) => {
                           value={formData.name}
                           onChange={handleChange}
                           placeholder={t("contact.form.name")}
-                          className="h-12 bg-white/20 border-white/30 text-white placeholder:text-white/70 backdrop-blur-sm focus:bg-white/30 focus:border-amber-200/50 transition-all duration-300"
+                          className="h-12 bg-white/20 border-white/30 text-white placeholder:text-white/70 backdrop-blur-sm focus:bg-white/30 focus:border-blue-200/50 transition-all duration-300"
                           required
                         />
                       </div>
@@ -280,7 +280,7 @@ const ContactInfo = ({ contactInfo }) => {
                           value={formData.phone}
                           onChange={handleChange}
                           placeholder="05xxxxxxxx"
-                          className="h-12 bg-white/20 border-white/30 text-white placeholder:text-white/70 backdrop-blur-sm focus:bg-white/30 focus:border-amber-200/50 transition-all duration-300"
+                          className="h-12 bg-white/20 border-white/30 text-white placeholder:text-white/70 backdrop-blur-sm focus:bg-white/30 focus:border-blue-200/50 transition-all duration-300"
                           required
                         />
                       </div>
@@ -293,7 +293,7 @@ const ContactInfo = ({ contactInfo }) => {
                         onChange={handleChange}
                         type="email"
                         placeholder="example@email.com"
-                        className="h-12 bg-white/20 border-white/30 text-white placeholder:text-white/70 backdrop-blur-sm focus:bg-white/30 focus:border-amber-200/50 transition-all duration-300"
+                        className="h-12 bg-white/20 border-white/30 text-white placeholder:text-white/70 backdrop-blur-sm focus:bg-white/30 focus:border-blue-200/50 transition-all duration-300"
                         required
                       />
                     </div>
@@ -304,14 +304,14 @@ const ContactInfo = ({ contactInfo }) => {
                         value={formData.message}
                         onChange={handleChange}
                         placeholder={t("contact.form.message")}
-                        className="min-h-[120px] bg-white/20 border-white/30 text-white placeholder:text-white/70 backdrop-blur-sm focus:bg-white/30 focus:border-amber-200/50 transition-all duration-300 resize-none"
+                        className="min-h-[120px] bg-white/20 border-white/30 text-white placeholder:text-white/70 backdrop-blur-sm focus:bg-white/30 focus:border-blue-200/50 transition-all duration-300 resize-none"
                         required
                       />
                     </div>
 
                     <Button
                       type="submit"
-                      className="w-full h-14 text-lg bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-white font-semibold border-none shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out group/btn relative overflow-hidden"
+                      className="w-full h-14 text-lg bg-gradient-to-r from-blue-400 to-cyan-500 hover:from-blue-500 hover:to-cyan-600 text-white font-semibold border-none shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out group/btn relative overflow-hidden"
                       disabled={loading}
                     >
                       <span className="relative z-10 flex items-center justify-center gap-2">

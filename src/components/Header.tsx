@@ -94,7 +94,7 @@ const Header = () => {
             <a
               href="tel:+201554300351"
               target="_blank"
-              className="flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white rounded-full px-4 py-2 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-full px-4 py-2 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               <Phone className="w-4 h-4" />
               <span>+201554300351</span>
@@ -196,7 +196,7 @@ const Header = () => {
                 </a>
 
                 {/* Services Submenu */}
-                {item.submenu && (isServicesHovered) && (
+                {item.submenu && isServicesHovered && (
                   <div
                     className={`absolute mt-0 w-56 bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 py-2 z-50 ${
                       isRTL ? "right-0" : "left-0"

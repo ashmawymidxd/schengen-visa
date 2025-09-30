@@ -14,7 +14,7 @@ const RequestSchengen = () => {
       icon: Phone,
       title: t("contact.phone.title"),
       details: ["+966 50 123 4567", "+966 11 234 5678"],
-      color: "text-green-500",
+      color: "text-blue-600",
     },
     {
       icon: Mail,

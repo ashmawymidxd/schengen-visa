@@ -381,12 +381,12 @@ const Countries = () => {
   return (
     <section
       id="countries"
-      className="section-padding bg-gradient-to-br from-gray-50 via-white to-emerald-50/30 relative overflow-hidden"
+      className="section-padding bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-emerald-400/20 to-green-400/20 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-amber-400/20 to-yellow-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-sky-400/20 to-blue-400/20 rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-gray-400/10 to-gray-300/10 rounded-full blur-3xl"></div>
       </div>
 
@@ -397,14 +397,14 @@ const Countries = () => {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/10 to-green-500/10 border border-emerald-200/50 text-emerald-600 px-6 py-3 rounded-full font-medium mb-6 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-200/50 text-blue-600 px-6 py-3 rounded-full font-medium mb-6 backdrop-blur-sm">
             <Sparkles className="w-4 h-4" />
             {t("countries.badge")}
             <Sparkles className="w-4 h-4" />
           </div>
           <h2 className="text-4xl lg:text-6xl font-bold  mb-6 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
             {t("countries.title")}
-            <span className="block bg-gradient-to-r from-emerald-600 to-green-600 p-5 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-blue-600 to-cyan-600 p-5 bg-clip-text text-transparent">
               {t("countries.subtitle")}
             </span>
           </h2>
@@ -455,12 +455,12 @@ const Countries = () => {
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <Clock className="w-4 h-4 text-emerald-500" />
+                        <Clock className="w-4 h-4 text-blue-500" />
                         <span className="text-sm text-gray-600">
                           {t("countries.processing_time")}
                         </span>
                       </div>
-                      <span className="text-sm font-semibold bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
+                      <span className="text-sm font-semibold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
                         {isRTL
                           ? country.processingTime
                           : country.processingTimeEn}
@@ -469,7 +469,7 @@ const Countries = () => {
 
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <Users className="w-4 h-4 text-amber-500" />
+                        <Users className="w-4 h-4 text-sky-500" />
                         <span className="text-sm text-gray-600">
                           {t("countries.popularity")}
                         </span>
@@ -492,8 +492,12 @@ const Countries = () => {
                   </div>
 
                   {/* CTA Button */}
-                  <div className="mt-4 pt-4 border-t border-gray-200/50 group-hover:border-emerald-200/50 transition-colors duration-300">
-                    <a href="https://wa.me/+201554300351" target="__blanck" className="group/btn w-full flex items-center justify-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium text-sm transition-all duration-300 hover:gap-3">
+                  <div className="mt-4 pt-4 border-t border-gray-200/50 group-hover:border-blue-200/50 transition-colors duration-300">
+                    <a
+                      href="https://wa.me/+201554300351"
+                      target="__blanck"
+                      className="group/btn w-full flex items-center justify-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm transition-all duration-300 hover:gap-3"
+                    >
                       {t("countries.request_visa")}{" "}
                       {isRTL ? country.name : country.nameEn}
                       <ArrowRight
@@ -507,7 +511,7 @@ const Countries = () => {
                   </div>
 
                   {/* Hover Effect Line */}
-                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full group-hover:w-3/4 transition-all duration-500 ease-out"></div>
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full group-hover:w-3/4 transition-all duration-500 ease-out"></div>
                 </CardContent>
               </Card>
             </div>
@@ -521,7 +525,7 @@ const Countries = () => {
           }`}
         >
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/10 to-yellow-500/10 border border-amber-200/50 text-amber-600 px-6 py-3 rounded-full font-medium mb-6 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500/10 to-blue-500/10 border border-sky-200/50 text-sky-600 px-6 py-3 rounded-full font-medium mb-6 backdrop-blur-sm">
               <PlaneIcon className="w-5 h-5" />
               {t("countries.service_providers")}
               <PlaneIcon className="w-5 h-5" />
