@@ -40,7 +40,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "header.contact": "اتصل بنا",
       "header.call_now": "اتصل الآن",
       "header.request_service": "اطلب الخدمة",
-      "header.company_name": "برايم فيزا",
+      "header.company_name": "فيرست مهاتا",
       "header.company_tagline": "خبراء استخراج التأشيرات",
       "header.service1": "اطلب الشنغن",
       "header.service2": "التاشيرات السياحية",
@@ -160,7 +160,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 
       // tourist visa service
       "tourist.description":
-        "نقدّم في برايم فيزا خدمة استخراج التأشيرات السياحية لمجموعة واسعة من الوجهات العالمية، مع متابعة دقيقة لكل تفاصيل الطلب لضمان تجربة سفر مريحة وخالية من المتاعب. هدفنا أن نسهّل عليك كل الإجراءات، بحيث تركز فقط على الاستمتاع برحلتك.",
+        "نقدّم في فيرست مهاتا خدمة استخراج التأشيرات السياحية لمجموعة واسعة من الوجهات العالمية، مع متابعة دقيقة لكل تفاصيل الطلب لضمان تجربة سفر مريحة وخالية من المتاعب. هدفنا أن نسهّل عليك كل الإجراءات، بحيث تركز فقط على الاستمتاع برحلتك.",
 
       "tourist.why-us": "ما يميزنا",
       "tourist.why-us-answer1": "سرعة في تجهيز الملفات والتقديم.",
@@ -195,7 +195,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 
       // Flight Reservation
       "flight.reservation.description":
-        "في برايم فيزا نوفر لك خدمة حجز تذاكر الطيران إلى جميع الوجهات العالمية بأفضل الأسعار وبأعلى مستوى من المرونة. سواء كنت تبحث عن رحلة اقتصادية أو درجة رجال الأعمال أو الأولى، نساعدك في إيجاد الخيار الأمثل لرحلتك.",
+        "في فيرست مهاتا نوفر لك خدمة حجز تذاكر الطيران إلى جميع الوجهات العالمية بأفضل الأسعار وبأعلى مستوى من المرونة. سواء كنت تبحث عن رحلة اقتصادية أو درجة رجال الأعمال أو الأولى، نساعدك في إيجاد الخيار الأمثل لرحلتك.",
 
       "flight.reservation.why-us": "ما يميزنا",
       "flight.reservation.why-us-answer1":
@@ -235,7 +235,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "flight.plain.reservations.btn": " احجز الآن",
       // Hotel Reservation
       "hotel.reservation.description":
-        "مع برايم فيزا أصبح حجز فندقك أسهل من أي وقت مضى. نوفر خيارات متنوعة تناسب جميع الميزانيات، من الفنادق الاقتصادية إلى المنتجعات الفاخرة، مع تأكيد فوري وأسعار تنافسية.",
+        "مع فيرست مهاتا أصبح حجز فندقك أسهل من أي وقت مضى. نوفر خيارات متنوعة تناسب جميع الميزانيات، من الفنادق الاقتصادية إلى المنتجعات الفاخرة، مع تأكيد فوري وأسعار تنافسية.",
 
       "hotel.reservation.why-us": "شبكة واسعة من الفنادق حول العالم.",
       "hotel.reservation.why-us-answer1": "شبكة واسعة من الفنادق حول العالم.",
@@ -483,7 +483,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "header.contact": "Contact Us",
       "header.call_now": "Call Now",
       "header.request_service": "Request Service",
-      "header.company_name": "Prime Visa",
+      "header.company_name": "First Mahata",
       "header.company_tagline": "Visa Experts",
       "header.service1": "ٌRequest Schengen",
       "header.service2": "Tourism Visa",
@@ -494,8 +494,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "hero.badge": "✈️ Schengen Visa Experts in Saudi Arabia",
       "hero.subtitle":
         "Whether your trip is for tourism, business, or adventure, we provide everything you need to travel with ease and confidence",
-      "hero.description": `At Prime Visa Services, we believe that travel is the beginning of discovering the world and creating unforgettable memories. That’s why we provide integrated and easy solutions for all things related to tourist visas, Schengen applications, and travel bookings, to give you a hassle-free experience with the highest professionalism.
-    Our goal at Prime Visa is to be your first partner in your journey, from the idea to the destination.`,
+      "hero.description": `At First Mahata Services, we believe that travel is the beginning of discovering the world and creating unforgettable memories. That’s why we provide integrated and easy solutions for all things related to tourist visas, Schengen applications, and travel bookings, to give you a hassle-free experience with the highest professionalism.
+    Our goal at First Mahata is to be your first partner in your journey, from the idea to the destination.`,
       "hero.request_now": "Request Service Now",
       "hero.free_consultation": "Free Consultation",
       "hero.stats.clients": "+5000",
@@ -608,7 +608,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 
       // Tourist Visa Service
       "tourist.description":
-        "At Prime Visa, we provide tourist visa services for a wide range of global destinations, with careful follow-up on every detail of your application to ensure a smooth and hassle-free travel experience. Our goal is to simplify all procedures so you can focus only on enjoying your trip.",
+        "At First Mahata, we provide tourist visa services for a wide range of global destinations, with careful follow-up on every detail of your application to ensure a smooth and hassle-free travel experience. Our goal is to simplify all procedures so you can focus only on enjoying your trip.",
       "tourist.why-us": "Why Choose Us",
       "tourist.why-us-answer1": "Fast processing of files and applications.",
       "tourist.badge1": "Fast Processing",
@@ -642,7 +642,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 
       // Flight Reservation
       "flight.reservation.description":
-        "At Prime Visa, we provide flight reservation services to all global destinations at the best prices and with maximum flexibility. Whether you are looking for an economy, business, or first-class ticket, we help you find the best option for your trip.",
+        "At First Mahata, we provide flight reservation services to all global destinations at the best prices and with maximum flexibility. Whether you are looking for an economy, business, or first-class ticket, we help you find the best option for your trip.",
       "flight.reservation.why-us": "Why Choose Us",
       "flight.reservation.why-us-answer1":
         "Competitive prices across all airlines.",
@@ -680,7 +680,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "flight.plain.reservations.btn": " Book Now",
       // Hotel Reservation
       "hotel.reservation.description":
-        "With Prime Visa, booking your hotel is easier than ever. We offer a wide range of options to suit all budgets, from economy hotels to luxury resorts, with instant confirmation and competitive prices.",
+        "With First Mahata, booking your hotel is easier than ever. We offer a wide range of options to suit all budgets, from economy hotels to luxury resorts, with instant confirmation and competitive prices.",
       "hotel.reservation.why-us": "Wide network of hotels worldwide.",
       "hotel.reservation.why-us-answer1":
         "Wide network of hotels around the worled",
@@ -746,7 +746,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       // About
       "about.badge": "About Us",
       "about.title": "Why Choose",
-      "about.subtitle": "Prime Visa for Your Next Trip?",
+      "about.subtitle": "First Mahata for Your Next Trip?",
       "about.description":
         "We are not just a visa office or booking agency, we are your travel partner from the first step until you reach your destination. With us, you’ll find:",
       "about.features1.title": "Integrated Solutions",
@@ -817,7 +817,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "faq.cta.button1": "Contact Us Now",
       "faq.cta.button2": "Direct WhatsApp",
 
-      "faqs1.question": "Is Prime Visa accredited by embassies?",
+      "faqs1.question": "Is First Mahata accredited by embassies?",
       "faqs1.answer":
         "Yes, we comply with all official requirements and prepare files that meet embassy standards.",
 
@@ -851,7 +851,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "faqs8.answer":
         "Yes, we provide personal consultations to help you choose the best destination based on your budget and interests.",
 
-      "faqs9.question": "What makes Prime Visa different?",
+      "faqs9.question": "What makes First Mahata different?",
       "faqs9.answer":
         "We offer a unique mix of expertise, speed, and competitive pricing, with personal support that builds confidence throughout your journey.",
 
