@@ -34,7 +34,7 @@ const Loader = () => {
               {/* Logo Image */}
               <img
                 src={logo}
-                alt="Prime Visa"
+                alt="First Mahata"
                 className="relative w-44 h-24 mx-auto drop-shadow-lg animate-scale"
               />
             </div>
@@ -73,7 +73,7 @@ const Loader = () => {
           {/* Main Title */}
           <div className="flex items-center justify-center space-x-3">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 via-sky-600 to-blue-600 bg-clip-text text-transparent animate-gradient">
-              Prime Visa
+              First Mahata
             </h2>
             <Sparkles className="w-6 h-6 text-blue-400 animate-sparkle" />
           </div>
