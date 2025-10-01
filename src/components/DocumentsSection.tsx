@@ -84,7 +84,7 @@ export default function DocumentsSection() {
         </h2>
 
         {/* Description */}
-        <p className="mt-8 text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed bg-white/60 backdrop-blur-lg rounded-2xl p-6 border border-gray-200/40 shadow-lg">
+        <p className="mt-8 text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto p-6 text-justify md:text-center">
           {t("documents.description")}
         </p>
 

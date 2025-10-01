@@ -84,12 +84,13 @@ function VisaSection() {
 
         {/* Description */}
         <p
-          className={`text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed bg-white/50 backdrop-blur-sm mt-5 p-6 border border-white/20 ${
+          className={`text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mt-5 p-6 text-justify md:text-center ${
             isRTL ? "font-arabic" : ""
           }`}
         >
           {t("tourist.description")}
         </p>
+        <div className="w-32 h-1 mx-auto mt-10 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-600 shadow-md shadow-yellow-200" />
       </div>
     </section>
   );

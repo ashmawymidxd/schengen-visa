@@ -82,10 +82,11 @@ function HotelSection() {
         <p
           className={`text-lg text-gray-600 max-w-3xl mx-auto ${
             isRTL ? "font-arabic" : ""
-          } leading-relaxed bg-white/70 backdrop-blur-md rounded-xl p-6 border border-gray-200/40 shadow`}
+          } p-6 text-justify md:text-center`}
         >
           {t("hotel.reservation.description")}
         </p>
+        <div className="w-32 h-1 mx-auto mt-10 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-600 shadow-md shadow-yellow-200" />
       </div>
     </section>
   );

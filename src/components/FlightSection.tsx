@@ -80,10 +80,11 @@ function FlightSection() {
         <p
           className={`text-lg text-gray-600 max-w-3xl mx-auto ${
             isRTL ? "font-arabic" : ""
-          }`}
+          } p-6 text-justify md:text-center`}
         >
           {t("flight.reservation.description")}
         </p>
+        <div className="w-32 h-1 mx-auto mt-10 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-600 shadow-md shadow-yellow-200" />
       </div>
     </section>
   );
