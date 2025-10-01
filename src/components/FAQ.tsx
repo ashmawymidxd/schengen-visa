@@ -196,7 +196,7 @@ const FAQ = () => {
                     <a
                       href="https://wa.me/+201554300351"
                       target="__blanck"
-                      className="text-center group relative inline-flex items-center gap-2 bg-sky-400 hover:bg-sky-300 text-blue-900 font-semibold text-lg px-8 py-4 rounded-2xl font-arabic shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out"
+                      className="text-center group relative items-center gap-2 bg-sky-400 hover:bg-sky-300 text-gray-100 font-semibold text-lg px-8 py-4 rounded-2xl font-arabic shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out"
                     >
                       {t("faq.cta.button1")}
                       <div className="w-0 h-0.5 bg-blue-700 absolute bottom-2 left-4 group-hover:w-8 transition-all duration-300 ease-out"></div>
