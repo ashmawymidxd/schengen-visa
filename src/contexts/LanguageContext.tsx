@@ -265,6 +265,32 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "hotel.reservation.why-us-desc3": "استشارات سفر من خبراء",
       "hotel.reservation.why-us-desc4": "إقامة مضمونة الجودة",
       "hotel.reservation.why-us-desc5": "تأكيد فوري",
+      "hotel.requirements-slug": "المتطلبات للحصول على التأشيرة",
+      "hotel.requirements1.title": "1. جواز السفر الأصلي وصورة منه",
+      "hotel.requirements1.details":
+        "يجب أن تكون صلاحية الجواز لا تقل عن 6 أشهر من تاريخ العودة من السفر.",
+
+      "hotel.requirements2.title": "2. الصور الشخصية",
+      "hotel.requirements2.details":
+        "عدد (2) صورة حديثة بمقاس 4.5 × 3.5 بخلفية بيضاء، دون أي تعديل للوجه.\n- للرجال: يجب أن تكون الصورة بدون شماغ.\n- للنساء: يجب أن يظهر جزء من منابت الشعر.\n- يشترط أن تكون الصور حديثة.",
+      "hotel.requirements3.title":
+        "3. خطاب تعريف بالراتب (باللغة الإنجليزية) – النسخة الأصلية",
+      "hotel.requirements3.details":
+        "● موظفو القطاع الحكومي: يجب أن يكون الخطاب مختومًا بختم ملون من جهة العمل الحكومية.\n● موظفو القطاع الخاص: يجب أن يكون على أوراق الشركة الرسمية ومصدقًا من الغرفة التجارية.\n● يشترط أن يكون الخطاب حديث الإصدار.",
+      "hotel.requirements4.title": "4. كشف الحساب البنكي",
+      "hotel.requirements4.details":
+        "● كشف حساب حديث لآخر 3 أشهر (خاص بالسعوديين).\n● يجب أن يكون باللغة الإنجليزية ومختومًا من البنك.\n● يشترط وجود رصيد لا يقل عن 15,000 ريال (ويُفضل أن يكون الرصيد أعلى).",
+      "hotel.requirements5.title": "5. البصمة",
+      "hotel.requirements5.details":
+        "● مطلوبة لجميع المتقدمين من عمر 12 سنة فأكثر.\n● الأطفال دون 12 عامًا غير مطالبين بالبصمة.",
+      "hotel.requirements6.title": "6. التأمين الطبي",
+      "hotel.requirements6.details":
+        "● يشترط وجود تأمين طبي ساري، وهو من المتطلبات الأساسية لتأشيرة الشنغن.\n● يتم توفير التأمين عبر أفضل شركات التأمين المعتمدة.",
+      "hotel.requirements7.title": "7. الترجمة",
+      "hotel.requirements7.details":
+        "● يجب ترجمة الوثائق التالية عند الحاجة:\n○ بطاقة الأحوال.\n○ كرت العائلة.",
+      "hotel.requirements8.title": "8. المدة المتوقعة لإصدار التأشيرة",
+      "hotel.requirements8.details":"●	يشترط وجود تأمين طبي ساري، وهو من المتطلبات الأساسية لتأشيرة الشنغن.\n●	يتم توفير التأمين عبر أفضل شركات التأمين المعتمدة.",
 
       // Countries
       "countries.visa_information": "معلومات عن فيزا الشنغن",
@@ -297,7 +323,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "country.iceland": "أيسلندا",
       "country.liechtenstein": "ليختنشتاين",
       "countries.service_providers": "مزود الخدمة",
-      "countries.service_providers.description": "الشراكة مع أفخم فنادق العالم لإقامتك المثالية",
+      "countries.service_providers.description":
+        "الشراكة مع أفخم فنادق العالم لإقامتك المثالية",
       // About
       "about.badge": "عن الشركة",
       "about.title": "لماذا اختار",
@@ -709,6 +736,41 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "hotel.reservation.why-us-desc3": "Expert travel consultation",
       "hotel.reservation.why-us-desc4": "Quality guaranteed accommodations",
       "hotel.reservation.why-us-desc5": "Instant confirmation",
+      "hotel.requirements-slug": "Visa Requirements",
+
+      "hotel.requirements1.title": "1. Original Passport and a Copy",
+      "hotel.requirements1.details":
+        "The passport must be valid for at least 6 months from the date of return from travel.",
+
+      "hotel.requirements2.title": "2. Personal Photos",
+      "hotel.requirements2.details":
+        "Two (2) recent photos, size 4.5 × 3.5 cm with a white background, without any face editing.\n- For men: the photo must be without a headscarf (Shemagh).\n- For women: part of the hairline must be visible.\n- The photos must be recent.",
+
+      "hotel.requirements3.title":
+        "3. Salary Certificate (in English) – Original Copy",
+      "hotel.requirements3.details":
+        "● Government sector employees: the certificate must be stamped with a colored seal from the government employer.\n● Private sector employees: it must be on the company’s official letterhead and attested by the Chamber of Commerce.\n● The certificate must be recently issued.",
+
+      "hotel.requirements4.title": "4. Bank Statement",
+      "hotel.requirements4.details":
+        "● A recent 3-month bank statement (for Saudi citizens).\n● It must be in English and stamped by the bank.\n● A minimum balance of 15,000 SAR is required (a higher balance is preferred).",
+
+      "hotel.requirements5.title": "5. Biometrics (Fingerprint)",
+      "hotel.requirements5.details":
+        "● Required for all applicants aged 12 and above.\n● Children under 12 are exempt from biometrics.",
+
+      "hotel.requirements6.title": "6. Medical Insurance",
+      "hotel.requirements6.details":
+        "● A valid medical insurance is required and is one of the essential requirements for the Schengen visa.\n● Insurance must be provided through approved insurance companies.",
+
+      "hotel.requirements7.title": "7. Translation",
+      "hotel.requirements7.details":
+        "● The following documents must be translated when required:\n○ National ID.\n○ Family card.",
+
+      "hotel.requirements8.title": "8. Expected Visa Processing Time",
+      "hotel.requirements8.details":
+        "● From 3 to 12 working days after biometrics are taken.\n● Processing time may increase if the embassy experiences high demand.",
+
       // Countries
       "countries.visa_information": "Schengen Visa Information",
       "countries.badge": "Available Countries",

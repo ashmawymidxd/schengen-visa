@@ -70,7 +70,7 @@ const ContactInfo = ({ contactInfo }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-sky-50/30 relative overflow-hidden py-20">
+    <div id="contact" className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-sky-50/30 relative overflow-hidden py-20">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl"></div>

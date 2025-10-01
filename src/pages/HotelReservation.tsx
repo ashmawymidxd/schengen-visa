@@ -18,6 +18,7 @@ import {
 import Footer from "@/components/Footer";
 import HotelReservationFQA from "@/components/HotelReservationFQA";
 import { useLanguage } from "@/contexts/LanguageContext";
+import HotelSection from "@/components/HotelSection";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -126,37 +127,16 @@ const HotelReservation = () => {
       {/* Why Choose Us Section */}
       <section className="section-padding relative z-10">
         <div className="container mx-auto">
+          <HotelSection/>
           <div
-            className={`bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-2xl shadow-blue-500/10 border border-blue-200/50 transform transition-all duration-1000 ${
+            className={`mt-12 bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-2xl shadow-blue-500/10 border border-blue-200/50 transform transition-all duration-1000 ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-10 opacity-0"
             }`}
           >
             {/* Header */}
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200/50 text-blue-600 px-6 py-3 rounded-full font-medium mb-6 backdrop-blur-sm">
-                <Sparkles className="w-4 h-4" />
-                {t("hotel.reservation.why-us")}
-                <Sparkles className="w-4 h-4" />
-              </div>
-
-              <h3
-                className={`text-3xl lg:text-4xl font-bold bg-gradient-to-r p-3 from-gray-800 to-gray-600 bg-clip-text text-transparent mb-4 ${
-                  isRTL ? "font-arabic" : ""
-                }`}
-              >
-                {t("hotel.reservation.why-us")}
-              </h3>
-
-              <p
-                className={`text-lg text-gray-600 max-w-3xl mx-auto ${
-                  isRTL ? "font-arabic" : ""
-                } leading-relaxed`}
-              >
-                {t("hotel.reservation.description")}
-              </p>
-            </div>
+           
 
             {/* Features Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
