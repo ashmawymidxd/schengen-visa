@@ -484,7 +484,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "header.call_now": "Call Now",
       "header.request_service": "Request Service",
       "header.company_name": "First Mahata",
-      "header.company_tagline": "Visa Experts",
+      "header.company_tagline": "Schengen Visa Experts",
       "header.service1": "ٌRequest Schengen",
       "header.service2": "Tourism Visa",
       "header.service3": "Flight Reservation",
