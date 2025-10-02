@@ -90,7 +90,7 @@ const Steps = () => {
             <Sparkles className="w-4 h-4 text-blue-500" />
           </div>
           <h2
-            className={`text-4xl lg:text-6xl font-bold text-gray-900 mb-6 text-yellow-500 ${
+            className={`text-4xl lg:text-6xl font-bold mb-6 text-yellow-500 ${
               isRTL ? "font-arabic" : ""
             }`}
           >
