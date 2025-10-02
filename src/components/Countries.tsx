@@ -402,7 +402,7 @@ const Countries = () => {
             {t("countries.badge")}
             <Sparkles className="w-4 h-4" />
           </div>
-          <h2 className="text-4xl lg:text-6xl font-bold  mb-6 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-6xl font-bold  mb-6 text-yellow-500">
             {t("countries.title")}
             <span className="block bg-gradient-to-r from-blue-600 to-cyan-600 p-5 bg-clip-text text-transparent">
               {t("countries.subtitle")}

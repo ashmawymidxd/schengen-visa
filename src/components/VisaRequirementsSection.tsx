@@ -65,7 +65,7 @@ function VisaRequirementsSeection() {
   return (
     <section className="max-w-4xl m-auto p-10">
       <h2
-        className={`text-3xl lg:text-4xl font-bold text-center mb-10 bg-gradient-to-r p-5 from-gray-800 to-gray-600 bg-clip-text text-transparent ${
+        className={`text-3xl lg:text-4xl font-bold text-center mb-10 bg-gradient-to-r p-5 from-blue-500 to-blue-400 bg-clip-text text-transparent ${
           isRTL ? "font-arabic" : ""
         }`}
       >

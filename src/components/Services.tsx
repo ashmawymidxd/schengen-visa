@@ -78,12 +78,10 @@ const Services = () => {
             <Sparkles className="w-4 h-4 text-blue-500" />
           </div>
           <h2
-            className={`text-4xl lg:text-6xl font-bold text-foreground mb-4 ${
-              isRTL ? "font-arabic" : ""
-            } bg-gradient-to-r from-blue-800 to-blue-700 bg-clip-text text-transparent`}
+            className="text-4xl lg:text-6xl font-bold text-foreground mb-4 text-yellow-500"
           >
             {t("services.title")}
-            <span className="block text-blue-600 text-transparent mt-5 p-5">
+            <span className="block text-blue-600 mt-5 p-5">
               {t("services.subtitle")}
             </span>
           </h2>

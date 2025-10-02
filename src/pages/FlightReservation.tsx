@@ -190,7 +190,7 @@ const FlightReservation = () => {
           </div>
 
           {/* Title */}
-          <h3 className="text-2xl lg:text-3xl font-bold text-center text-gray-800 mb-4">
+          <h3 className="text-2xl lg:text-3xl font-bold text-center text-blue-500 p-3 mb-4">
             {t("countries.service_providers")}
           </h3>
 

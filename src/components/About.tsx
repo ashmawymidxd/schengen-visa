@@ -92,13 +92,13 @@ const About = () => {
             {t("about.badge")}
             <Sparkles className="w-4 h-4" />
           </div>
-          <h2 className="text-4xl lg:text-6xl font-bold mb-6 font-arabic">
+          <h2 className="text-4xl lg:text-6xl font-bold mb-6 font-arabic text-yellow-500">
             {t("about.title")}
             <span className="block bg-gradient-to-r text-blue-800 p-5">
               {t("about.subtitle")}
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-arabic leading-relaxed bg-white/50 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-arabic leading-relaxed bg-white/50 backdrop-blur-sm rounded-2xl p-5 border border-white/20">
             {t("about.description")}
           </p>
         </div>

@@ -87,7 +87,7 @@ const ContactForm = ({ contactInfo }) => {
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-200/50 text-blue-600 px-6 py-3 rounded-full font-arabic font-medium mb-6 backdrop-blur-sm">
             <Sparkles className="w-4 h-4" />
-            {t("contact.title") || "Get In Touch"}
+            {t("contact.title")}
             <Sparkles className="w-4 h-4" />
           </div>
 
@@ -106,20 +106,17 @@ const ContactForm = ({ contactInfo }) => {
                 : "translate-y-10 opacity-0"
             }`}
           >
-            {/* Contact Info Cards */}
-            <div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-8 font-arabic bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
-                {t("contact.info.title")}
-              </h3>
-            </div>
-
             {/* Quick Actions */}
             <div className="bg-white/60 backdrop-blur-md rounded-2xl p-6 border border-white/20 relative overflow-hidden group hover:shadow-2xl hover:shadow-blue-500/5 transition-all duration-500">
               {/* Blue Corner Accent */}
               <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-blue-400 to-cyan-500 rounded-bl-2xl transform translate-x-8 -translate-y-8 rotate-45 opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
 
-              <h4 className="text-xl font-bold text-gray-800 mb-6 font-arabic relative z-10">
-                {t("contact.quick.title")}
+              <h4 className="text-2xl font-bold text-yellow-600 mb-8 font-arabic bg-gradient-to-r from-yellow-500 to-yellow-400 bg-clip-text text-transparent">
+                ☎️
+                <span className="text-blue-500">
+                  {t("contact.info.title")}{" "}
+                </span>
+                {t("contact.quick.title")}{" "}
               </h4>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
                 <Button

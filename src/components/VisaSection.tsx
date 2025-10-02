@@ -75,7 +75,7 @@ function VisaSection() {
 
         {/* Title */}
         <h3
-          className={`text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent ${
+          className={`text-3xl lg:text-4xl font-bold bg-gradient-to-r from-yellow-500 to-yellow-400 p-3 bg-clip-text text-transparent ${
             isRTL ? "font-arabic" : ""
           }`}
         >
@@ -84,7 +84,7 @@ function VisaSection() {
 
         {/* Description */}
         <p
-          className={`text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mt-5 p-6 text-justify md:text-center ${
+          className={`text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed p-6 text-justify md:text-center ${
             isRTL ? "font-arabic" : ""
           }`}
         >

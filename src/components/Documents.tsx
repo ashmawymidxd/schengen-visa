@@ -94,7 +94,7 @@ const Documents = () => {
               <div className="bg-gradient-to-r from-blue-500 to-sky-500 p-2 rounded-full">
                 <FileText className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-2xl lg:text-3xl font-bold  bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+              <h3 className="text-2xl lg:text-3xl font-bold p-3 bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
                 {t("documents.additional.title")}
               </h3>
             </div>
@@ -185,7 +185,7 @@ const Documents = () => {
                   <a
                     href="https://wa.me/+201554300351"
                     target="__blanck"
-                    className="text-center group relative inline-flex items-center gap-2 bg-transparent border-2 border-white/30 hover:border-white/50 text-white hover:bg-white/10 text-lg px-8 py-4 rounded-2xl font-semibold backdrop-blur-sm transition-all duration-300 ease-out"
+                    className="text-center group relative items-center gap-2 bg-transparent border-2 border-white/30 hover:border-white/50 text-white hover:bg-white/10 text-lg px-8 py-4 rounded-2xl font-semibold backdrop-blur-sm transition-all duration-300 ease-out"
                   >
                     {t("documents.help.button2")}
                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>

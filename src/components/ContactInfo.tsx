@@ -90,7 +90,7 @@ const ContactInfo = ({ contactInfo }) => {
             {t("contact.badge")}
             <Sparkles className="w-4 h-4" />
           </div>
-          <h2 className="text-4xl lg:text-6xl font-bold mb-6 font-arabic bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-6xl font-bold text-yellow-500 font-arabic">
             {t("contact.title")}
             <span className="block bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text p-5 text-transparent">
               {t("contact.subtitle")}

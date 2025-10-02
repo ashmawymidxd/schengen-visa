@@ -16,10 +16,10 @@ export default function Testimonials({
       >
         {/* Heading */}
         <div className="text-center mb-12">
-          <h3 className="text-3xl lg:text-4xl font-bold mb-4 font-arabic p-3 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+          <h3 className="text-4xl lg:text-6xl font-bold text-yellow-500 font-arabic">
             {title}
           </h3>
-          <p className="text-muted-foreground font-arabic text-lg">
+          <p className="text-muted-foreground font-arabic text-lg mt-8">
             {subtitle}
           </p>
         </div>

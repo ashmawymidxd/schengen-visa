@@ -83,7 +83,7 @@ const Hero = () => {
                 isRTL ? "font-arabic" : ""
               } leading-tight`}
             >
-              <span className="block bg-gradient-to-r from-gray-100 to-gray-100 bg-clip-text text-transparent drop-shadow-lg p-5">
+              <span className="block bg-gradient-to-r from-gray-100 to-gray-100 bg-clip-text text-transparent drop-shadow-lg p-6">
                 {t("hero.subtitle")}
               </span>
             </h1>

@@ -72,7 +72,7 @@ function HotelSection() {
         </div>
 
         <h3
-          className={`text-3xl lg:text-4xl font-bold bg-gradient-to-r p-3 from-gray-800 to-gray-600 bg-clip-text text-transparent mb-4 ${
+          className={`text-3xl lg:text-4xl font-bold bg-gradient-to-r p-3 from-yellow-500 to-yellow-400 bg-clip-text text-transparent mb-4 ${
             isRTL ? "font-arabic" : ""
           }`}
         >

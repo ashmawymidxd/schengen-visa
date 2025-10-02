@@ -53,7 +53,7 @@ function RequestSchengenFAQ() {
           {t("request.faqTitle")}
           <MessageCircle className="w-5 h-5" />
         </div>
-        <h2 className="text-4xl lg:text-5xl p-5 font-bold  mb-4 font-arabic bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+        <h2 className="text-4xl lg:text-5xl p-5 font-bold  mb-4 font-arabic bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">
           {t("request.faqHeading")}
         </h2>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto font-arabic leading-relaxed">

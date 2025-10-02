@@ -206,7 +206,7 @@ const HotelReservation = () => {
             </div>
           </div>
 
-          <h3 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mt-6 mb-4">
+          <h3 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-500 to-blue-400 p-3 bg-clip-text text-transparent mt-6 mb-4">
             {t("countries.service_providers")}
           </h3>
 

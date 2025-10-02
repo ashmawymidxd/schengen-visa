@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+
 import { HelpCircle, MessageCircle, Sparkles, ChevronDown } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState, useEffect } from "react";
@@ -89,7 +90,7 @@ const FAQ = () => {
             {t("faq.badge")}
             <Sparkles className="w-4 h-4 text-sky-500" />
           </div>
-          <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 font-arabic">
+          <h2 className="text-4xl lg:text-6xl font-bold text-yellow-500 font-arabic">
             {t("faq.title")}
             <span className="block bg-gradient-to-r p-3 from-blue-600 to-cyan-600 mt-5 bg-clip-text text-transparent">
               {t("faq.subtitle")}

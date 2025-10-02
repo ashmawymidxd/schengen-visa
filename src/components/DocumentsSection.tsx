@@ -75,7 +75,7 @@ export default function DocumentsSection() {
 
         {/* Title */}
         <h2 className="text-4xl lg:text-6xl font-extrabold leading-snug">
-          <span className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-400 bg-clip-text text-transparent">
             {t("documents.title")}
           </span>
           <span className="mx-3 bg-gradient-to-r from-sky-500 via-blue-600 to-sky-500 bg-clip-text text-transparent">
@@ -89,7 +89,7 @@ export default function DocumentsSection() {
         </p>
 
         {/* Gold highlight bar */}
-        <div className="w-32 h-1 mx-auto mt-10 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-600 shadow-md shadow-yellow-200" />
+        <div className="w-32 h-1 mx-auto mt-10 rounded-full bg-gradient-to-r from-yellow-500 to-yellow-600 shadow-md shadow-yellow-200" />
       </div>
     </section>
   );
