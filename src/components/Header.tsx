@@ -48,6 +48,7 @@ const Header = () => {
 
   const menuItems = [
     { name: t("header.home"), href: "#home", id: "home" },
+    { name: t("header.about"), href: "#about", id: "about" },
     {
       name: t("header.services"),
       href: "#services",
@@ -59,7 +60,6 @@ const Header = () => {
         { name: t("header.service4"), href: "/hotel-reservation" },
       ],
     },
-    { name: t("header.about"), href: "#about", id: "about" },
     { name: t("header.faq"), href: "#faq", id: "faq" },
     { name: t("header.contact"), href: "#contact", id: "contact" },
   ];
