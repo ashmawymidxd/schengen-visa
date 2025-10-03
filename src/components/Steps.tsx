@@ -38,7 +38,7 @@ const Steps = () => {
       accent: "bg-blue-700",
     },
     {
-      icon: CheckCircle,
+      icon: Eye,
       number: "03",
       title: t("steps.step3.title"),
       description: t("steps.step3.desc"),
@@ -46,7 +46,7 @@ const Steps = () => {
       accent: "bg-blue-700",
     },
     {
-      icon: Eye,
+      icon: CheckCircle,
       number: "04",
       title: t("steps.step4.title"),
       description: t("steps.step4.desc"),
