@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ServiceHeader from "@/components/ServiceHeader";
+import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import {
   Phone,
@@ -15,7 +16,6 @@ import {
   Zap,
   Heart,
 } from "lucide-react";
-import Footer from "@/components/Footer";
 import HotelReservationFQA from "@/components/HotelReservationFQA";
 import { useLanguage } from "@/contexts/LanguageContext";
 import HotelSection from "@/components/HotelSection";

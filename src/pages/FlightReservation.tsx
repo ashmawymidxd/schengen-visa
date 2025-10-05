@@ -37,7 +37,7 @@ import air6 from "../assets/countries/ni.png";
 import air7 from "../assets/countries/om.png";
 import air8 from "../assets/countries/qa.png";
 import air9 from "../assets/countries/sa.png";
-import air10 from "../assets/countries/spa.png";
+import air10 from "../assets/countries/aa.png";
 
 const FlightReservation = () => {
   const { t, isRTL } = useLanguage();
@@ -105,7 +105,7 @@ const FlightReservation = () => {
     air7,
     air8,
     air9,
-    air10,
+    air10
   ];
 
   return (

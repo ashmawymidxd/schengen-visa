@@ -1,26 +1,15 @@
 import {
-  MapPin,
   Clock,
   Users,
-  Airplay,
   PlaneIcon,
   Sparkles,
   ArrowRight,
+  Search,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
-import air1 from "../assets/countries/ae.png";
-import air2 from "../assets/countries/eg.png";
-import air3 from "../assets/countries/em.png";
-import air4 from "../assets/countries/ku.png";
-import air5 from "../assets/countries/na.png";
-import air6 from "../assets/countries/ni.png";
-import air7 from "../assets/countries/om.png";
-import air8 from "../assets/countries/qa.png";
-import air9 from "../assets/countries/sa.png";
-import air10 from "../assets/countries/aa.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import ServiceHeader from "@/components/ServiceHeader";
+import Footer from "@/components/Footer";
 import "swiper/css";
 import "swiper/css/navigation";
 import { useState, useEffect } from "react";
@@ -28,6 +17,7 @@ import { useState, useEffect } from "react";
 const Countries = () => {
   const { t, isRTL } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     setIsVisible(true);
@@ -378,212 +368,232 @@ const Countries = () => {
     }
   };
 
+  // Filter countries based on search query
+  const filteredCountries = countries.filter((country) => {
+    const searchLower = searchQuery.toLowerCase();
+    return (
+      country.name.toLowerCase().includes(searchLower) ||
+      country.nameEn.toLowerCase().includes(searchLower) ||
+      country.description.toLowerCase().includes(searchLower) ||
+      country.descriptionEn.toLowerCase().includes(searchLower)
+    );
+  });
+
   return (
-    <section
-      id="countries"
-      className="section-padding bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden"
-    >
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-sky-400/20 to-blue-400/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-gray-400/10 to-gray-300/10 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="container mx-auto relative z-10">
-        {/* Header Section */}
-        <div
-          className={`text-center mb-16 transform transition-all duration-1000 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
-        >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-200/50 text-blue-600 px-6 py-3 rounded-full font-medium mb-6 backdrop-blur-sm">
-            <Sparkles className="w-4 h-4" />
-            {t("countries.badge")}
-            <Sparkles className="w-4 h-4" />
-          </div>
-          <h2 className="text-4xl lg:text-6xl font-bold  mb-6 text-yellow-500">
-            {t("countries.title")}
-            <span className="block bg-gradient-to-r from-blue-600 to-cyan-600 p-5 bg-clip-text text-transparent">
-              {t("countries.subtitle")}
-            </span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed bg-white/50 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-            {t("countries.description")}
-          </p>
+    <div className="min-h-screen">
+      <ServiceHeader />
+      <section
+        id="countries"
+        className="section-padding bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden"
+      >
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-sky-400/20 to-blue-400/20 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-gray-400/10 to-gray-300/10 rounded-full blur-3xl"></div>
         </div>
 
-        {/* Countries Grid */}
-        <div
-          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 transform transition-all duration-1000 delay-300 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
-        >
-          {countries.map((country, index) => (
-            <div key={index} className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-white/80 to-gray-100/80 rounded-3xl shadow-lg border border-white/50 backdrop-blur-sm transform group-hover:scale-105 transition-all duration-500 ease-out"></div>
-
-              <Card className="relative z-10 border-0 bg-transparent shadow-none overflow-visible">
-                <CardContent className="p-6 relative z-10">
-                  {/* Flag with Gradient Background */}
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="relative">
-                      <div
-                        className={`absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-300 rounded-xl blur-md opacity-30 group-hover:opacity-50 transition-opacity duration-500`}
-                      ></div>
-                      <div
-                        className={`relative bg-gradient-to-br from-gray-100 to-gray-300 p-3 rounded-xl shadow-sm`}
-                      >
-                        <img
-                          src={country.flag}
-                          className="w-12 h-8 object-cover rounded"
-                          alt={isRTL ? country.name : country.nameEn}
-                        />
-                      </div>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-800 group-hover:text-gray-900 transition-colors duration-300">
-                        {isRTL ? country.name : country.nameEn}
-                      </h3>
-                      <p className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
-                        {isRTL ? country.description : country.descriptionEn}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Info Section */}
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <Clock className="w-4 h-4 text-blue-500" />
-                        <span className="text-sm text-gray-600">
-                          {t("countries.processing_time")}
-                        </span>
-                      </div>
-                      <span className="text-sm font-semibold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-                        {isRTL
-                          ? country.processingTime
-                          : country.processingTimeEn}
-                      </span>
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <Users className="w-4 h-4 text-sky-500" />
-                        <span className="text-sm text-gray-600">
-                          {t("countries.popularity")}
-                        </span>
-                      </div>
-                      <div className="relative">
-                        <span
-                          className={`text-xs px-3 py-1 rounded-full font-medium backdrop-blur-sm ${getPopularityColor(
-                            country.popularity
-                          )}`}
-                        >
-                          {isRTL ? country.popularity : country.popularityEn}
-                        </span>
-                        <div
-                          className={`absolute inset-0 rounded-full ${getPopularityGradient(
-                            country.popularity
-                          )} opacity-0 group-hover:opacity-20 transition-opacity duration-300`}
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* CTA Button */}
-                  <div className="mt-4 pt-4 border-t border-gray-200/50 group-hover:border-blue-200/50 transition-colors duration-300">
-                    <a
-                      href="https://wa.me/+201554300351"
-                      target="__blanck"
-                      className="group/btn w-full flex items-center justify-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm transition-all duration-300 hover:gap-3"
-                    >
-                      {t("countries.request_visa")}{" "}
-                      {isRTL ? country.name : country.nameEn}
-                      <ArrowRight
-                        className={`w-4 h-4 transform transition-transform duration-300 ${
-                          isRTL
-                            ? "rotate-180 group-hover/btn:-translate-x-1"
-                            : "group-hover/btn:translate-x-1"
-                        }`}
-                      />
-                    </a>
-                  </div>
-
-                  {/* Hover Effect Line */}
-                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full group-hover:w-3/4 transition-all duration-500 ease-out"></div>
-                </CardContent>
-              </Card>
+        <div className="container mx-auto relative z-10">
+          {/* Header Section */}
+          <div
+            className={`text-center mb-8 transform transition-all duration-1000 ${
+              isVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-10 opacity-0"
+            }`}
+          >
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-200/50 text-blue-600 px-6 py-3 rounded-full font-medium mb-6 backdrop-blur-sm">
+              <Sparkles className="w-4 h-4" />
+              {t("countries.badge")}
+              <Sparkles className="w-4 h-4" />
             </div>
-          ))}
-        </div>
-
-        {/* Airlines Slider Section */}
-        <div
-          className={`my-16 transform transition-all duration-1000 delay-600 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
-        >
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500/10 to-blue-500/10 border border-sky-200/50 text-sky-600 px-6 py-3 rounded-full font-medium mb-6 backdrop-blur-sm">
-              <PlaneIcon className="w-5 h-5" />
-              {t("countries.service_providers")}
-              <PlaneIcon className="w-5 h-5" />
-            </div>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed bg-white/50 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              {t("countries.description")}
+            </p>
           </div>
 
-          <div className="relative">
-            <div className="mt-10">
-              <Swiper
+          {/* Search Input */}
+          <div
+            className={`max-w-md mx-auto mb-12 transform transition-all duration-1000 delay-200 ${
+              isVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-10 opacity-0"
+            }`}
+          >
+            <div className="relative">
+              {/* Search Icon */}
+              <Search
+                className={`absolute top-1/2 transform -translate-y-1/2 w-5 h-5 text-blue-600 ${
+                  isRTL ? "right-4" : "left-4"
+                }`}
+              />
+
+              {/* Input Field */}
+              <input
+                type="text"
                 dir={isRTL ? "rtl" : "ltr"}
-                modules={[Navigation, Autoplay]}
-                spaceBetween={20}
-                slidesPerView={2}
-                breakpoints={{
-                  640: { slidesPerView: 3 },
-                  768: { slidesPerView: 4 },
-                  1024: { slidesPerView: 5 },
-                  1280: { slidesPerView: 6 },
-                }}
-                navigation={false}
-                autoplay={{
-                  delay: 2000,
-                  disableOnInteraction: false,
-                  reverseDirection: !isRTL,
-                }}
-                speed={500}
-                loop={true}
-                key={isRTL ? "rtl" : "ltr"}
-              >
-                {[
-                  air1,
-                  air2,
-                  air3,
-                  air4,
-                  air5,
-                  air6,
-                  air7,
-                  air8,
-                  air9,
-                  air10,
-                ].map((img, index) => (
-                  <SwiperSlide key={index}>
-                    <div className="p-5 rounded-md bg-gradient-to-br from-white to-gray-200">
-                      <img
-                        src={img}
-                        draggable="false"
-                        alt={`slide-${index}`}
-                        className="rounded-md"
-                      />
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+                placeholder={
+                  isRTL ? "ابحث عن الدولة..." : "Search for a country..."
+                }
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className={`w-full py-4 bg-white/80 backdrop-blur-sm border rounded-full 
+        focus:outline-none focus:ring-2 transition-all duration-300 text-gray-700 placeholder-gray-400
+        ${isRTL ? "pr-12 pl-4 text-right" : "pl-12 pr-4 text-left"} 
+        border-blue-200/50 focus:ring-blue-500/20 focus:border-blue-400`}
+              />
+
+              {/* Clear Button (✕) */}
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery("")}
+                  className={`absolute top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gold-500 transition-colors duration-200 ${
+                    isRTL ? "left-4" : "right-4"
+                  }`}
+                >
+                  ✕
+                </button>
+              )}
+            </div>
+
+            {/* Result Count */}
+            <div className="text-center mt-3 text-sm text-gray-500">
+              {isRTL
+                ? `عرض ${filteredCountries.length} من ${countries.length} دولة`
+                : `Showing ${filteredCountries.length} of ${countries.length} countries`}
             </div>
           </div>
+
+          {/* Countries Grid */}
+          <div
+            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 transform transition-all duration-1000 delay-300 ${
+              isVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-10 opacity-0"
+            }`}
+          >
+            {filteredCountries.length === 0 ? (
+              <div className="col-span-full text-center py-12">
+                <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-blue-200/50">
+                  <Search className="w-16 h-16 text-blue-300 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-700 mb-2">
+                    {isRTL ? "لم يتم العثور على نتائج" : "No results found"}
+                  </h3>
+                  <p className="text-gray-500">
+                    {isRTL
+                      ? "جرب البحث بكلمات مختلفة أو تأكد من الإملاء"
+                      : "Try searching with different keywords or check your spelling"}
+                  </p>
+                </div>
+              </div>
+            ) : (
+              filteredCountries.map((country, index) => (
+                <div key={index} className="group relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/80 to-gray-100/80 rounded-3xl shadow-lg border border-white/50 backdrop-blur-sm transform group-hover:scale-105 transition-all duration-500 ease-out"></div>
+
+                  <Card className="relative z-10 border-0 bg-transparent shadow-none overflow-visible">
+                    <CardContent className="p-6 relative z-10">
+                      {/* Flag with Gradient Background */}
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="relative">
+                          <div
+                            className={`absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-300 rounded-xl blur-md opacity-30 group-hover:opacity-50 transition-opacity duration-500`}
+                          ></div>
+                          <div
+                            className={`relative bg-gradient-to-br from-gray-100 to-gray-300 p-3 rounded-xl shadow-sm`}
+                          >
+                            <img
+                              src={country.flag}
+                              className="w-12 h-8 object-cover rounded"
+                              alt={isRTL ? country.name : country.nameEn}
+                            />
+                          </div>
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-xl font-bold text-gray-800 group-hover:text-gray-900 transition-colors duration-300">
+                            {isRTL ? country.name : country.nameEn}
+                          </h3>
+                          <p className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+                            {isRTL
+                              ? country.description
+                              : country.descriptionEn}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Info Section */}
+                      <div className="space-y-3">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <Clock className="w-4 h-4 text-blue-500" />
+                            <span className="text-sm text-gray-600">
+                              {t("countries.processing_time")}
+                            </span>
+                          </div>
+                          <span className="text-sm font-semibold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                            {isRTL
+                              ? country.processingTime
+                              : country.processingTimeEn}
+                          </span>
+                        </div>
+
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <Users className="w-4 h-4 text-sky-500" />
+                            <span className="text-sm text-gray-600">
+                              {t("countries.popularity")}
+                            </span>
+                          </div>
+                          <div className="relative">
+                            <span
+                              className={`text-xs px-3 py-1 rounded-full font-medium backdrop-blur-sm ${getPopularityColor(
+                                country.popularity
+                              )}`}
+                            >
+                              {isRTL
+                                ? country.popularity
+                                : country.popularityEn}
+                            </span>
+                            <div
+                              className={`absolute inset-0 rounded-full ${getPopularityGradient(
+                                country.popularity
+                              )} opacity-0 group-hover:opacity-20 transition-opacity duration-300`}
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* CTA Button */}
+                      <div className="mt-4 pt-4 border-t border-gray-200/50 group-hover:border-blue-200/50 transition-colors duration-300">
+                        <a
+                          href="https://wa.me/+201554300351"
+                          target="__blanck"
+                          className="group/btn w-full flex items-center justify-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm transition-all duration-300 hover:gap-3"
+                        >
+                          {t("countries.request_visa")}{" "}
+                          {isRTL ? country.name : country.nameEn}
+                          <ArrowRight
+                            className={`w-4 h-4 transform transition-transform duration-300 ${
+                              isRTL
+                                ? "rotate-180 group-hover/btn:-translate-x-1"
+                                : "group-hover/btn:translate-x-1"
+                            }`}
+                          />
+                        </a>
+                      </div>
+
+                      {/* Hover Effect Line */}
+                      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full group-hover:w-3/4 transition-all duration-500 ease-out"></div>
+                    </CardContent>
+                  </Card>
+                </div>
+              ))
+            )}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <Footer />
+    </div>
   );
 };
 

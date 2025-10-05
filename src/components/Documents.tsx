@@ -109,7 +109,7 @@ const Documents = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50 shadow-lg border border-white/50 backdrop-blur-sm transform group-hover:scale-105 transition-all duration-500 ease-out"></div>
                 <div className="relative z-10 flex items-center gap-4 p-4 rounded-xl">
                   {/* Icon with Gradient Background */}
-                  <div
+                  <a href="https://wa.me/+201554300351" target="__blank"
                     className={`relative transform group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500`}
                   >
                     <div
@@ -120,10 +120,10 @@ const Documents = () => {
                     >
                       <doc.icon className="w-5 h-5 text-white" />
                     </div>
-                  </div>
+                  </a>
 
                   <div className="flex-1 min-w-0">
-                    <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900 transition-colors duration-300 block truncate">
+                    <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900 transition-colors duration-300 block">
                       {doc.text}
                     </span>
                     <span className="text-xs text-gray-500 group-hover:text-gray-600 transition-colors duration-300 block mt-1">
