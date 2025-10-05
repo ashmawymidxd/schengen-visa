@@ -52,8 +52,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "hero.subtitle":
         "سواء كانت رحلتك سیاحة، عمل أو مغامرة، نوفر لك كل ما تحتاجه لتسافر براحة وثقة",
       "hero.description": `في فيرست محطة لخدمات التأشیرات، نؤمن أن السفر ھو بدایة لاكتشاف العالم وصناعة ذكریات لا تُنسى. لذلك وفرنا حلول متكاملة وسھلة
-        لكل ما یخص التأشیرات السیاحیة، طلبات الشنغن، وحجوزات طيران السفر، لنمنحك تجربة خالیة من التعقید وبأعلى درجات الاحترافیة.
-        ھدفنا في فيرست محطة لخدمات التأشیرات أن نكون شریكك الأول في رحلتك، من الفكرة وحتى الوصول`,
+    لكل ما یخص التأشیرات السیاحیة، طلبات الشنغن، وحجوزات طيران السفر، لنمنحك تجربة خالیة من التعقید وبأعلى درجات الاحترافیة.
+    ھدفنا في فيرست محطة لخدمات التأشیرات أن نكون شریكك الأول في رحلتك، من الفكرة وحتى الوصول`,
       "hero.request_now": "اطلب الخدمة الآن",
       "hero.free_consultation": "استشارة مجانية",
       "hero.stats.clients": "+5000",
@@ -103,9 +103,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       // Request Service
       "documents.badge": "اطلب الشنغن",
       "documents.title": "ما هي ",
-      "documents.subtitle": "الشنغن",
-      "documents.description":
-        " تأشيرة الشنغن هي تأشيرة موحدة تتيح لك السفر إلى 29 دولة أوروبية باستخدام تأشيرة واحدة فقط، مما يجعلها الخيار الأمثل للرحلات السياحية أو العمل.",
+      "documents.subtitle": "الاوراق المطلوبة",
       "documents.additional.title": "الأوراق المطلوبة",
       "documents.additional.desc":
         "قد تحتاج هذه المستندات حسب حالتك الشخصية والعائلية",
@@ -139,12 +137,12 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 
       "request.faqs3.question": "ما هي الشروط للحصول على تأشيرة شنغن؟",
       "request.faqs3.answer": `أن يكون جواز السفر ساري المفعول لمدة لا تقل عن 3 أشهر بعد تاريخ العودة.
-      تقديم خطة سفر واضحة (تذاكر طيران ذهاب وعودة + حجز فندقي).
-      إثبات القدرة المالية (كشف حساب بنكي يغطي تكاليف الرحلة).
-      تأمين طبي للسفر يغطي فترة الإقامة داخل دول الشنغن.
-      سجل جنائي نظيف (قد تطلب بعض السفارات شهادة عدم محكومية).
-      أسباب قوية للعودة إلى بلدك (وظيفة، التزامات أسرية، ممتلكات...).
-      `,
+    تقديم خطة سفر واضحة (تذاكر طيران ذهاب وعودة + حجز فندقي).
+    إثبات القدرة المالية (كشف حساب بنكي يغطي تكاليف الرحلة).
+    تأمين طبي للسفر يغطي فترة الإقامة داخل دول الشنغن.
+    سجل جنائي نظيف (قد تطلب بعض السفارات شهادة عدم محكومية).
+    أسباب قوية للعودة إلى بلدك (وظيفة، التزامات أسرية، ممتلكات...).
+    `,
       "request.faqTitle": "أسئلة شائعة",
       "request.faqHeading": "أسئلة متكررة",
       "request.faqSubtitle":
@@ -290,7 +288,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "hotel.requirements7.details":
         "● يجب ترجمة الوثائق التالية عند الحاجة:\n○ بطاقة الأحوال.\n○ كرت العائلة.",
       "hotel.requirements8.title": "8. المدة المتوقعة لإصدار التأشيرة",
-      "hotel.requirements8.details":"●	يشترط وجود تأمين طبي ساري، وهو من المتطلبات الأساسية لتأشيرة الشنغن.\n●	يتم توفير التأمين عبر أفضل شركات التأمين المعتمدة.",
+      "hotel.requirements8.details":
+        "●	يشترط وجود تأمين طبي ساري، وهو من المتطلبات الأساسية لتأشيرة الشنغن.\n●	يتم توفير التأمين عبر أفضل شركات التأمين المعتمدة.",
 
       // Countries
       "countries.visa_information": "معلومات عن فيزا الشنغن",
@@ -500,6 +499,48 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "footer.licensed": "مرخص من وزارة التجارة السعودية",
       "footer.member": "عضو غرفة الرياض التجارية",
       "footer.address": "الرياض - حي الملز",
+
+      "translation.badge": "ترجمة معتمدة ومعترف بها",
+      "translation.title": "الترجمة المعتمدة",
+      "translation.subtitle": "للأوراق والملفات",
+      "translation.description":
+        "نقدم ترجمة معتمدة ودقيقة لجميع المستندات الرسمية المطلوبة لتقديم طلبات التأشيرة، من خلال فريق متخصص ومعتمد لدى السفارات والقنصليات.",
+
+      "translation.features.languages.title": "أكثر من 30 لغة",
+      "translation.features.languages.desc":
+        "نوفر ترجمة معتمدة لمختلف اللغات العالمية.",
+
+      "translation.features.delivery.title": "تسليم سريع",
+      "translation.features.delivery.desc":
+        "نلتزم بتسليم الترجمة خلال 24 – 48 ساعة.",
+
+      "translation.features.certified.title": "معتمدون رسميًا",
+      "translation.features.certified.desc":
+        "ترجماتنا معترف بها من الجهات والسفارات.",
+
+      "translation.features.documents.title": "جميع أنواع الوثائق",
+      "translation.features.documents.desc":
+        "شهادات، عقود، مستندات تجارية وشخصية.",
+
+      "translation.documents.title": "أنواع المستندات التي نترجمها",
+      "translation.documents.desc":
+        "نترجم جميع أنواع المستندات الرسمية والشخصية بدقة واحترافية",
+      "translation.documents.birth": "شهادات الميلاد والزواج",
+      "translation.documents.academic": "السجلات الأكاديمية",
+      "translation.documents.contracts": "العقود والاتفاقيات",
+      "translation.documents.financial": "المستندات المالية",
+      "translation.documents.medical": "التقارير الطبية",
+      "translation.documents.travel": "وثائق السفر والإقامة",
+
+      "translation.help.title": "هل تحتاج إلى ترجمة معتمدة لوثائقك؟",
+      "translation.help.desc":
+        "ارسل لنا مستنداتك وسنقوم بترجمتها بشكل احترافي ومعتمد خلال وقت قصير. دقة، سرية، واعتراف رسمي.",
+      "translation.help.button1": "اطلب الترجمة الآن",
+      "translation.help.button2": "قائمة المستندات PDF",
+
+      "translation.trust.quality": "ضمان الجودة",
+      "translation.trust.certified": "معتمد رسميًا",
+      "translation.trust.timely": "تسليم في الوقت المحدد",
     },
     en: {
       // Header
@@ -576,9 +617,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       // Request Service
       "documents.badge": "Request Schengen Visa",
       "documents.title": "What is",
-      "documents.subtitle": "Schengen",
-      "documents.description":
-        "The Schengen Visa is a unified visa that allows you to travel to 29 European countries with just one visa, making it the ideal choice for tourism or business trips.",
+      "documents.subtitle": "Required Documents",
       "documents.additional.title": "Required Documents",
       "documents.additional.desc":
         "These documents may be required depending on your personal and family situation",
@@ -984,6 +1023,48 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "footer.licensed": "Licensed by the Saudi Ministry of Commerce",
       "footer.member": "Member of Riyadh Chamber of Commerce",
       "footer.address": "Riyadh - Al Malaz District",
+      "translation.badge": "Certified & Recognized Translation",
+      "translation.title": "Certified Translation",
+      "translation.subtitle": "For Documents & Files",
+      "translation.description":
+        "We provide accurate certified translation for all official documents required for visa applications, through a specialized team certified by embassies and consulates.",
+
+      "translation.features.languages.title": "30+ Languages",
+      "translation.features.languages.desc":
+        "We provide certified translation for various global languages.",
+
+      "translation.features.delivery.title": "Fast Delivery",
+      "translation.features.delivery.desc":
+        "We commit to delivering translations within 24-48 hours.",
+
+      "translation.features.certified.title": "Officially Certified",
+      "translation.features.certified.desc":
+        "Our translations are recognized by authorities and embassies.",
+
+      "translation.features.documents.title": "All Document Types",
+      "translation.features.documents.desc":
+        "Certificates, contracts, commercial and personal documents.",
+
+      "translation.documents.title": "Types of Documents We Translate",
+      "translation.documents.desc":
+        "We translate all types of official and personal documents with accuracy and professionalism",
+      "translation.documents.birth": "Birth and Marriage Certificates",
+      "translation.documents.academic": "Academic Records",
+      "translation.documents.contracts": "Contracts and Agreements",
+      "translation.documents.financial": "Financial Documents",
+      "translation.documents.medical": "Medical Reports",
+      "translation.documents.travel": "Travel and Residence Documents",
+
+      "translation.help.title":
+        "Need Certified Translation for Your Documents?",
+      "translation.help.desc":
+        "Send us your documents and we'll translate them professionally and certified in a short time. Accuracy, confidentiality, and official recognition.",
+      "translation.help.button1": "Order Translation Now",
+      "translation.help.button2": "Documents List PDF",
+
+      "translation.trust.quality": "Quality Guarantee",
+      "translation.trust.certified": "Officially Certified",
+      "translation.trust.timely": "Timely Delivery",
     },
   };
 

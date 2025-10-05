@@ -36,15 +36,12 @@ function RequestSchengenFAQ() {
 
   return (
     <div
-      className={` mx-auto p-6 lg:p-10 transform transition-all duration-1000 ${
+      className={`container mx-auto mb-12 transform transition-all duration-1000 ${
         isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
       }`}
     >
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-20 -right-20 w-60 h-60 bg-blue-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-blue-400/10 rounded-full blur-3xl"></div>
-      </div>
+     
 
       {/* Header Section */}
       <div className="text-center mb-12">

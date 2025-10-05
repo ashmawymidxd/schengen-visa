@@ -18,12 +18,12 @@ const ServiceHeader = () => {
   }, [location.pathname]);
 
   const menuItems = [
-    { name: t("countries.badge"), href: "/countries"},
-    { name: t("header.service1"), href: "/request-schengen" },
-    { name: t("header.service2"), href: "/tourist-visa" },
+    { name: t("header.service2"), href: "/countries" },
+    { name: t("documents.additional.title"), href: "/request-schengen" },
     { name: t("header.service3"), href: "/flight-reservation" },
     { name: t("header.service4"), href: "/hotel-reservation" },
-    { name: t("header.faq"), href: "/faq"},
+    { name: t("header.faq"), href: "/faq" },
+    { name: t("translation.title"), href: "/certified-translation" },
   ];
 
   const toggleLanguage = () => {
@@ -105,7 +105,7 @@ const ServiceHeader = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`relative group font-medium transition-all duration-300 rounded-full px-3 py-2 ${
+                className={`relative group font-medium transition-all duration-300 rounded-full px-2 py-2 ${
                   isRTL ? "font-arabic" : ""
                 } ${
                   isActive(item.href)

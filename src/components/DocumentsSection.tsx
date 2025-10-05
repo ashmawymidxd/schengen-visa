@@ -1,6 +1,7 @@
 import { Sparkles } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-
+import safe from "../assets/about/safe.png";
+import { Link } from "react-router-dom";
 export default function DocumentsSection() {
   const { t } = useLanguage();
 
@@ -65,16 +66,16 @@ export default function DocumentsSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center max-w-5xl mx-auto transform transition-all duration-1000 translate-y-0 opacity-100">
+      <div className="relative z-10 flex flex-col gap-10 items-center justify-center max-w-5xl mx-auto transform transition-all duration-1000 translate-y-0 opacity-100">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-200/40 to-blue-200/30 border border-blue-300/40 text-sky-700 px-6 py-3 rounded-full font-medium mb-6 backdrop-blur-md shadow-sm shadow-sky-100">
+        <Link to={'/countries'} className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-200/40 to-blue-200/30 border border-blue-300/40 text-sky-700 px-6 py-3 rounded-full font-medium backdrop-blur-md shadow-sm shadow-sky-100">
           <Sparkles className="w-4 h-4 text-yellow-500" />
           {t("documents.badge")}
           <Sparkles className="w-4 h-4 text-yellow-500" />
-        </div>
+        </Link>
 
         {/* Title */}
-        <h2 className="text-4xl lg:text-6xl font-extrabold leading-snug">
+        <h2 className="text-4xl lg:text-6xl font-extrabold leading-snug text-center">
           <span className="bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-400 bg-clip-text text-transparent">
             {t("documents.title")}
           </span>
@@ -83,13 +84,12 @@ export default function DocumentsSection() {
           </span>
         </h2>
 
-        {/* Description */}
-        <p className="mt-8 text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto p-6 text-justify md:text-center">
-          {t("documents.description")}
-        </p>
+        {/* document icon svg */}
+
+        <img src={safe} alt="" className="" />
 
         {/* Gold highlight bar */}
-        <div className="w-32 h-1 mx-auto mt-10 rounded-full bg-gradient-to-r from-yellow-500 to-yellow-600 shadow-md shadow-yellow-200" />
+        <div className="w-32 h-1 mx-auto rounded-full bg-gradient-to-r from-yellow-500 to-yellow-600 shadow-md shadow-yellow-200" />
       </div>
     </section>
   );

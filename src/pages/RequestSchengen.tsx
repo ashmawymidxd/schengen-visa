@@ -6,6 +6,9 @@ import CountryCards from "@/components/CountryCards";
 import ContactForm from "@/components/ContactForm";
 import { Phone, Mail } from "lucide-react";
 import RequestSchengenFAQ from "@/components/RequestSchengenFAQ";
+import TouristVisaFAQ from "@/components/TouristVisaFAQ";
+import VisaRequirementsSection from "@/components/VisaRequirementsSection";
+import Featurs from "@/components/Featurs";
 
 const RequestSchengen = () => {
   const { t } = useLanguage();
@@ -29,6 +32,9 @@ const RequestSchengen = () => {
       <Documents />
       <RequestSchengenFAQ />
       <CountryCards />
+      <Featurs />
+      <VisaRequirementsSection />
+      <TouristVisaFAQ />
       <ContactForm contactInfo={contactInfo} />
       <Footer />
     </div>

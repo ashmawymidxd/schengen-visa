@@ -14,6 +14,7 @@ const RequestSchengen = lazy(() => import("./pages/RequestSchengen"));
 const TouristVisa = lazy(() => import("./pages/TouristVisa"));
 const FlightReservation = lazy(() => import("./pages/FlightReservation"));
 const HotelReservation = lazy(() => import("./pages/HotelReservation"));
+const CertifiedTranslation = lazy(() => import("./pages/CertifiedTranslation"));
 const FQA = lazy(() => import("./pages/FQA"));
 const Countries = lazy(() => import("./pages/Countries"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -39,6 +40,7 @@ const App = () => (
               <Route path="/hotel-reservation" element={<HotelReservation />} />
               <Route path="/faq" element={<FQA />} />
               <Route path="/countries" element={<Countries />} />
+            <Route path="/certified-translation" element={<CertifiedTranslation />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
