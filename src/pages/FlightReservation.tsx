@@ -113,7 +113,7 @@ const FlightReservation = () => {
       <ServiceHeader />
 
       {/* Main Content */}
-      <div className="section-padding relative z-10">
+      <div className=" relative z-10">
         {/* Why Choose Us Section */}
         <section className="">
           <div className="container mx-auto">
