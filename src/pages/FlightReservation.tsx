@@ -105,17 +105,16 @@ const FlightReservation = () => {
     air7,
     air8,
     air9,
-    air10
+    air10,
   ];
 
   return (
     <div className="min-h-screen">
       <ServiceHeader />
-
       {/* Main Content */}
       <div className=" relative z-10">
         {/* Why Choose Us Section */}
-        <section className="">
+        <section className="mt-12">
           <div className="container mx-auto">
             <FlightSection />
             <div

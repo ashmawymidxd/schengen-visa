@@ -67,7 +67,7 @@ function FlightSection() {
       <div className="relative z-10 text-center max-w-5xl mx-auto">
         <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-200/50 text-blue-600 px-6 py-3 rounded-full font-medium mb-6 backdrop-blur-sm">
           <Sparkles className="w-4 h-4" />
-          {t("flight.reservation.why-us")}
+          {t("header.service3")}
           <Sparkles className="w-4 h-4" />
         </div>
         <h3
